@@ -1,0 +1,1750 @@
+arvind_2004@ARVINDM:/$ sudo apt install openjdk-17-jdk
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  alsa-topology-conf alsa-ucm-conf ca-certificates-java fonts-dejavu-extra java-common libasound2-data libasound2t64
+  libatk-wrapper-java libatk-wrapper-java-jni libgif7 libice-dev libice6 libnspr4 libnss3 libpcsclite1 libpthread-stubs0-dev
+  libsm-dev libsm6 libx11-dev libxau-dev libxaw7 libxcb-shape0 libxcb1-dev libxdmcp-dev libxft2 libxkbfile1 libxmu6 libxpm4
+  libxt-dev libxt6t64 libxv1 libxxf86dga1 openjdk-17-jdk-headless openjdk-17-jre openjdk-17-jre-headless x11-utils x11proto-dev
+  xorg-sgml-doctools xtrans-dev
+Suggested packages:
+  default-jre alsa-utils libasound2-plugins libice-doc pcscd libsm-doc libx11-doc libxcb-doc libxt-doc openjdk-17-demo
+  openjdk-17-source visualvm libnss-mdns fonts-ipafont-gothic fonts-ipafont-mincho fonts-wqy-microhei | fonts-wqy-zenhei
+  fonts-indic mesa-utils
+Recommended packages:
+  luit
+The following NEW packages will be installed:
+  alsa-topology-conf alsa-ucm-conf ca-certificates-java fonts-dejavu-extra java-common libasound2-data libasound2t64
+  libatk-wrapper-java libatk-wrapper-java-jni libgif7 libice-dev libice6 libnspr4 libnss3 libpcsclite1 libpthread-stubs0-dev
+  libsm-dev libsm6 libx11-dev libxau-dev libxaw7 libxcb-shape0 libxcb1-dev libxdmcp-dev libxft2 libxkbfile1 libxmu6 libxpm4
+  libxt-dev libxt6t64 libxv1 libxxf86dga1 openjdk-17-jdk openjdk-17-jdk-headless openjdk-17-jre openjdk-17-jre-headless x11-utils
+  x11proto-dev xorg-sgml-doctools xtrans-dev
+0 upgraded, 40 newly installed, 0 to remove and 56 not upgraded.
+Need to get 123 MB/128 MB of archives.
+After this operation, 298 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://archive.ubuntu.com/ubuntu noble/main amd64 xorg-sgml-doctools all 1:1.11-1.1 [10.9 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble/main amd64 x11proto-dev all 2023.2-1 [602 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libice-dev amd64 2:1.0.10-1build3 [51.0 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libnspr4 amd64 2:4.35-1.1build1 [117 kB]
+Get:5 http://archive.ubuntu.com/ubuntu noble/main amd64 libpcsclite1 amd64 2.0.3-1build1 [21.4 kB]
+Get:6 http://archive.ubuntu.com/ubuntu noble/main amd64 libpthread-stubs0-dev amd64 0.4-1build3 [4746 B]
+Get:7 http://archive.ubuntu.com/ubuntu noble/main amd64 libsm-dev amd64 2:1.2.3-1build3 [17.8 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble/main amd64 libxau-dev amd64 1:1.0.9-1build6 [9570 B]
+Get:9 http://archive.ubuntu.com/ubuntu noble/main amd64 libxdmcp-dev amd64 1:1.1.3-0ubuntu6 [26.5 kB]
+Get:10 http://archive.ubuntu.com/ubuntu noble/main amd64 xtrans-dev all 1.4.0-1 [68.9 kB]
+Err:10 http://archive.ubuntu.com/ubuntu noble/main amd64 xtrans-dev all 1.4.0-1
+  Hash Sum mismatch
+  Hashes of expected file:
+   - SHA512:bd7b220c57f705f7f6274f1c12166042f5f82d4a39ef54c8b968c8fc58fa3439233431a6a175ab41487a45ce09e035eecd6baffb1eebac845328d4d50363d16f
+   - SHA256:45277c51d5d83db351b61859314b59595c9626ac372fbb2fc0d5542e169d9086
+   - SHA1:edb12d6a666d507e1cb1589ab0c24434001878d5 [weak]
+   - MD5Sum:5411362f7caeccc1185750f3a1a508ee [weak]
+   - Filesize:68900 [weak]
+  Hashes of received file:
+   - SHA512:2a6e68c4a1c1e77686e91587d22af07d3794bd032800b941c48b515d96753cc21846cc32aa6ddb8bfe67c87897986e19856436635a582943346164be6bb7b52d
+   - SHA256:fe422a124ab303029cec066dfba7d87094a4642903c32a5fbf9994bedadb77cf
+   - SHA1:51f6d51aeca59415e4e507bc3f794812d8e5028f [weak]
+   - MD5Sum:c4ba840f3e252e9d260f93314664a208 [weak]
+   - Filesize:68900 [weak]
+  Last modification reported: Wed, 26 Feb 2020 17:23:28 +0000
+Get:11 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb1-dev amd64 1.15-1ubuntu2 [85.8 kB]
+Ign:11 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb1-dev amd64 1.15-1ubuntu2
+Err:12 http://archive.ubuntu.com/ubuntu noble/main amd64 libx11-dev amd64 2:1.8.7-1build1
+  403  Forbidden [IP: 185.125.190.83 80]
+Get:13 http://archive.ubuntu.com/ubuntu noble/main amd64 libxt-dev amd64 1:1.2.1-1.2build1 [394 kB]
+Ign:14 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openjdk-17-jre-headless amd64 17.0.14+7-1~24.04
+Err:14 http://security.ubuntu.com/ubuntu noble-updates/main amd64 openjdk-17-jre-headless amd64 17.0.14+7-1~24.04
+  403  Forbidden [IP: 185.125.190.83 80]
+Get:15 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openjdk-17-jdk-headless amd64 17.0.14+7-1~24.04 [71.4 MB]
+Ign:15 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openjdk-17-jdk-headless amd64 17.0.14+7-1~24.04
+Get:16 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openjdk-17-jdk amd64 17.0.14+7-1~24.04 [1523 kB]
+Get:11 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb1-dev amd64 1.15-1ubuntu2 [85.8 kB]
+Err:11 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb1-dev amd64 1.15-1ubuntu2
+  Hash Sum mismatch
+  Hashes of expected file:
+   - SHA512:ea9c0f7f5e00aa3abe0b885a04733859f50fb819734531ce96a9d29ccc3dd01b3d95fbf4119e26750ad44aee995847638128416685b36a00e467880254f94763
+   - SHA256:1bafe3432feafc9e57f858721da524dfb3ee1f6fc4ef6b0c73023e79eadb9c28
+   - SHA1:ca750f2589dde1d1a48188e9c79d3474cae94622 [weak]
+   - MD5Sum:1e4450158a96673730029fda74fdfac6 [weak]
+   - Filesize:85790 [weak]
+  Hashes of received file:
+   - SHA512:6f7431b7066973975db79a949c112a17ad51a44f8d46079b35bb7937092c56e568419f923fefc1b094e14b7e3a06615fbc5a7fecfe153216c476ba3ac99bf7c6
+   - SHA256:7d678d7e1ff07f42de7d3427c98fdfad995baac89589a36fb1bd919eb2aba9e6
+   - SHA1:4c0058efc85d5d15261ff447b931a9af125f19aa [weak]
+   - MD5Sum:3c0c7a86fe5eb36ec050dd4d5e44422a [weak]
+   - Filesize:85790 [weak]
+  Last modification reported: Thu, 18 Apr 2024 16:08:56 +0000
+Ign:15 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openjdk-17-jdk-headless amd64 17.0.14+7-1~24.04
+Ign:15 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openjdk-17-jdk-headless amd64 17.0.14+7-1~24.04
+Err:15 http://security.ubuntu.com/ubuntu noble-updates/main amd64 openjdk-17-jdk-headless amd64 17.0.14+7-1~24.04
+  Connection timed out [IP: 185.125.190.83 80]
+Fetched 2916 kB in 1min 52s (26.0 kB/s)
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/x/xtrans/xtrans-dev_1.4.0-1_all.deb  Hash Sum mismatch
+   Hashes of expected file:
+    - SHA512:bd7b220c57f705f7f6274f1c12166042f5f82d4a39ef54c8b968c8fc58fa3439233431a6a175ab41487a45ce09e035eecd6baffb1eebac845328d4d50363d16f
+    - SHA256:45277c51d5d83db351b61859314b59595c9626ac372fbb2fc0d5542e169d9086
+    - SHA1:edb12d6a666d507e1cb1589ab0c24434001878d5 [weak]
+    - MD5Sum:5411362f7caeccc1185750f3a1a508ee [weak]
+    - Filesize:68900 [weak]
+   Hashes of received file:
+    - SHA512:2a6e68c4a1c1e77686e91587d22af07d3794bd032800b941c48b515d96753cc21846cc32aa6ddb8bfe67c87897986e19856436635a582943346164be6bb7b52d
+    - SHA256:fe422a124ab303029cec066dfba7d87094a4642903c32a5fbf9994bedadb77cf
+    - SHA1:51f6d51aeca59415e4e507bc3f794812d8e5028f [weak]
+    - MD5Sum:c4ba840f3e252e9d260f93314664a208 [weak]
+    - Filesize:68900 [weak]
+   Last modification reported: Wed, 26 Feb 2020 17:23:28 +0000
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/libx/libxcb/libxcb1-dev_1.15-1ubuntu2_amd64.deb  Hash Sum mismatch
+   Hashes of expected file:
+    - SHA512:ea9c0f7f5e00aa3abe0b885a04733859f50fb819734531ce96a9d29ccc3dd01b3d95fbf4119e26750ad44aee995847638128416685b36a00e467880254f94763
+    - SHA256:1bafe3432feafc9e57f858721da524dfb3ee1f6fc4ef6b0c73023e79eadb9c28
+    - SHA1:ca750f2589dde1d1a48188e9c79d3474cae94622 [weak]
+    - MD5Sum:1e4450158a96673730029fda74fdfac6 [weak]
+    - Filesize:85790 [weak]
+   Hashes of received file:
+    - SHA512:6f7431b7066973975db79a949c112a17ad51a44f8d46079b35bb7937092c56e568419f923fefc1b094e14b7e3a06615fbc5a7fecfe153216c476ba3ac99bf7c6
+    - SHA256:7d678d7e1ff07f42de7d3427c98fdfad995baac89589a36fb1bd919eb2aba9e6
+    - SHA1:4c0058efc85d5d15261ff447b931a9af125f19aa [weak]
+    - MD5Sum:3c0c7a86fe5eb36ec050dd4d5e44422a [weak]
+    - Filesize:85790 [weak]
+   Last modification reported: Thu, 18 Apr 2024 16:08:56 +0000
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11-dev_1.8.7-1build1_amd64.deb  403  Forbidden [IP: 185.125.190.83 80]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/o/openjdk-17/openjdk-17-jre-headless_17.0.14%2b7-1%7e24.04_amd64.deb  403  Forbidden [IP: 185.125.190.83 80]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/o/openjdk-17/openjdk-17-jdk-headless_17.0.14%2b7-1%7e24.04_amd64.deb  Connection timed out [IP: 185.125.190.83 80]
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+arvind_2004@ARVINDM:/$ java --version
+Command 'java' not found, but can be installed with:
+sudo apt install openjdk-17-jre-headless  # version 17.0.14+7-1~24.04, or
+sudo apt install openjdk-21-jre-headless  # version 21.0.6+7-1~24.04.1
+sudo apt install default-jre              # version 2:1.17-75
+sudo apt install openjdk-11-jre-headless  # version 11.0.26+4-1ubuntu1~24.04
+sudo apt install openjdk-8-jre-headless   # version 8u442-b06~us1-0ubuntu1~24.04
+sudo apt install openjdk-19-jre-headless  # version 19.0.2+7-4
+sudo apt install openjdk-20-jre-headless  # version 20.0.2+9-1
+sudo apt install openjdk-22-jre-headless  # version 22~22ea-1
+arvind_2004@ARVINDM:/$ sudo apt-get update --fix-missing
+Hit:1 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Err:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+  403  Forbidden [IP: 91.189.91.81 80]
+Reading package lists... Done
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble-backports/InRelease  403  Forbidden [IP: 91.189.91.81 80]
+E: The repository 'http://archive.ubuntu.com/ubuntu noble-backports InRelease' is not signed.
+N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+arvind_2004@ARVINDM:/$ sudo apt install openjdk-17-jdk
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  alsa-topology-conf alsa-ucm-conf ca-certificates-java fonts-dejavu-extra java-common libasound2-data libasound2t64
+  libatk-wrapper-java libatk-wrapper-java-jni libgif7 libice-dev libice6 libnspr4 libnss3 libpcsclite1 libpthread-stubs0-dev
+  libsm-dev libsm6 libx11-dev libxau-dev libxaw7 libxcb-shape0 libxcb1-dev libxdmcp-dev libxft2 libxkbfile1 libxmu6 libxpm4
+  libxt-dev libxt6t64 libxv1 libxxf86dga1 openjdk-17-jdk-headless openjdk-17-jre openjdk-17-jre-headless x11-utils x11proto-dev
+  xorg-sgml-doctools xtrans-dev
+Suggested packages:
+  default-jre alsa-utils libasound2-plugins libice-doc pcscd libsm-doc libx11-doc libxcb-doc libxt-doc openjdk-17-demo
+  openjdk-17-source visualvm libnss-mdns fonts-ipafont-gothic fonts-ipafont-mincho fonts-wqy-microhei | fonts-wqy-zenhei
+  fonts-indic mesa-utils
+Recommended packages:
+  luit
+The following NEW packages will be installed:
+  alsa-topology-conf alsa-ucm-conf ca-certificates-java fonts-dejavu-extra java-common libasound2-data libasound2t64
+  libatk-wrapper-java libatk-wrapper-java-jni libgif7 libice-dev libice6 libnspr4 libnss3 libpcsclite1 libpthread-stubs0-dev
+  libsm-dev libsm6 libx11-dev libxau-dev libxaw7 libxcb-shape0 libxcb1-dev libxdmcp-dev libxft2 libxkbfile1 libxmu6 libxpm4
+  libxt-dev libxt6t64 libxv1 libxxf86dga1 openjdk-17-jdk openjdk-17-jdk-headless openjdk-17-jre openjdk-17-jre-headless x11-utils
+  x11proto-dev xorg-sgml-doctools xtrans-dev
+0 upgraded, 40 newly installed, 0 to remove and 56 not upgraded.
+Need to get 120 MB/128 MB of archives.
+After this operation, 298 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://archive.ubuntu.com/ubuntu noble/main amd64 xtrans-dev all 1.4.0-1 [68.9 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb1-dev amd64 1.15-1ubuntu2 [85.8 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libx11-dev amd64 2:1.8.7-1build1 [732 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openjdk-17-jre-headless amd64 17.0.14+7-1~24.04 [47.9 MB]
+Get:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openjdk-17-jdk-headless amd64 17.0.14+7-1~24.04 [71.4 MB]
+Fetched 893 kB in 5s (185 kB/s)
+Extracting templates from packages: 100%
+Selecting previously unselected package alsa-topology-conf.
+(Reading database ... 40768 files and directories currently installed.)
+Preparing to unpack .../00-alsa-topology-conf_1.2.5.1-2_all.deb ...
+Unpacking alsa-topology-conf (1.2.5.1-2) ...
+Selecting previously unselected package libasound2-data.
+Preparing to unpack .../01-libasound2-data_1.2.11-1build2_all.deb ...
+Unpacking libasound2-data (1.2.11-1build2) ...
+Selecting previously unselected package libasound2t64:amd64.
+Preparing to unpack .../02-libasound2t64_1.2.11-1build2_amd64.deb ...
+Unpacking libasound2t64:amd64 (1.2.11-1build2) ...
+Selecting previously unselected package alsa-ucm-conf.
+Preparing to unpack .../03-alsa-ucm-conf_1.2.10-1ubuntu5.4_all.deb ...
+Unpacking alsa-ucm-conf (1.2.10-1ubuntu5.4) ...
+Selecting previously unselected package ca-certificates-java.
+Preparing to unpack .../04-ca-certificates-java_20240118_all.deb ...
+Unpacking ca-certificates-java (20240118) ...
+Selecting previously unselected package fonts-dejavu-extra.
+Preparing to unpack .../05-fonts-dejavu-extra_2.37-8_all.deb ...
+Unpacking fonts-dejavu-extra (2.37-8) ...
+Selecting previously unselected package java-common.
+Preparing to unpack .../06-java-common_0.75+exp1_all.deb ...
+Unpacking java-common (0.75+exp1) ...
+Selecting previously unselected package libice6:amd64.
+Preparing to unpack .../07-libice6_2%3a1.0.10-1build3_amd64.deb ...
+Unpacking libice6:amd64 (2:1.0.10-1build3) ...
+Selecting previously unselected package libsm6:amd64.
+Preparing to unpack .../08-libsm6_2%3a1.2.3-1build3_amd64.deb ...
+Unpacking libsm6:amd64 (2:1.2.3-1build3) ...
+Selecting previously unselected package libxt6t64:amd64.
+Preparing to unpack .../09-libxt6t64_1%3a1.2.1-1.2build1_amd64.deb ...
+Unpacking libxt6t64:amd64 (1:1.2.1-1.2build1) ...
+Selecting previously unselected package libxmu6:amd64.
+Preparing to unpack .../10-libxmu6_2%3a1.1.3-3build2_amd64.deb ...
+Unpacking libxmu6:amd64 (2:1.1.3-3build2) ...
+Selecting previously unselected package libxpm4:amd64.
+Preparing to unpack .../11-libxpm4_1%3a3.5.17-1build2_amd64.deb ...
+Unpacking libxpm4:amd64 (1:3.5.17-1build2) ...
+Selecting previously unselected package libxaw7:amd64.
+Preparing to unpack .../12-libxaw7_2%3a1.0.14-1build2_amd64.deb ...
+Unpacking libxaw7:amd64 (2:1.0.14-1build2) ...
+Selecting previously unselected package libxcb-shape0:amd64.
+Preparing to unpack .../13-libxcb-shape0_1.15-1ubuntu2_amd64.deb ...
+Unpacking libxcb-shape0:amd64 (1.15-1ubuntu2) ...
+Selecting previously unselected package libxft2:amd64.
+Preparing to unpack .../14-libxft2_2.3.6-1build1_amd64.deb ...
+Unpacking libxft2:amd64 (2.3.6-1build1) ...
+Selecting previously unselected package libxkbfile1:amd64.
+Preparing to unpack .../15-libxkbfile1_1%3a1.1.0-1build4_amd64.deb ...
+Unpacking libxkbfile1:amd64 (1:1.1.0-1build4) ...
+Selecting previously unselected package libxv1:amd64.
+Preparing to unpack .../16-libxv1_2%3a1.0.11-1.1build1_amd64.deb ...
+Unpacking libxv1:amd64 (2:1.0.11-1.1build1) ...
+Selecting previously unselected package libxxf86dga1:amd64.
+Preparing to unpack .../17-libxxf86dga1_2%3a1.1.5-1build1_amd64.deb ...
+Unpacking libxxf86dga1:amd64 (2:1.1.5-1build1) ...
+Selecting previously unselected package x11-utils.
+Preparing to unpack .../18-x11-utils_7.7+6build2_amd64.deb ...
+Unpacking x11-utils (7.7+6build2) ...
+Selecting previously unselected package libatk-wrapper-java.
+Preparing to unpack .../19-libatk-wrapper-java_0.40.0-3build2_all.deb ...
+Unpacking libatk-wrapper-java (0.40.0-3build2) ...
+Selecting previously unselected package libatk-wrapper-java-jni:amd64.
+Preparing to unpack .../20-libatk-wrapper-java-jni_0.40.0-3build2_amd64.deb ...
+Unpacking libatk-wrapper-java-jni:amd64 (0.40.0-3build2) ...
+Selecting previously unselected package libgif7:amd64.
+Preparing to unpack .../21-libgif7_5.2.2-1ubuntu1_amd64.deb ...
+Unpacking libgif7:amd64 (5.2.2-1ubuntu1) ...
+Selecting previously unselected package xorg-sgml-doctools.
+Preparing to unpack .../22-xorg-sgml-doctools_1%3a1.11-1.1_all.deb ...
+Unpacking xorg-sgml-doctools (1:1.11-1.1) ...
+Selecting previously unselected package x11proto-dev.
+Preparing to unpack .../23-x11proto-dev_2023.2-1_all.deb ...
+Unpacking x11proto-dev (2023.2-1) ...
+Selecting previously unselected package libice-dev:amd64.
+Preparing to unpack .../24-libice-dev_2%3a1.0.10-1build3_amd64.deb ...
+Unpacking libice-dev:amd64 (2:1.0.10-1build3) ...
+Selecting previously unselected package libnspr4:amd64.
+Preparing to unpack .../25-libnspr4_2%3a4.35-1.1build1_amd64.deb ...
+Unpacking libnspr4:amd64 (2:4.35-1.1build1) ...
+Selecting previously unselected package libnss3:amd64.
+Preparing to unpack .../26-libnss3_2%3a3.98-1build1_amd64.deb ...
+Unpacking libnss3:amd64 (2:3.98-1build1) ...
+Selecting previously unselected package libpcsclite1:amd64.
+Preparing to unpack .../27-libpcsclite1_2.0.3-1build1_amd64.deb ...
+Unpacking libpcsclite1:amd64 (2.0.3-1build1) ...
+Selecting previously unselected package libpthread-stubs0-dev:amd64.
+Preparing to unpack .../28-libpthread-stubs0-dev_0.4-1build3_amd64.deb ...
+Unpacking libpthread-stubs0-dev:amd64 (0.4-1build3) ...
+Selecting previously unselected package libsm-dev:amd64.
+Preparing to unpack .../29-libsm-dev_2%3a1.2.3-1build3_amd64.deb ...
+Unpacking libsm-dev:amd64 (2:1.2.3-1build3) ...
+Selecting previously unselected package libxau-dev:amd64.
+Preparing to unpack .../30-libxau-dev_1%3a1.0.9-1build6_amd64.deb ...
+Unpacking libxau-dev:amd64 (1:1.0.9-1build6) ...
+Selecting previously unselected package libxdmcp-dev:amd64.
+Preparing to unpack .../31-libxdmcp-dev_1%3a1.1.3-0ubuntu6_amd64.deb ...
+Unpacking libxdmcp-dev:amd64 (1:1.1.3-0ubuntu6) ...
+Selecting previously unselected package xtrans-dev.
+Preparing to unpack .../32-xtrans-dev_1.4.0-1_all.deb ...
+Unpacking xtrans-dev (1.4.0-1) ...
+Selecting previously unselected package libxcb1-dev:amd64.
+Preparing to unpack .../33-libxcb1-dev_1.15-1ubuntu2_amd64.deb ...
+Unpacking libxcb1-dev:amd64 (1.15-1ubuntu2) ...
+Selecting previously unselected package libx11-dev:amd64.
+Preparing to unpack .../34-libx11-dev_2%3a1.8.7-1build1_amd64.deb ...
+Unpacking libx11-dev:amd64 (2:1.8.7-1build1) ...
+Selecting previously unselected package libxt-dev:amd64.
+Preparing to unpack .../35-libxt-dev_1%3a1.2.1-1.2build1_amd64.deb ...
+Unpacking libxt-dev:amd64 (1:1.2.1-1.2build1) ...
+Selecting previously unselected package openjdk-17-jre-headless:amd64.
+Preparing to unpack .../36-openjdk-17-jre-headless_17.0.14+7-1~24.04_amd64.deb ...
+Unpacking openjdk-17-jre-headless:amd64 (17.0.14+7-1~24.04) ...
+Selecting previously unselected package openjdk-17-jre:amd64.
+Preparing to unpack .../37-openjdk-17-jre_17.0.14+7-1~24.04_amd64.deb ...
+Unpacking openjdk-17-jre:amd64 (17.0.14+7-1~24.04) ...
+Selecting previously unselected package openjdk-17-jdk-headless:amd64.
+Preparing to unpack .../38-openjdk-17-jdk-headless_17.0.14+7-1~24.04_amd64.deb ...
+Unpacking openjdk-17-jdk-headless:amd64 (17.0.14+7-1~24.04) ...
+Selecting previously unselected package openjdk-17-jdk:amd64.
+Preparing to unpack .../39-openjdk-17-jdk_17.0.14+7-1~24.04_amd64.deb ...
+Unpacking openjdk-17-jdk:amd64 (17.0.14+7-1~24.04) ...
+Setting up libice6:amd64 (2:1.0.10-1build3) ...
+Setting up libxft2:amd64 (2.3.6-1build1) ...
+Setting up libxpm4:amd64 (1:3.5.17-1build2) ...
+Setting up java-common (0.75+exp1) ...
+Setting up libxcb-shape0:amd64 (1.15-1ubuntu2) ...
+Setting up libxxf86dga1:amd64 (2:1.1.5-1build1) ...
+Setting up libpthread-stubs0-dev:amd64 (0.4-1build3) ...
+Setting up libasound2-data (1.2.11-1build2) ...
+Setting up xtrans-dev (1.4.0-1) ...
+Setting up libasound2t64:amd64 (1.2.11-1build2) ...
+Setting up libnspr4:amd64 (2:4.35-1.1build1) ...
+Setting up libxv1:amd64 (2:1.0.11-1.1build1) ...
+Setting up libpcsclite1:amd64 (2.0.3-1build1) ...
+Setting up libgif7:amd64 (5.2.2-1ubuntu1) ...
+Setting up fonts-dejavu-extra (2.37-8) ...
+Setting up alsa-topology-conf (1.2.5.1-2) ...
+Setting up xorg-sgml-doctools (1:1.11-1.1) ...
+Setting up libxkbfile1:amd64 (1:1.1.0-1build4) ...
+Setting up ca-certificates-java (20240118) ...
+No JRE found. Skipping Java certificates setup.
+Setting up libsm6:amd64 (2:1.2.3-1build3) ...
+Setting up alsa-ucm-conf (1.2.10-1ubuntu5.4) ...
+Setting up libnss3:amd64 (2:3.98-1build1) ...
+Setting up libxt6t64:amd64 (1:1.2.1-1.2build1) ...
+Setting up openjdk-17-jre-headless:amd64 (17.0.14+7-1~24.04) ...
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/java to provide /usr/bin/java (java) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jpackage to provide /usr/bin/jpackage (jpackage) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/keytool to provide /usr/bin/keytool (keytool) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/rmiregistry to provide /usr/bin/rmiregistry (rmiregistry) in auto m
+ode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/lib/jexec to provide /usr/bin/jexec (jexec) in auto mode
+Setting up libxmu6:amd64 (2:1.1.3-3build2) ...
+Setting up libxaw7:amd64 (2:1.0.14-1build2) ...
+Setting up x11-utils (7.7+6build2) ...
+Setting up libatk-wrapper-java (0.40.0-3build2) ...
+Setting up libatk-wrapper-java-jni:amd64 (0.40.0-3build2) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.4) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for sgml-base (1.31) ...
+Setting up x11proto-dev (2023.2-1) ...
+Processing triggers for fontconfig (2.15.0-1.1ubuntu2) ...
+Setting up libxau-dev:amd64 (1:1.0.9-1build6) ...
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+Setting up libice-dev:amd64 (2:1.0.10-1build3) ...
+Setting up libsm-dev:amd64 (2:1.2.3-1build3) ...
+Setting up libxdmcp-dev:amd64 (1:1.1.3-0ubuntu6) ...
+Setting up libxcb1-dev:amd64 (1.15-1ubuntu2) ...
+Setting up libx11-dev:amd64 (2:1.8.7-1build1) ...
+Setting up libxt-dev:amd64 (1:1.2.1-1.2build1) ...
+Processing triggers for ca-certificates-java (20240118) ...
+Adding debian:ACCVRAIZ1.pem
+Adding debian:AC_RAIZ_FNMT-RCM.pem
+Adding debian:AC_RAIZ_FNMT-RCM_SERVIDORES_SEGUROS.pem
+Adding debian:ANF_Secure_Server_Root_CA.pem
+Adding debian:Actalis_Authentication_Root_CA.pem
+Adding debian:AffirmTrust_Commercial.pem
+Adding debian:AffirmTrust_Networking.pem
+Adding debian:AffirmTrust_Premium.pem
+Adding debian:AffirmTrust_Premium_ECC.pem
+Adding debian:Amazon_Root_CA_1.pem
+Adding debian:Amazon_Root_CA_2.pem
+Adding debian:Amazon_Root_CA_3.pem
+Adding debian:Amazon_Root_CA_4.pem
+Adding debian:Atos_TrustedRoot_2011.pem
+Adding debian:Atos_TrustedRoot_Root_CA_ECC_TLS_2021.pem
+Adding debian:Atos_TrustedRoot_Root_CA_RSA_TLS_2021.pem
+Adding debian:Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.pem
+Adding debian:BJCA_Global_Root_CA1.pem
+Adding debian:BJCA_Global_Root_CA2.pem
+Adding debian:Baltimore_CyberTrust_Root.pem
+Adding debian:Buypass_Class_2_Root_CA.pem
+Adding debian:Buypass_Class_3_Root_CA.pem
+Adding debian:CA_Disig_Root_R2.pem
+Adding debian:CFCA_EV_ROOT.pem
+Adding debian:COMODO_Certification_Authority.pem
+Adding debian:COMODO_ECC_Certification_Authority.pem
+Adding debian:COMODO_RSA_Certification_Authority.pem
+Adding debian:Certainly_Root_E1.pem
+Adding debian:Certainly_Root_R1.pem
+Adding debian:Certigna.pem
+Adding debian:Certigna_Root_CA.pem
+Adding debian:Certum_EC-384_CA.pem
+Adding debian:Certum_Trusted_Network_CA.pem
+Adding debian:Certum_Trusted_Network_CA_2.pem
+Adding debian:Certum_Trusted_Root_CA.pem
+Adding debian:CommScope_Public_Trust_ECC_Root-01.pem
+Adding debian:CommScope_Public_Trust_ECC_Root-02.pem
+Adding debian:CommScope_Public_Trust_RSA_Root-01.pem
+Adding debian:CommScope_Public_Trust_RSA_Root-02.pem
+Adding debian:Comodo_AAA_Services_root.pem
+Adding debian:D-TRUST_BR_Root_CA_1_2020.pem
+Adding debian:D-TRUST_EV_Root_CA_1_2020.pem
+Adding debian:D-TRUST_Root_Class_3_CA_2_2009.pem
+Adding debian:D-TRUST_Root_Class_3_CA_2_EV_2009.pem
+Adding debian:DigiCert_Assured_ID_Root_CA.pem
+Adding debian:DigiCert_Assured_ID_Root_G2.pem
+Adding debian:DigiCert_Assured_ID_Root_G3.pem
+Adding debian:DigiCert_Global_Root_CA.pem
+Adding debian:DigiCert_Global_Root_G2.pem
+Adding debian:DigiCert_Global_Root_G3.pem
+Adding debian:DigiCert_High_Assurance_EV_Root_CA.pem
+Adding debian:DigiCert_TLS_ECC_P384_Root_G5.pem
+Adding debian:DigiCert_TLS_RSA4096_Root_G5.pem
+Adding debian:DigiCert_Trusted_Root_G4.pem
+Adding debian:Entrust.net_Premium_2048_Secure_Server_CA.pem
+Adding debian:Entrust_Root_Certification_Authority.pem
+Adding debian:Entrust_Root_Certification_Authority_-_EC1.pem
+Adding debian:Entrust_Root_Certification_Authority_-_G2.pem
+Adding debian:Entrust_Root_Certification_Authority_-_G4.pem
+Adding debian:GDCA_TrustAUTH_R5_ROOT.pem
+Adding debian:GLOBALTRUST_2020.pem
+Adding debian:GTS_Root_R1.pem
+Adding debian:GTS_Root_R2.pem
+Adding debian:GTS_Root_R3.pem
+Adding debian:GTS_Root_R4.pem
+Adding debian:GlobalSign_ECC_Root_CA_-_R4.pem
+Adding debian:GlobalSign_ECC_Root_CA_-_R5.pem
+Adding debian:GlobalSign_Root_CA.pem
+Adding debian:GlobalSign_Root_CA_-_R3.pem
+Adding debian:GlobalSign_Root_CA_-_R6.pem
+Adding debian:GlobalSign_Root_E46.pem
+Adding debian:GlobalSign_Root_R46.pem
+Adding debian:Go_Daddy_Class_2_CA.pem
+Adding debian:Go_Daddy_Root_Certificate_Authority_-_G2.pem
+Adding debian:HARICA_TLS_ECC_Root_CA_2021.pem
+Adding debian:HARICA_TLS_RSA_Root_CA_2021.pem
+Adding debian:Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.pem
+Adding debian:Hellenic_Academic_and_Research_Institutions_RootCA_2015.pem
+Adding debian:HiPKI_Root_CA_-_G1.pem
+Adding debian:Hongkong_Post_Root_CA_3.pem
+Adding debian:ISRG_Root_X1.pem
+Adding debian:ISRG_Root_X2.pem
+Adding debian:IdenTrust_Commercial_Root_CA_1.pem
+Adding debian:IdenTrust_Public_Sector_Root_CA_1.pem
+Adding debian:Izenpe.com.pem
+Adding debian:Microsec_e-Szigno_Root_CA_2009.pem
+Adding debian:Microsoft_ECC_Root_Certificate_Authority_2017.pem
+Adding debian:Microsoft_RSA_Root_Certificate_Authority_2017.pem
+Adding debian:NAVER_Global_Root_Certification_Authority.pem
+Adding debian:NetLock_Arany_=Class_Gold=_Főtanúsítvány.pem
+Adding debian:OISTE_WISeKey_Global_Root_GB_CA.pem
+Adding debian:OISTE_WISeKey_Global_Root_GC_CA.pem
+Adding debian:QuoVadis_Root_CA_1_G3.pem
+Adding debian:QuoVadis_Root_CA_2.pem
+Adding debian:QuoVadis_Root_CA_2_G3.pem
+Adding debian:QuoVadis_Root_CA_3.pem
+Adding debian:QuoVadis_Root_CA_3_G3.pem
+Adding debian:SSL.com_EV_Root_Certification_Authority_ECC.pem
+Adding debian:SSL.com_EV_Root_Certification_Authority_RSA_R2.pem
+Adding debian:SSL.com_Root_Certification_Authority_ECC.pem
+Adding debian:SSL.com_Root_Certification_Authority_RSA.pem
+Adding debian:SSL.com_TLS_ECC_Root_CA_2022.pem
+Adding debian:SSL.com_TLS_RSA_Root_CA_2022.pem
+Adding debian:SZAFIR_ROOT_CA2.pem
+Adding debian:Sectigo_Public_Server_Authentication_Root_E46.pem
+Adding debian:Sectigo_Public_Server_Authentication_Root_R46.pem
+Adding debian:SecureSign_RootCA11.pem
+Adding debian:SecureTrust_CA.pem
+Adding debian:Secure_Global_CA.pem
+Adding debian:Security_Communication_ECC_RootCA1.pem
+Adding debian:Security_Communication_RootCA2.pem
+Adding debian:Security_Communication_RootCA3.pem
+Adding debian:Security_Communication_Root_CA.pem
+Adding debian:Starfield_Class_2_CA.pem
+Adding debian:Starfield_Root_Certificate_Authority_-_G2.pem
+Adding debian:Starfield_Services_Root_Certificate_Authority_-_G2.pem
+Adding debian:SwissSign_Gold_CA_-_G2.pem
+Adding debian:SwissSign_Silver_CA_-_G2.pem
+Adding debian:T-TeleSec_GlobalRoot_Class_2.pem
+Adding debian:T-TeleSec_GlobalRoot_Class_3.pem
+Adding debian:TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.pem
+Adding debian:TWCA_Global_Root_CA.pem
+Adding debian:TWCA_Root_Certification_Authority.pem
+Adding debian:TeliaSonera_Root_CA_v1.pem
+Adding debian:Telia_Root_CA_v2.pem
+Adding debian:TrustAsia_Global_Root_CA_G3.pem
+Adding debian:TrustAsia_Global_Root_CA_G4.pem
+Adding debian:Trustwave_Global_Certification_Authority.pem
+Adding debian:Trustwave_Global_ECC_P256_Certification_Authority.pem
+Adding debian:Trustwave_Global_ECC_P384_Certification_Authority.pem
+Adding debian:TunTrust_Root_CA.pem
+Adding debian:UCA_Extended_Validation_Root.pem
+Adding debian:UCA_Global_G2_Root.pem
+Adding debian:USERTrust_ECC_Certification_Authority.pem
+Adding debian:USERTrust_RSA_Certification_Authority.pem
+Adding debian:XRamp_Global_CA_Root.pem
+Adding debian:certSIGN_ROOT_CA.pem
+Adding debian:certSIGN_Root_CA_G2.pem
+Adding debian:e-Szigno_Root_CA_2017.pem
+Adding debian:ePKI_Root_Certification_Authority.pem
+Adding debian:emSign_ECC_Root_CA_-_C3.pem
+Adding debian:emSign_ECC_Root_CA_-_G3.pem
+Adding debian:emSign_Root_CA_-_C1.pem
+Adding debian:emSign_Root_CA_-_G1.pem
+Adding debian:vTrus_ECC_Root_CA.pem
+Adding debian:vTrus_Root_CA.pem
+done.
+Setting up openjdk-17-jre:amd64 (17.0.14+7-1~24.04) ...
+Setting up openjdk-17-jdk-headless:amd64 (17.0.14+7-1~24.04) ...
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jar to provide /usr/bin/jar (jar) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jarsigner to provide /usr/bin/jarsigner (jarsigner) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/javac to provide /usr/bin/javac (javac) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/javadoc to provide /usr/bin/javadoc (javadoc) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/javap to provide /usr/bin/javap (javap) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jcmd to provide /usr/bin/jcmd (jcmd) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jdb to provide /usr/bin/jdb (jdb) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jdeprscan to provide /usr/bin/jdeprscan (jdeprscan) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jdeps to provide /usr/bin/jdeps (jdeps) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jfr to provide /usr/bin/jfr (jfr) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jimage to provide /usr/bin/jimage (jimage) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jinfo to provide /usr/bin/jinfo (jinfo) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jlink to provide /usr/bin/jlink (jlink) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jmap to provide /usr/bin/jmap (jmap) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jmod to provide /usr/bin/jmod (jmod) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jps to provide /usr/bin/jps (jps) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jrunscript to provide /usr/bin/jrunscript (jrunscript) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jshell to provide /usr/bin/jshell (jshell) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jstack to provide /usr/bin/jstack (jstack) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jstat to provide /usr/bin/jstat (jstat) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jstatd to provide /usr/bin/jstatd (jstatd) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/serialver to provide /usr/bin/serialver (serialver) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jhsdb to provide /usr/bin/jhsdb (jhsdb) in auto mode
+Setting up openjdk-17-jdk:amd64 (17.0.14+7-1~24.04) ...
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jconsole to provide /usr/bin/jconsole (jconsole) in auto mode
+arvind_2004@ARVINDM:/$ java --version
+openjdk 17.0.14 2025-01-21
+OpenJDK Runtime Environment (build 17.0.14+7-Ubuntu-124.04)
+OpenJDK 64-Bit Server VM (build 17.0.14+7-Ubuntu-124.04, mixed mode, sharing)
+arvind_2004@ARVINDM:/$ ls
+bin                boot  etc   init  lib.usr-is-merged  lost+found  mnt  proc  run   sbin.usr-is-merged  srv  tmp  var
+bin.usr-is-merged  dev   home  lib   lib64              media       opt  root  sbin  snap                sys  usr
+arvind_2004@ARVINDM:/$ sudo apt install maven -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libaopalliance-java libapache-pom-java libatinject-jsr330-api-java libcdi-api-java libcommons-cli-java libcommons-io-java
+  libcommons-lang3-java libcommons-parent-java liberror-prone-java libgeronimo-annotation-1.3-spec-java
+  libgeronimo-interceptor-3.0-spec-java libguava-java libguice-java libjansi-java libjsr305-java libmaven-parent-java
+  libmaven-resolver-java libmaven-shared-utils-java libmaven3-core-java libplexus-cipher-java libplexus-classworlds-java
+  libplexus-component-annotations-java libplexus-interpolation-java libplexus-sec-dispatcher-java libplexus-utils2-java
+  libsisu-inject-java libsisu-plexus-java libslf4j-java libwagon-file-java libwagon-http-shaded-java libwagon-provider-api-java
+Suggested packages:
+  libatinject-jsr330-api-java-doc libel-api-java libcommons-io-java-doc libasm-java libcglib-java libjsr305-java-doc
+  libmaven-shared-utils-java-doc liblogback-java libplexus-utils2-java-doc junit4 testng libcommons-logging-java liblog4j1.2-java
+The following NEW packages will be installed:
+  libaopalliance-java libapache-pom-java libatinject-jsr330-api-java libcdi-api-java libcommons-cli-java libcommons-io-java
+  libcommons-lang3-java libcommons-parent-java liberror-prone-java libgeronimo-annotation-1.3-spec-java
+  libgeronimo-interceptor-3.0-spec-java libguava-java libguice-java libjansi-java libjsr305-java libmaven-parent-java
+  libmaven-resolver-java libmaven-shared-utils-java libmaven3-core-java libplexus-cipher-java libplexus-classworlds-java
+  libplexus-component-annotations-java libplexus-interpolation-java libplexus-sec-dispatcher-java libplexus-utils2-java
+  libsisu-inject-java libsisu-plexus-java libslf4j-java libwagon-file-java libwagon-http-shaded-java libwagon-provider-api-java
+  maven
+0 upgraded, 32 newly installed, 0 to remove and 56 not upgraded.
+Need to get 10.1 MB of archives.
+After this operation, 13.1 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble/universe amd64 libapache-pom-java all 29-2 [5284 B]
+Get:2 http://archive.ubuntu.com/ubuntu noble/universe amd64 libatinject-jsr330-api-java all 1.0+ds1-5 [5348 B]
+Get:3 http://archive.ubuntu.com/ubuntu noble/universe amd64 libgeronimo-interceptor-3.0-spec-java all 1.0.1-4fakesync [8616 B]
+Get:4 http://archive.ubuntu.com/ubuntu noble/universe amd64 libcdi-api-java all 1.2-3 [54.3 kB]
+Get:5 http://archive.ubuntu.com/ubuntu noble/universe amd64 libcommons-cli-java all 1.6.0-1 [59.9 kB]
+Get:6 http://archive.ubuntu.com/ubuntu noble/universe amd64 libcommons-parent-java all 56-1 [10.7 kB]
+Get:7 http://archive.ubuntu.com/ubuntu noble/universe amd64 libcommons-io-java all 2.11.0-2 [297 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 libcommons-lang3-java all 3.14.0-1 [586 kB]
+Get:9 http://archive.ubuntu.com/ubuntu noble/universe amd64 libjsr305-java all 0.1~+svn49-11 [27.0 kB]
+Get:10 http://archive.ubuntu.com/ubuntu noble/universe amd64 libguava-java all 32.0.1-1 [2692 kB]
+Get:11 http://archive.ubuntu.com/ubuntu noble/universe amd64 liberror-prone-java all 2.18.0-1 [22.5 kB]
+Get:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 libgeronimo-annotation-1.3-spec-java all 1.3-1 [11.2 kB]
+Get:13 http://archive.ubuntu.com/ubuntu noble/universe amd64 libaopalliance-java all 20070526-7 [8166 B]
+Get:14 http://archive.ubuntu.com/ubuntu noble/universe amd64 libguice-java all 4.2.3-2 [1434 kB]
+Get:15 http://archive.ubuntu.com/ubuntu noble/universe amd64 libjansi-java all 2.4.1-2 [83.0 kB]
+Get:16 http://archive.ubuntu.com/ubuntu noble/universe amd64 libmaven-parent-java all 35-1 [5810 B]
+Get:17 http://archive.ubuntu.com/ubuntu noble/universe amd64 libplexus-utils2-java all 3.4.2-1 [256 kB]
+Get:18 http://archive.ubuntu.com/ubuntu noble/universe amd64 libwagon-provider-api-java all 3.5.3-1 [47.9 kB]
+Get:19 http://archive.ubuntu.com/ubuntu noble/universe amd64 libmaven-resolver-java all 1.6.3-1 [544 kB]
+Get:20 http://archive.ubuntu.com/ubuntu noble/universe amd64 libmaven-shared-utils-java all 3.3.4-1 [137 kB]
+Get:21 http://archive.ubuntu.com/ubuntu noble/universe amd64 libplexus-cipher-java all 2.0-1 [14.7 kB]
+Get:22 http://archive.ubuntu.com/ubuntu noble/universe amd64 libplexus-classworlds-java all 2.7.0-1 [50.0 kB]
+Get:23 http://archive.ubuntu.com/ubuntu noble/universe amd64 libplexus-component-annotations-java all 2.1.1-1 [6550 B]
+Get:24 http://archive.ubuntu.com/ubuntu noble/universe amd64 libplexus-interpolation-java all 1.26-1 [76.8 kB]
+Get:25 http://archive.ubuntu.com/ubuntu noble/universe amd64 libplexus-sec-dispatcher-java all 2.0-3 [28.1 kB]
+Get:26 http://archive.ubuntu.com/ubuntu noble/universe amd64 libslf4j-java all 1.7.32-1 [141 kB]
+Get:27 http://archive.ubuntu.com/ubuntu noble/universe amd64 libsisu-inject-java all 0.3.4-2 [347 kB]
+Get:28 http://archive.ubuntu.com/ubuntu noble/universe amd64 libsisu-plexus-java all 0.3.4-3 [181 kB]
+Get:29 http://archive.ubuntu.com/ubuntu noble/universe amd64 libmaven3-core-java all 3.8.7-2 [1565 kB]
+Get:30 http://archive.ubuntu.com/ubuntu noble/universe amd64 libwagon-file-java all 3.5.3-1 [7918 B]
+Get:31 http://archive.ubuntu.com/ubuntu noble/universe amd64 libwagon-http-shaded-java all 3.5.3-1 [1332 kB]
+Get:32 http://archive.ubuntu.com/ubuntu noble/universe amd64 maven all 3.8.7-2 [18.3 kB]
+Fetched 10.1 MB in 7s (1530 kB/s)
+Extracting templates from packages: 100%
+Selecting previously unselected package libapache-pom-java.
+(Reading database ... 42827 files and directories currently installed.)
+Preparing to unpack .../00-libapache-pom-java_29-2_all.deb ...
+Unpacking libapache-pom-java (29-2) ...
+Selecting previously unselected package libatinject-jsr330-api-java.
+Preparing to unpack .../01-libatinject-jsr330-api-java_1.0+ds1-5_all.deb ...
+Unpacking libatinject-jsr330-api-java (1.0+ds1-5) ...
+Selecting previously unselected package libgeronimo-interceptor-3.0-spec-java.
+Preparing to unpack .../02-libgeronimo-interceptor-3.0-spec-java_1.0.1-4fakesync_all.deb ...
+Unpacking libgeronimo-interceptor-3.0-spec-java (1.0.1-4fakesync) ...
+Selecting previously unselected package libcdi-api-java.
+Preparing to unpack .../03-libcdi-api-java_1.2-3_all.deb ...
+Unpacking libcdi-api-java (1.2-3) ...
+Selecting previously unselected package libcommons-cli-java.
+Preparing to unpack .../04-libcommons-cli-java_1.6.0-1_all.deb ...
+Unpacking libcommons-cli-java (1.6.0-1) ...
+Selecting previously unselected package libcommons-parent-java.
+Preparing to unpack .../05-libcommons-parent-java_56-1_all.deb ...
+Unpacking libcommons-parent-java (56-1) ...
+Selecting previously unselected package libcommons-io-java.
+Preparing to unpack .../06-libcommons-io-java_2.11.0-2_all.deb ...
+Unpacking libcommons-io-java (2.11.0-2) ...
+Selecting previously unselected package libcommons-lang3-java.
+Preparing to unpack .../07-libcommons-lang3-java_3.14.0-1_all.deb ...
+Unpacking libcommons-lang3-java (3.14.0-1) ...
+Selecting previously unselected package libjsr305-java.
+Preparing to unpack .../08-libjsr305-java_0.1~+svn49-11_all.deb ...
+Unpacking libjsr305-java (0.1~+svn49-11) ...
+Selecting previously unselected package libguava-java.
+Preparing to unpack .../09-libguava-java_32.0.1-1_all.deb ...
+Unpacking libguava-java (32.0.1-1) ...
+Selecting previously unselected package liberror-prone-java.
+Preparing to unpack .../10-liberror-prone-java_2.18.0-1_all.deb ...
+Unpacking liberror-prone-java (2.18.0-1) ...
+Selecting previously unselected package libgeronimo-annotation-1.3-spec-java.
+Preparing to unpack .../11-libgeronimo-annotation-1.3-spec-java_1.3-1_all.deb ...
+Unpacking libgeronimo-annotation-1.3-spec-java (1.3-1) ...
+Selecting previously unselected package libaopalliance-java.
+Preparing to unpack .../12-libaopalliance-java_20070526-7_all.deb ...
+Unpacking libaopalliance-java (20070526-7) ...
+Selecting previously unselected package libguice-java.
+Preparing to unpack .../13-libguice-java_4.2.3-2_all.deb ...
+Unpacking libguice-java (4.2.3-2) ...
+Selecting previously unselected package libjansi-java.
+Preparing to unpack .../14-libjansi-java_2.4.1-2_all.deb ...
+Unpacking libjansi-java (2.4.1-2) ...
+Selecting previously unselected package libmaven-parent-java.
+Preparing to unpack .../15-libmaven-parent-java_35-1_all.deb ...
+Unpacking libmaven-parent-java (35-1) ...
+Selecting previously unselected package libplexus-utils2-java.
+Preparing to unpack .../16-libplexus-utils2-java_3.4.2-1_all.deb ...
+Unpacking libplexus-utils2-java (3.4.2-1) ...
+Selecting previously unselected package libwagon-provider-api-java.
+Preparing to unpack .../17-libwagon-provider-api-java_3.5.3-1_all.deb ...
+Unpacking libwagon-provider-api-java (3.5.3-1) ...
+Selecting previously unselected package libmaven-resolver-java.
+Preparing to unpack .../18-libmaven-resolver-java_1.6.3-1_all.deb ...
+Unpacking libmaven-resolver-java (1.6.3-1) ...
+Selecting previously unselected package libmaven-shared-utils-java.
+Preparing to unpack .../19-libmaven-shared-utils-java_3.3.4-1_all.deb ...
+Unpacking libmaven-shared-utils-java (3.3.4-1) ...
+Selecting previously unselected package libplexus-cipher-java.
+Preparing to unpack .../20-libplexus-cipher-java_2.0-1_all.deb ...
+Unpacking libplexus-cipher-java (2.0-1) ...
+Selecting previously unselected package libplexus-classworlds-java.
+Preparing to unpack .../21-libplexus-classworlds-java_2.7.0-1_all.deb ...
+Unpacking libplexus-classworlds-java (2.7.0-1) ...
+Selecting previously unselected package libplexus-component-annotations-java.
+Preparing to unpack .../22-libplexus-component-annotations-java_2.1.1-1_all.deb ...
+Unpacking libplexus-component-annotations-java (2.1.1-1) ...
+Selecting previously unselected package libplexus-interpolation-java.
+Preparing to unpack .../23-libplexus-interpolation-java_1.26-1_all.deb ...
+Unpacking libplexus-interpolation-java (1.26-1) ...
+Selecting previously unselected package libplexus-sec-dispatcher-java.
+Preparing to unpack .../24-libplexus-sec-dispatcher-java_2.0-3_all.deb ...
+Unpacking libplexus-sec-dispatcher-java (2.0-3) ...
+Selecting previously unselected package libslf4j-java.
+Preparing to unpack .../25-libslf4j-java_1.7.32-1_all.deb ...
+Unpacking libslf4j-java (1.7.32-1) ...
+Selecting previously unselected package libsisu-inject-java.
+Preparing to unpack .../26-libsisu-inject-java_0.3.4-2_all.deb ...
+Unpacking libsisu-inject-java (0.3.4-2) ...
+Selecting previously unselected package libsisu-plexus-java.
+Preparing to unpack .../27-libsisu-plexus-java_0.3.4-3_all.deb ...
+Unpacking libsisu-plexus-java (0.3.4-3) ...
+Selecting previously unselected package libmaven3-core-java.
+Preparing to unpack .../28-libmaven3-core-java_3.8.7-2_all.deb ...
+Unpacking libmaven3-core-java (3.8.7-2) ...
+Selecting previously unselected package libwagon-file-java.
+Preparing to unpack .../29-libwagon-file-java_3.5.3-1_all.deb ...
+Unpacking libwagon-file-java (3.5.3-1) ...
+Selecting previously unselected package libwagon-http-shaded-java.
+Preparing to unpack .../30-libwagon-http-shaded-java_3.5.3-1_all.deb ...
+Unpacking libwagon-http-shaded-java (3.5.3-1) ...
+Selecting previously unselected package maven.
+Preparing to unpack .../31-maven_3.8.7-2_all.deb ...
+Unpacking maven (3.8.7-2) ...
+Setting up libslf4j-java (1.7.32-1) ...
+Setting up libplexus-utils2-java (3.4.2-1) ...
+Setting up libplexus-classworlds-java (2.7.0-1) ...
+Setting up libjsr305-java (0.1~+svn49-11) ...
+Setting up libaopalliance-java (20070526-7) ...
+Setting up libcommons-cli-java (1.6.0-1) ...
+Setting up libplexus-component-annotations-java (2.1.1-1) ...
+Setting up libgeronimo-annotation-1.3-spec-java (1.3-1) ...
+Setting up libgeronimo-interceptor-3.0-spec-java (1.0.1-4fakesync) ...
+Setting up libjansi-java (2.4.1-2) ...
+Setting up libapache-pom-java (29-2) ...
+Setting up libatinject-jsr330-api-java (1.0+ds1-5) ...
+Setting up libplexus-interpolation-java (1.26-1) ...
+Setting up libwagon-http-shaded-java (3.5.3-1) ...
+Setting up libcdi-api-java (1.2-3) ...
+Setting up libwagon-provider-api-java (3.5.3-1) ...
+Setting up libmaven-parent-java (35-1) ...
+Setting up libcommons-parent-java (56-1) ...
+Setting up libsisu-inject-java (0.3.4-2) ...
+Setting up libplexus-cipher-java (2.0-1) ...
+Setting up libsisu-plexus-java (0.3.4-3) ...
+Setting up libcommons-lang3-java (3.14.0-1) ...
+Setting up libplexus-sec-dispatcher-java (2.0-3) ...
+Setting up libwagon-file-java (3.5.3-1) ...
+Setting up libcommons-io-java (2.11.0-2) ...
+Setting up libmaven-resolver-java (1.6.3-1) ...
+Setting up libmaven-shared-utils-java (3.3.4-1) ...
+Setting up libguava-java (32.0.1-1) ...
+Setting up liberror-prone-java (2.18.0-1) ...
+Setting up libguice-java (4.2.3-2) ...
+Setting up libmaven3-core-java (3.8.7-2) ...
+Setting up maven (3.8.7-2) ...
+update-alternatives: using /usr/share/maven/bin/mvn to provide /usr/bin/mvn (mvn) in auto mode
+arvind_2004@ARVINDM:/$ sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins
+--2025-03-19 05:38:22--  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+Resolving pkg.jenkins.io (pkg.jenkins.io)... 151.101.158.133, 2a04:4e42:25::645
+Connecting to pkg.jenkins.io (pkg.jenkins.io)|151.101.158.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 3175 (3.1K) [application/pgp-keys]
+Saving to: ‘/usr/share/keyrings/jenkins-keyring.asc’
+
+/usr/share/keyrings/jenkins-keyri 100%[==========================================================>]   3.10K  --.-KB/s    in 0s
+
+2025-03-19 05:38:22 (13.0 MB/s) - ‘/usr/share/keyrings/jenkins-keyring.asc’ saved [3175/3175]
+
+Hit:1 http://security.ubuntu.com/ubuntu noble-security InRelease
+Ign:2 https://pkg.jenkins.io/debian-stable binary/ InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu noble InRelease
+Get:4 https://pkg.jenkins.io/debian-stable binary/ Release [2044 B]
+Get:5 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:6 https://pkg.jenkins.io/debian-stable binary/ Release.gpg [833 B]
+Get:7 https://pkg.jenkins.io/debian-stable binary/ Packages [28.7 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Get:9 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [208 B]
+Get:10 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 c-n-f Metadata [112 B]
+Get:11 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [14.2 kB]
+Get:12 http://archive.ubuntu.com/ubuntu noble-backports/universe Translation-en [12.1 kB]
+Get:13 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [20.0 kB]
+Get:14 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 c-n-f Metadata [1256 B]
+Get:15 http://archive.ubuntu.com/ubuntu noble-backports/restricted amd64 Components [212 B]
+Get:16 http://archive.ubuntu.com/ubuntu noble-backports/restricted amd64 c-n-f Metadata [116 B]
+Get:17 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Components [212 B]
+Get:18 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 c-n-f Metadata [116 B]
+Fetched 332 kB in 7s (51.1 kB/s)
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  net-tools
+The following NEW packages will be installed:
+  jenkins net-tools
+0 upgraded, 2 newly installed, 0 to remove and 56 not upgraded.
+Need to get 95.0 MB of archives.
+After this operation, 97.6 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu noble/main amd64 net-tools amd64 2.10-0.1ubuntu4 [204 kB]
+Get:2 https://pkg.jenkins.io/debian-stable binary/ jenkins 2.492.2 [94.8 MB]
+Fetched 95.0 MB in 49s (1959 kB/s)
+Selecting previously unselected package net-tools.
+(Reading database ... 43816 files and directories currently installed.)
+Preparing to unpack .../net-tools_2.10-0.1ubuntu4_amd64.deb ...
+Unpacking net-tools (2.10-0.1ubuntu4) ...
+Selecting previously unselected package jenkins.
+Preparing to unpack .../jenkins_2.492.2_all.deb ...
+Unpacking jenkins (2.492.2) ...
+Setting up net-tools (2.10-0.1ubuntu4) ...
+Setting up jenkins (2.492.2) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/jenkins.service → /usr/lib/systemd/system/jenkins.service.
+Processing triggers for man-db (2.12.0-4build2) ...
+arvind_2004@ARVINDM:/$ sudo service jenkins restart
+arvind_2004@ARVINDM:/$ jenkins --version
+2.492.2
+arvind_2004@ARVINDM:/$ sudo cat var/lib/jenkins/secrets/initialAdminPassword
+59edc6648f0446a5a1e4e8aed37c699c
+arvind_2004@ARVINDM:/$ sudo service jenkins status
+● jenkins.service - Jenkins Continuous Integration Server
+     Loaded: loaded (/usr/lib/systemd/system/jenkins.service; enabled; preset: enabled)
+     Active: active (running) since Wed 2025-03-19 05:40:21 UTC; 10min ago
+   Main PID: 3353 (java)
+      Tasks: 62 (limit: 9329)
+     Memory: 923.0M ()
+     CGroup: /system.slice/jenkins.service
+             └─3353 /usr/bin/java -Djava.awt.headless=true -jar /usr/share/java/jenkins.war --webroot=/var/cache/jenkins/war --httpP>
+
+Mar 19 05:50:17 ARVINDM jenkins[3353]: 2025-03-19 05:50:17.284+0000 [id=102]        INFO        h.m.UpdateCenter$UpdateCenterConfigu>
+Mar 19 05:50:20 ARVINDM jenkins[3353]: 2025-03-19 05:50:20.732+0000 [id=102]        INFO        h.model.UpdateCenter$DownloadJob#run>
+Mar 19 05:50:20 ARVINDM jenkins[3353]: 2025-03-19 05:50:20.733+0000 [id=102]        INFO        h.model.UpdateCenter$DownloadJob#run>
+Mar 19 05:50:20 ARVINDM jenkins[3353]: 2025-03-19 05:50:20.734+0000 [id=102]        INFO        h.m.UpdateCenter$UpdateCenterConfigu>
+Mar 19 05:50:23 ARVINDM jenkins[3353]: 2025-03-19 05:50:23.780+0000 [id=102]        INFO        h.model.UpdateCenter$DownloadJob#run>
+Mar 19 05:50:23 ARVINDM jenkins[3353]: 2025-03-19 05:50:23.780+0000 [id=102]        INFO        h.model.UpdateCenter$DownloadJob#run>
+Mar 19 05:50:23 ARVINDM jenkins[3353]: 2025-03-19 05:50:23.781+0000 [id=102]        INFO        h.m.UpdateCenter$UpdateCenterConfigu>
+Mar 19 05:50:26 ARVINDM jenkins[3353]: 2025-03-19 05:50:26.852+0000 [id=102]        INFO        h.model.UpdateCenter$DownloadJob#run>
+Mar 19 05:50:26 ARVINDM jenkins[3353]: 2025-03-19 05:50:26.852+0000 [id=102]        INFO        h.model.UpdateCenter$DownloadJob#run>
+Mar 19 05:50:26 ARVINDM jenkins[3353]: 2025-03-19 05:50:26.853+0000 [id=102]        INFO        h.m.UpdateCenter$UpdateCenterConfigu>
+
+arvind_2004@ARVINDM:/$ sudo apt install docker.io -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  bridge-utils containerd dns-root-data dnsmasq-base iptables libip4tc2 libip6tc2 libnetfilter-conntrack3 libnfnetlink0
+  libnftables1 libnftnl11 nftables pigz runc ubuntu-fan
+Suggested packages:
+  ifupdown aufs-tools btrfs-progs cgroupfs-mount | cgroup-lite debootstrap docker-buildx docker-compose-v2 docker-doc rinse
+  zfs-fuse | zfsutils firewalld
+The following NEW packages will be installed:
+  bridge-utils containerd dns-root-data dnsmasq-base docker.io iptables libip4tc2 libip6tc2 libnetfilter-conntrack3 libnfnetlink0
+  libnftables1 libnftnl11 nftables pigz runc ubuntu-fan
+0 upgraded, 16 newly installed, 0 to remove and 56 not upgraded.
+Need to get 79.6 MB of archives.
+After this operation, 306 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble/universe amd64 pigz amd64 2.8-1 [65.6 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libip4tc2 amd64 1.8.10-3ubuntu2 [23.3 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libip6tc2 amd64 1.8.10-3ubuntu2 [23.7 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libnfnetlink0 amd64 1.0.2-2build1 [14.8 kB]
+Get:5 http://archive.ubuntu.com/ubuntu noble/main amd64 libnetfilter-conntrack3 amd64 1.0.9-6build1 [45.2 kB]
+Get:6 http://archive.ubuntu.com/ubuntu noble/main amd64 libnftnl11 amd64 1.2.6-2build1 [66.0 kB]
+Get:7 http://archive.ubuntu.com/ubuntu noble/main amd64 iptables amd64 1.8.10-3ubuntu2 [381 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble/main amd64 libnftables1 amd64 1.0.9-1build1 [358 kB]
+Get:9 http://archive.ubuntu.com/ubuntu noble/main amd64 nftables amd64 1.0.9-1build1 [69.8 kB]
+Get:10 http://archive.ubuntu.com/ubuntu noble/main amd64 bridge-utils amd64 1.7.1-1ubuntu2 [33.9 kB]
+Get:11 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 runc amd64 1.1.12-0ubuntu3.1 [8599 kB]
+Get:12 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 containerd amd64 1.7.24-0ubuntu1~24.04.1 [37.0 MB]
+Get:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dns-root-data all 2024071801~ubuntu0.24.04.1 [5918 B]
+Get:14 http://archive.ubuntu.com/ubuntu noble/main amd64 dnsmasq-base amd64 2.90-2build2 [375 kB]
+Get:15 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 docker.io amd64 26.1.3-0ubuntu1~24.04.1 [32.4 MB]
+Get:16 http://archive.ubuntu.com/ubuntu noble/universe amd64 ubuntu-fan all 0.12.16 [35.2 kB]
+Fetched 79.6 MB in 28s (2819 kB/s)
+Preconfiguring packages ...
+Selecting previously unselected package pigz.
+(Reading database ... 43879 files and directories currently installed.)
+Preparing to unpack .../00-pigz_2.8-1_amd64.deb ...
+Unpacking pigz (2.8-1) ...
+Selecting previously unselected package libip4tc2:amd64.
+Preparing to unpack .../01-libip4tc2_1.8.10-3ubuntu2_amd64.deb ...
+Unpacking libip4tc2:amd64 (1.8.10-3ubuntu2) ...
+Selecting previously unselected package libip6tc2:amd64.
+Preparing to unpack .../02-libip6tc2_1.8.10-3ubuntu2_amd64.deb ...
+Unpacking libip6tc2:amd64 (1.8.10-3ubuntu2) ...
+Selecting previously unselected package libnfnetlink0:amd64.
+Preparing to unpack .../03-libnfnetlink0_1.0.2-2build1_amd64.deb ...
+Unpacking libnfnetlink0:amd64 (1.0.2-2build1) ...
+Selecting previously unselected package libnetfilter-conntrack3:amd64.
+Preparing to unpack .../04-libnetfilter-conntrack3_1.0.9-6build1_amd64.deb ...
+Unpacking libnetfilter-conntrack3:amd64 (1.0.9-6build1) ...
+Selecting previously unselected package libnftnl11:amd64.
+Preparing to unpack .../05-libnftnl11_1.2.6-2build1_amd64.deb ...
+Unpacking libnftnl11:amd64 (1.2.6-2build1) ...
+Selecting previously unselected package iptables.
+Preparing to unpack .../06-iptables_1.8.10-3ubuntu2_amd64.deb ...
+Unpacking iptables (1.8.10-3ubuntu2) ...
+Selecting previously unselected package libnftables1:amd64.
+Preparing to unpack .../07-libnftables1_1.0.9-1build1_amd64.deb ...
+Unpacking libnftables1:amd64 (1.0.9-1build1) ...
+Selecting previously unselected package nftables.
+Preparing to unpack .../08-nftables_1.0.9-1build1_amd64.deb ...
+Unpacking nftables (1.0.9-1build1) ...
+Selecting previously unselected package bridge-utils.
+Preparing to unpack .../09-bridge-utils_1.7.1-1ubuntu2_amd64.deb ...
+Unpacking bridge-utils (1.7.1-1ubuntu2) ...
+Selecting previously unselected package runc.
+Preparing to unpack .../10-runc_1.1.12-0ubuntu3.1_amd64.deb ...
+Unpacking runc (1.1.12-0ubuntu3.1) ...
+Selecting previously unselected package containerd.
+Preparing to unpack .../11-containerd_1.7.24-0ubuntu1~24.04.1_amd64.deb ...
+Unpacking containerd (1.7.24-0ubuntu1~24.04.1) ...
+Selecting previously unselected package dns-root-data.
+Preparing to unpack .../12-dns-root-data_2024071801~ubuntu0.24.04.1_all.deb ...
+Unpacking dns-root-data (2024071801~ubuntu0.24.04.1) ...
+Selecting previously unselected package dnsmasq-base.
+Preparing to unpack .../13-dnsmasq-base_2.90-2build2_amd64.deb ...
+Unpacking dnsmasq-base (2.90-2build2) ...
+Selecting previously unselected package docker.io.
+Preparing to unpack .../14-docker.io_26.1.3-0ubuntu1~24.04.1_amd64.deb ...
+Unpacking docker.io (26.1.3-0ubuntu1~24.04.1) ...
+Selecting previously unselected package ubuntu-fan.
+Preparing to unpack .../15-ubuntu-fan_0.12.16_all.deb ...
+Unpacking ubuntu-fan (0.12.16) ...
+Setting up libip4tc2:amd64 (1.8.10-3ubuntu2) ...
+Setting up libip6tc2:amd64 (1.8.10-3ubuntu2) ...
+Setting up libnftnl11:amd64 (1.2.6-2build1) ...
+Setting up runc (1.1.12-0ubuntu3.1) ...
+Setting up dns-root-data (2024071801~ubuntu0.24.04.1) ...
+Setting up bridge-utils (1.7.1-1ubuntu2) ...
+Setting up pigz (2.8-1) ...
+Setting up libnfnetlink0:amd64 (1.0.2-2build1) ...
+Setting up containerd (1.7.24-0ubuntu1~24.04.1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/containerd.service → /usr/lib/systemd/system/containerd.service.
+Setting up libnftables1:amd64 (1.0.9-1build1) ...
+Setting up nftables (1.0.9-1build1) ...
+Setting up libnetfilter-conntrack3:amd64 (1.0.9-6build1) ...
+Setting up iptables (1.8.10-3ubuntu2) ...
+update-alternatives: using /usr/sbin/iptables-legacy to provide /usr/sbin/iptables (iptables) in auto mode
+update-alternatives: using /usr/sbin/ip6tables-legacy to provide /usr/sbin/ip6tables (ip6tables) in auto mode
+update-alternatives: using /usr/sbin/iptables-nft to provide /usr/sbin/iptables (iptables) in auto mode
+update-alternatives: using /usr/sbin/ip6tables-nft to provide /usr/sbin/ip6tables (ip6tables) in auto mode
+update-alternatives: using /usr/sbin/arptables-nft to provide /usr/sbin/arptables (arptables) in auto mode
+update-alternatives: using /usr/sbin/ebtables-nft to provide /usr/sbin/ebtables (ebtables) in auto mode
+Setting up docker.io (26.1.3-0ubuntu1~24.04.1) ...
+info: Selecting GID from range 100 to 999 ...
+info: Adding group `docker' (GID 109) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /usr/lib/systemd/system/docker.service.
+Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /usr/lib/systemd/system/docker.socket.
+Setting up dnsmasq-base (2.90-2build2) ...
+Setting up ubuntu-fan (0.12.16) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/ubuntu-fan.service → /usr/lib/systemd/system/ubuntu-fan.service.
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for dbus (1.14.10-4ubuntu4.1) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.4) ...
+arvind_2004@ARVINDM:/$ sudo service docker restart
+arvind_2004@ARVINDM:/$ sudo service docker status
+● docker.service - Docker Application Container Engine
+     Loaded: loaded (/usr/lib/systemd/system/docker.service; enabled; preset: enabled)
+     Active: active (running) since Wed 2025-03-19 05:55:19 UTC; 17s ago
+TriggeredBy: ● docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 4479 (dockerd)
+      Tasks: 16
+     Memory: 35.3M ()
+     CGroup: /system.slice/docker.service
+             └─4479 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+
+Mar 19 05:55:19 ARVINDM dockerd[4479]: time="2025-03-19T05:55:19.602923236Z" level=info msg="Default bridge (docker0) is assigned wi>
+Mar 19 05:55:19 ARVINDM dockerd[4479]: time="2025-03-19T05:55:19.777283894Z" level=info msg="Loading containers: done."
+Mar 19 05:55:19 ARVINDM dockerd[4479]: time="2025-03-19T05:55:19.816833574Z" level=warning msg="WARNING: No blkio throttle.read_bps_>
+Mar 19 05:55:19 ARVINDM dockerd[4479]: time="2025-03-19T05:55:19.816895864Z" level=warning msg="WARNING: No blkio throttle.write_bps>
+Mar 19 05:55:19 ARVINDM dockerd[4479]: time="2025-03-19T05:55:19.816903517Z" level=warning msg="WARNING: No blkio throttle.read_iops>
+Mar 19 05:55:19 ARVINDM dockerd[4479]: time="2025-03-19T05:55:19.816909308Z" level=warning msg="WARNING: No blkio throttle.write_iop>
+Mar 19 05:55:19 ARVINDM dockerd[4479]: time="2025-03-19T05:55:19.816945065Z" level=info msg="Docker daemon" commit="26.1.3-0ubuntu1~>
+Mar 19 05:55:19 ARVINDM dockerd[4479]: time="2025-03-19T05:55:19.817041446Z" level=info msg="Daemon has completed initialization"
+Mar 19 05:55:19 ARVINDM dockerd[4479]: time="2025-03-19T05:55:19.863331403Z" level=info msg="API listen on /run/docker.sock"
+Mar 19 05:55:19 ARVINDM systemd[1]: Started docker.service - Docker Application Container Engine.
+lines 1-21/21 (END)
+arvind_2004@ARVINDM:/$ sudo usermod -aG docker $USER
+arvind_2004@ARVINDM:/$ docker images
+permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Head "http://%2Fvar%2Frun%2Fdocker.sock/_ping": dial unix /var/run/docker.sock: connect: permission denied
+arvind_2004@ARVINDM:/$ sudo systemctl start docker
+arvind_2004@ARVINDM:/$ sudo systemctl enable docker
+arvind_2004@ARVINDM:/$ sudo docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+arvind_2004@ARVINDM:/$ sudo docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+arvind_2004@ARVINDM:/$ sudo usermod -aG docker $USER
+arvind_2004@ARVINDM:/$ newgrp docker
+arvind_2004@ARVINDM:/$ docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+arvind_2004@ARVINDM:/$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+arvind_2004@ARVINDM:/$  sudo chmod 666 /var/run/docker.sock
+arvind_2004@ARVINDM:/$ minikube
+Command 'minikube' not found, did you mean:
+  command 'minitube' from deb minitube (3.9.3-2)
+Try: sudo apt install <deb name>
+arvind_2004@ARVINDM:/$ docker --version
+Docker version 26.1.3, build 26.1.3-0ubuntu1~24.04.1
+arvind_2004@ARVINDM:/$ curl -LO https://dl.k8s.io/release/v1.32.0/bin/linux/amd64/kubectl
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   138  100   138    0     0    234      0 --:--:-- --:--:-- --:--:--   234
+Warning: Failed to open the file kubectl: Permission denied
+  0 54.6M    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+curl: (23) Failure writing output to destination
+arvind_2004@ARVINDM:/$ cd ~
+arvind_2004@ARVINDM:~$ curl -LO https://dl.k8s.io/release/v1.32.0/bin/linux/amd64/kubectl
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   138  100   138    0     0    226      0 --:--:-- --:--:-- --:--:--   226
+100 54.6M  100 54.6M    0     0  2683k      0  0:00:20  0:00:20 --:--:-- 3563k
+arvind_2004@ARVINDM:~$ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+arvind_2004@ARVINDM:~$ chmod +x kubectl
+mkdir -p ~/.local/bin
+mv ./kubectl ~/.local/bin/kubectl
+arvind_2004@ARVINDM:~$
+kubectl version --client
+error: unknown command "version\u00a0--client" for "kubectl"
+arvind_2004@ARVINDM:~$ kubectl version --client
+error: unknown command "version\u00a0--client" for "kubectl"
+arvind_2004@ARVINDM:~$ kubectl version --client
+Client Version: v1.32.0
+Kustomize Version: v5.5.0
+arvind_2004@ARVINDM:~$ curl -LO https://github.com/kubernetes/minikube/releases/latest/download/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-amd64
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
+100  119M  100  119M    0     0  3604k      0  0:00:33  0:00:33 --:--:-- 5394k'
+'arvind_2004@ARVINDM:~$ docker login
+Log in with your Docker ID or email address to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com/ to create one.
+You can log in with your password or a Personal Access Token (PAT). Using a limited-scope PAT grants better security and is required for organizations using SSO. Learn more at https://docs.docker.com/go/access-tokens/
+
+Username: Arvind
+Password:
+Error response from daemon: Get "https://registry-1.docker.io/v2/": unauthorized: incorrect username or password
+arvind_2004@ARVINDM:~$ docker login
+Log in with your Docker ID or email address to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com/ to create one.
+You can log in with your password or a Personal Access Token (PAT). Using a limited-scope PAT grants better security and is required for organizations using SSO. Learn more at https://docs.docker.com/go/access-tokens/
+
+Username: arvind
+Password:
+Error response from daemon: Get "https://registry-1.docker.io/v2/": unauthorized: incorrect username or password
+arvind_2004@ARVINDM:~$ docker logout
+Removing login credentials for https://index.docker.io/v1/
+arvind_2004@ARVINDM:~$ docker login
+Log in with your Docker ID or email address to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com/ to create one.
+You can log in with your password or a Personal Access Token (PAT). Using a limited-scope PAT grants better security and is required for organizations using SSO. Learn more at https://docs.docker.com/go/access-tokens/
+
+Username: arvind
+Password:
+Error response from daemon: Get "https://registry-1.docker.io/v2/": unauthorized: incorrect username or password
+arvind_2004@ARVINDM:~$ docker logout
+Removing login credentials for https://index.docker.io/v1/
+arvind_2004@ARVINDM:~$ docker login -u "arvind" -p "31-Aug-04"
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+Error response from daemon: Get "https://registry-1.docker.io/v2/": unauthorized: incorrect username or password
+arvind_2004@ARVINDM:~$ docker login -u "arvind"
+Password:
+Error response from daemon: Get "https://registry-1.docker.io/v2/": unauthorized: incorrect username or password
+arvind_2004@ARVINDM:~$ docker login -u "arvindm2004"
+Password:
+WARNING! Your password will be stored unencrypted in /home/arvind_2004/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+arvind_2004@ARVINDM:~$ minikube start
+😄  minikube v1.35.0 on Ubuntu 24.04 (amd64)
+✨  Automatically selected the docker driver. Other choices: none, ssh
+📌  Using Docker driver with root privileges
+👍  Starting "minikube" primary control-plane node in "minikube" cluster
+🚜  Pulling base image v0.0.46 ...
+💾  Downloading Kubernetes v1.32.0 preload ...
+    > preloaded-images-k8s-v18-v1...:  333.57 MiB / 333.57 MiB  100.00% 1.14 Mi
+    > gcr.io/k8s-minikube/kicbase...:  500.31 MiB / 500.31 MiB  100.00% 1.15 Mi
+🔥  Creating docker container (CPUs=2, Memory=2200MB) ...
+🐳  Preparing Kubernetes v1.32.0 on Docker 27.4.1 ...
+    ▪ Generating certificates and keys ...
+    ▪ Booting up control plane ...
+    ▪ Configuring RBAC rules ...
+🔗  Configuring bridge CNI (Container Networking Interface) ...
+🔎  Verifying Kubernetes components...
+    ▪ Using image gcr.io/k8s-minikube/storage-provisioner:v5
+🌟  Enabled addons: storage-provisioner, default-storageclass
+🏄  Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
+arvind_2004@ARVINDM:~$ minikube status
+minikube
+type: Control Plane
+host: Running
+kubelet: Running
+apiserver: Running
+kubeconfig: Configured
+
+arvind_2004@ARVINDM:~$ kubectl get pod
+No resources found in default namespace.
+arvind_2004@ARVINDM:~$ kubectl get deploy
+No resources found in default namespace.
+arvind_2004@ARVINDM:~$ kubectl cluster-info
+Kubernetes control plane is running at https://127.0.0.1:32769
+CoreDNS is running at https://127.0.0.1:32769/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+arvind_2004@ARVINDM:~$ kubectl get namespaces
+NAME              STATUS   AGE
+default           Active   6m47s
+kube-node-lease   Active   6m47s
+kube-public       Active   6m47s
+kube-system       Active   6m48s
+arvind_2004@ARVINDM:~$ kubectl get pods -n default
+No resources found in default namespace.
+arvind_2004@ARVINDM:~$ kubectl get pods --all-namespaces
+NAMESPACE     NAME                               READY   STATUS    RESTARTS       AGE
+kube-system   coredns-668d6bf9bc-6lcpd           1/1     Running   0              7m41s
+kube-system   etcd-minikube                      1/1     Running   0              7m45s
+kube-system   kube-apiserver-minikube            1/1     Running   0              7m48s
+kube-system   kube-controller-manager-minikube   1/1     Running   0              7m45s
+kube-system   kube-proxy-cpvwc                   1/1     Running   0              7m41s
+kube-system   kube-scheduler-minikube            1/1     Running   0              7m45s
+kube-system   storage-provisioner                1/1     Running   1 (7m8s ago)   7m43s
+arvind_2004@ARVINDM:~$ kubectl get deployments --all-namespaces
+NAMESPACE     NAME      READY   UP-TO-DATE   AVAILABLE   AGE
+kube-system   coredns   1/1     1            1           8m6s
+arvind_2004@ARVINDM:~$ kubectl get services --all-namespaces
+NAMESPACE     NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)                  AGE
+default       kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP                  8m18s
+kube-system   kube-dns     ClusterIP   10.96.0.10   <none>        53/UDP,53/TCP,9153/TCP   8m17s
+arvind_2004@ARVINDM:~$ kubectl get nodes
+NAME       STATUS   ROLES           AGE     VERSION
+minikube   Ready    control-plane   8m35s   v1.32.0
+arvind_2004@ARVINDM:~$ kubectl create deployment nginx --image=nginx
+deployment.apps/nginx created
+arvind_2004@ARVINDM:~$ kubectl get pods
+NAME                     READY   STATUS              RESTARTS   AGE
+nginx-5869d7778c-skzgz   0/1     ContainerCreating   0          7s
+arvind_2004@ARVINDM:~$ kubectl config view --minify | grep namespace
+    namespace: default
+arvind_2004@ARVINDM:~$ kubectl get pod
+NAME                     READY   STATUS    RESTARTS   AGE
+nginx-5869d7778c-skzgz   1/1     Running   0          64s
+arvind_2004@ARVINDM:~$ kubeclt get deploy
+kubeclt: command not found
+arvind_2004@ARVINDM:~$ kubectl get deploy
+NAME    READY   UP-TO-DATE   AVAILABLE   AGE
+nginx   1/1     1            1           112s
+arvind_2004@ARVINDM:~$ kubectl get pod -o wide
+kubectl get pod -o wide: command not found
+arvind_2004@ARVINDM:~$ kubectl get pod -o wide
+NAME                     READY   STATUS    RESTARTS   AGE     IP           NODE       NOMINATED NODE   READINESS GATES
+nginx-5869d7778c-skzgz   1/1     Running   0          2m44s   10.244.0.3   minikube   <none>           <none>
+arvind_2004@ARVINDM:~$
+
+Microsoft Windows [Version 10.0.22631.4751]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Arvind M>wsl -d Ubuntu
+arvind_2004@ARVINDM:/mnt/c/Users/Arvind M$ cd ..
+arvind_2004@ARVINDM:/mnt/c/Users$ cd ..
+arvind_2004@ARVINDM:/mnt/c$ cd ..
+arvind_2004@ARVINDM:/mnt$ cd ..
+arvind_2004@ARVINDM:/$ cd ..
+arvind_2004@ARVINDM:/$ docker login
+Authenticating with existing credentials...
+WARNING! Your password will be stored unencrypted in /home/arvind_2004/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+arvind_2004@ARVINDM:/$ minikube status
+minikube
+type: Control Plane
+host: Stopped
+kubelet: Stopped
+apiserver: Stopped
+kubeconfig: Stopped
+
+arvind_2004@ARVINDM:/$ minikube start
+😄  minikube v1.35.0 on Ubuntu 24.04 (amd64)
+✨  Using the docker driver based on existing profile
+👍  Starting "minikube" primary control-plane node in "minikube" cluster
+🚜  Pulling base image v0.0.46 ...
+🔄  Restarting existing docker container for "minikube" ...
+🤦  StartHost failed, but will try again: driver start: start: docker start minikube: exit status 1
+stdout:
+
+stderr:
+Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: error during container init: error setting cgroup config for procHooks process: failed to write "a *:* rwm": write /sys/fs/cgroup/devices/docker/12b267417d8b3be2eb4ba7f5f62ccae26497c699239886050de0aa72f5e90e5d/devices.allow: invalid argument: unknown
+Error: failed to start containers: minikube
+
+^C
+arvind_2004@ARVINDM:/$ minikube start
+😄  minikube v1.35.0 on Ubuntu 24.04 (amd64)
+✨  Using the docker driver based on existing profile
+👍  Starting "minikube" primary control-plane node in "minikube" cluster
+🚜  Pulling base image v0.0.46 ...
+🔄  Restarting existing docker container for "minikube" ...
+🐳  Preparing Kubernetes v1.32.0 on Docker 27.4.1 ...
+🔎  Verifying Kubernetes components...
+    ▪ Using image gcr.io/k8s-minikube/storage-provisioner:v5
+🌟  Enabled addons: storage-provisioner, default-storageclass
+🏄  Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
+arvind_2004@ARVINDM:/$ minikube status
+minikube
+type: Control Plane
+host: Running
+kubelet: Running
+apiserver: Running
+kubeconfig: Configured
+
+arvind_2004@ARVINDM:/$ git --version
+git version 2.43.0
+arvind_2004@ARVINDM:/$ mvn --version
+Apache Maven 3.8.7
+Maven home: /usr/share/maven
+Java version: 17.0.14, vendor: Ubuntu, runtime: /usr/lib/jvm/java-17-openjdk-amd64
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "5.15.167.4-microsoft-standard-wsl2", arch: "amd64", family: "unix"
+arvind_2004@ARVINDM:/$ sudo apt install docker-compose -y
+[sudo] password for arvind_2004:
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package docker-compose -y
+arvind_2004@ARVINDM:/$ docker-compose.yml simple-web-app
+docker-compose.yml: command not found
+arvind_2004@ARVINDM:/$ kubectl get pod
+NAME                     READY   STATUS    RESTARTS        AGE
+nginx-5869d7778c-skzgz   1/1     Running   1 (7m10s ago)   126m
+arvind_2004@ARVINDM:/$ docker start david-db-1
+Error response from daemon: No such container: david-db-1
+Error: failed to start containers: david-db-1
+arvind_2004@ARVINDM:/$ docker-compose up -d
+ERROR:
+        Can't find a suitable configuration file in this directory or any
+        parent. Are you in the right directory?
+
+        Supported filenames: docker-compose.yml, docker-compose.yaml, compose.yml, compose.yaml
+
+arvind_2004@ARVINDM:/$ docker-compose.yml
+docker-compose.yml: command not found
+arvind_2004@ARVINDM:/$ docker-compose.yml up -d
+docker-compose.yml: command not found
+arvind_2004@ARVINDM:/$ docker ps -a
+CONTAINER ID   IMAGE                                 COMMAND                  CREATED       STATUS         PORTS
+  NAMES
+12b267417d8b   gcr.io/k8s-minikube/kicbase:v0.0.46   "/usr/local/bin/entr…"   2 hours ago   Up 9 minutes   127.0.0.1:32777->22/tcp, 127.0.0.1:32776->2376/tcp, 127.0.0.1:32775->5000/tcp, 127.0.0.1:32774->8443/tcp, 127.0.0.1:32773->32443/tcp   minikube
+arvind_2004@ARVINDM:/$ docker-compose up -d
+ERROR:
+        Can't find a suitable configuration file in this directory or any
+        parent. Are you in the right directory?
+
+        Supported filenames: docker-compose.yml, docker-compose.yaml, compose.yml, compose.yaml
+
+arvind_2004@ARVINDM:/$ ls
+bin                boot  etc   init  lib.usr-is-merged  lost+found  mnt  proc  run   sbin.usr-is-merged  srv  tmp  var
+bin.usr-is-merged  dev   home  lib   lib64              media       opt  root  sbin  snap                sys  usr
+arvind_2004@ARVINDM:/$ find ~ -name "docker-compose.yml"
+/home/arvind_2004/docker-compose.yml
+arvind_2004@ARVINDM:/$ cd /home/arvind_2004/docker-compose.yml
+-bash: cd: /home/arvind_2004/docker-compose.yml: Not a directory
+arvind_2004@ARVINDM:/$ cd /home/arvind_2004
+arvind_2004@ARVINDM:~$ docker-compose up -d
+Creating network "arvind_2004_default" with the default driver
+Pulling web (nginx:latest)...
+latest: Pulling from library/nginx
+6e909acdb790: Pull complete
+5eaa34f5b9c2: Pull complete
+417c4bccf534: Pull complete
+e7e0ca015e55: Pull complete
+373fe654e984: Pull complete
+97f5c0f51d43: Pull complete
+c22eb46e871a: Pull complete
+Digest: sha256:124b44bfc9ccd1f3cedf4b592d4d1e8bddb78b51ec2ed5056c52d3692baebc19
+Status: Downloaded newer image for nginx:latest
+Pulling db (mysql:latest)...
+latest: Pulling from library/mysql
+804bb8ae89de: Pull complete
+1b515e7ceb69: Pull complete
+eaa11c0a9f08: Pull complete
+8d18181893b8: Pull complete
+e0a910cc8604: Pull complete
+bc0c792ca096: Pull complete
+8d73d2a73425: Pull complete
+4a7e00d873b9: Pull complete
+27a2553d6a80: Pull complete
+69e76254f502: Pull complete
+Digest: sha256:9b9d0aab4860798acff13d2a0ece3bc26639fe18b83fa5cd3e3d0e16b3ed05dd
+Status: Downloaded newer image for mysql:latest
+Creating arvind_2004_db_1  ... done
+Creating arvind_2004_web_1 ... done
+arvind_2004@ARVINDM:~$ docker exec -it david-db-1 /bin/bash
+Error response from daemon: No such container: david-db-1
+arvind_2004@ARVINDM:~$ sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 71.4M  100 71.4M    0     0  3706k      0  0:00:19  0:00:19 --:--:-- 4355k
+arvind_2004@ARVINDM:~$ remove
+Command 'remove' not found, did you mean:
+  command 'remote' from snap remote (1.09)
+See 'snap info <snapname>' for additional versions.
+arvind_2004@ARVINDM:~$ minikub remove
+minikub: command not found
+arvind_2004@ARVINDM:~$ minikube delete
+🔥  Deleting "minikube" in docker ...
+🔥  Deleting container "minikube" ...
+🔥  Removing /home/arvind_2004/.minikube/machines/minikube ...
+💀  Removed all traces of the "minikube" cluster.
+arvind_2004@ARVINDM:~$ minikube restart
+Error: unknown command "restart" for "minikube"
+
+Did you mean this?
+        start
+
+Run 'minikube --help' for usage.
+arvind_2004@ARVINDM:~$ minikube start
+😄  minikube v1.35.0 on Ubuntu 24.04 (amd64)
+✨  Automatically selected the docker driver. Other choices: none, ssh
+📌  Using Docker driver with root privileges
+👍  Starting "minikube" primary control-plane node in "minikube" cluster
+🚜  Pulling base image v0.0.46 ...
+🔥  Creating docker container (CPUs=2, Memory=2200MB) ...
+🐳  Preparing Kubernetes v1.32.0 on Docker 27.4.1 ...
+    ▪ Generating certificates and keys ...
+    ▪ Booting up control plane ...
+    ▪ Configuring RBAC rules ...
+🔗  Configuring bridge CNI (Container Networking Interface) ...
+🔎  Verifying Kubernetes components...
+    ▪ Using image gcr.io/k8s-minikube/storage-provisioner:v5
+🌟  Enabled addons: storage-provisioner, default-storageclass
+🏄  Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
+arvind_2004@ARVINDM:~$ ls
+docker-compose.yml
+arvind_2004@ARVINDM:~$ mkdir simplewebapp
+arvind_2004@ARVINDM:~$ ls
+docker-compose.yml  simplewebapp
+arvind_2004@ARVINDM:~$ cd simplewebapp
+arvind_2004@ARVINDM:~/simplewebapp$ git clone https://github.com/Arvind22cse/Devops_Guivi.git
+Cloning into 'Devops_Guivi'...
+remote: Enumerating objects: 14, done.
+remote: Counting objects: 100% (14/14), done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 14 (delta 0), reused 14 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (14/14), done.
+arvind_2004@ARVINDM:~/simplewebapp$ ls
+Devops_Guivi
+arvind_2004@ARVINDM:~/simplewebapp$ cd Devops_Guivi
+arvind_2004@ARVINDM:~/simplewebapp/Devops_Guivi$ mvn --version
+Apache Maven 3.8.7
+Maven home: /usr/share/maven
+Java version: 17.0.14, vendor: Ubuntu, runtime: /usr/lib/jvm/java-17-openjdk-amd64
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "5.15.167.4-microsoft-standard-wsl2", arch: "amd64", family: "unix"
+arvind_2004@ARVINDM:~/simplewebapp/Devops_Guivi$ mvn clean
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ----------------------< com.mycompany.app:my-app >----------------------
+[INFO] Building my-app Maven Webapp 1.0-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/3.1.0/maven-clean-plugin-3.1.0.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/3.1.0/maven-clean-plugin-3.1.0.pom (5.2 kB at 9.2 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/31/maven-plugins-31.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/31/maven-plugins-31.pom (10 kB at 78 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/31/maven-parent-31.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/31/maven-parent-31.pom (43 kB at 230 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/19/apache-19.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/19/apache-19.pom (15 kB at 127 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/3.1.0/maven-clean-plugin-3.1.0.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/3.1.0/maven-clean-plugin-3.1.0.jar (30 kB at 256 kB/s)
+[INFO]
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ my-app ---
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/3.0/maven-plugin-api-3.0.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/3.0/maven-plugin-api-3.0.pom (2.3 kB at 17 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven/3.0/maven-3.0.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven/3.0/maven-3.0.pom (22 kB at 175 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/15/maven-parent-15.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/15/maven-parent-15.pom (24 kB at 192 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/6/apache-6.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/6/apache-6.pom (13 kB at 85 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/3.0/maven-model-3.0.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/3.0/maven-model-3.0.pom (3.9 kB at 41 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/2.0.4/plexus-utils-2.0.4.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/2.0.4/plexus-utils-2.0.4.pom (3.3 kB at 34 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/2.0.6/plexus-2.0.6.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/2.0.6/plexus-2.0.6.pom (17 kB at 143 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/3.0/maven-artifact-3.0.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/3.0/maven-artifact-3.0.pom (1.9 kB at 20 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-inject-plexus/1.4.2/sisu-inject-plexus-1.4.2.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-inject-plexus/1.4.2/sisu-inject-plexus-1.4.2.pom (5.4 kB at 39 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/inject/guice-plexus/1.4.2/guice-plexus-1.4.2.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/inject/guice-plexus/1.4.2/guice-plexus-1.4.2.pom (3.1 kB at 22 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/inject/guice-bean/1.4.2/guice-bean-1.4.2.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/inject/guice-bean/1.4.2/guice-bean-1.4.2.pom (2.6 kB at 20 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-inject/1.4.2/sisu-inject-1.4.2.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-inject/1.4.2/sisu-inject-1.4.2.pom (1.2 kB at 10 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-parent/1.4.2/sisu-parent-1.4.2.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-parent/1.4.2/sisu-parent-1.4.2.pom (7.8 kB at 52 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/forge/forge-parent/6/forge-parent-6.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/forge/forge-parent/6/forge-parent-6.pom (11 kB at 23 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.7.1/plexus-component-annotations-1.7.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.7.1/plexus-component-annotations-1.7.1.pom (770 B at 7.5 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/1.7.1/plexus-containers-1.7.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/1.7.1/plexus-containers-1.7.1.pom (5.0 kB at 38 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/4.0/plexus-4.0.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/4.0/plexus-4.0.pom (22 kB at 110 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/forge/forge-parent/10/forge-parent-10.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/forge/forge-parent/10/forge-parent-10.pom (14 kB at 40 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.2.3/plexus-classworlds-2.2.3.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.2.3/plexus-classworlds-2.2.3.pom (4.0 kB at 16 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/2.0.5/plexus-utils-2.0.5.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/2.0.5/plexus-utils-2.0.5.pom (3.3 kB at 14 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-inject-bean/1.4.2/sisu-inject-bean-1.4.2.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-inject-bean/1.4.2/sisu-inject-bean-1.4.2.pom (5.5 kB at 25 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-guice/2.1.7/sisu-guice-2.1.7.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-guice/2.1.7/sisu-guice-2.1.7.pom (11 kB at 49 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.2.1/maven-shared-utils-3.2.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.2.1/maven-shared-utils-3.2.1.pom (5.6 kB at 31 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/30/maven-shared-components-30.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/30/maven-shared-components-30.pom (4.6 kB at 22 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/30/maven-parent-30.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/30/maven-parent-30.pom (41 kB at 169 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/18/apache-18.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/18/apache-18.pom (16 kB at 71 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.5/commons-io-2.5.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.5/commons-io-2.5.pom (13 kB at 59 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/39/commons-parent-39.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/39/commons-parent-39.pom (62 kB at 187 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/16/apache-16.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/16/apache-16.pom (15 kB at 70 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/3.0/maven-plugin-api-3.0.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/3.0/maven-model-3.0.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/2.0.4/plexus-utils-2.0.4.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/3.0/maven-artifact-3.0.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-inject-plexus/1.4.2/sisu-inject-plexus-1.4.2.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/3.0/maven-model-3.0.jar (165 kB at 329 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.7.1/plexus-component-annotations-1.7.1.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/3.0/maven-plugin-api-3.0.jar (49 kB at 81 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.2.3/plexus-classworlds-2.2.3.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/3.0/maven-artifact-3.0.jar (52 kB at 86 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-inject-bean/1.4.2/sisu-inject-bean-1.4.2.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.7.1/plexus-component-annotations-1.7.1.jar (4.3 kB at 5.9 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-guice/2.1.7/sisu-guice-2.1.7-noaop.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/2.0.4/plexus-utils-2.0.4.jar (222 kB at 306 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-inject-plexus/1.4.2/sisu-inject-plexus-1.4.2.jar (202 kB at 277 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.5/commons-io-2.5.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.2.1/maven-shared-utils-3.2.1.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.2.3/plexus-classworlds-2.2.3.jar (46 kB at 59 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-inject-bean/1.4.2/sisu-inject-bean-1.4.2.jar (153 kB at 165 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.2.1/maven-shared-utils-3.2.1.jar (167 kB at 160 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.5/commons-io-2.5.jar (209 kB at 200 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-guice/2.1.7/sisu-guice-2.1.7-noaop.jar (472 kB at 298 kB/s)
+[INFO] Deleting /home/arvind_2004/simplewebapp/Devops_Guivi/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.642 s
+[INFO] Finished at: 2025-03-19T09:45:44Z
+[INFO] ------------------------------------------------------------------------
+arvind_2004@ARVINDM:~/simplewebapp/Devops_Guivi$ cd ..
+arvind_2004@ARVINDM:~/simplewebapp$ cd ..
+arvind_2004@ARVINDM:~$ /var/lib/jenkins/workspace/Maven1/target
+-bash: /var/lib/jenkins/workspace/Maven1/target: Is a directory
+arvind_2004@ARVINDM:~$ cd /var/lib/jenkins/workspace/Maven1/target
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1/target$ ls
+maven-archiver  my-app  my-app.war
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1/target$ sudo nano Jenkinsfile
+[sudo] password for arvind_2004:
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1/target$ git config --global user.name "Arvind22cse"
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1/target$ git config --global user.email "arvindm.22cse@kongu.edu"
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1/target$ git init
+/var/lib/jenkins/workspace/Maven1/target/.git: Permission denied
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1/target$ sudo git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in /var/lib/jenkins/workspace/Maven1/target/.git/
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1/target$ sudo chown -R arvind_2004:arvind_2004 /var/lib/jenkins/workspace/Maven1/target
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1/target$ git init
+Reinitialized existing Git repository in /var/lib/jenkins/workspace/Maven1/target/.git/
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1/target$ git add .
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1/target$ git commit -m "Jenkins"
+[master (root-commit) 4d49c54] Jenkins
+ 5 files changed, 49 insertions(+)
+ create mode 100644 Jenkinsfile
+ create mode 100644 maven-archiver/pom.properties
+ create mode 100644 my-app.war
+ create mode 100644 my-app/WEB-INF/web.xml
+ create mode 100644 my-app/index.jsp
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1/target$ git branch -M master
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1/target$ git remote add origin https://github.com/Arvind22cse/sample_jerkins.git
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1/target$ git push -u origin master
+Username for 'https://github.com': Arvind22cse
+Password for 'https://Arvind22cse@github.com':
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/Arvind22cse/sample_jerkins.git/'
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1/target$ git push -u origin master
+Username for 'https://github.com': Arvind22cse
+Password for 'https://Arvind22cse@github.com':
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/Arvind22cse/sample_jerkins.git/'
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1/target$ git push -u origin master
+Username for 'https://github.com': Arvind22cse
+Password for 'https://Arvind22cse@github.com':
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/Arvind22cse/sample_jerkins.git/'
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1/target$ git push -u origin master
+Username for 'https://github.com': Arvind22cse
+Password for 'https://Arvind22cse@github.com':
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (10/10), 2.56 KiB | 2.56 MiB/s, done.
+Total 10 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Arvind22cse/sample_jerkins.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1/target$ cat Jenkinsfile
+pipeline {
+    agent any
+
+    stages {
+        stage('scm') {
+            steps {
+      git 'https://github.com/Arvind22cse/Devops_Guivi.git'
+            }
+        }
+        stage('build') {
+            steps {
+               sh "mvn clean"
+               sh "mvn install"
+}
+}
+stage('build to images') {
+            steps {
+               script{
+                  sh 'docker build -t arvindm2004/simplewebapp .'
+               }
+    }
+}
+stage('push to hub') {
+            steps {
+               script{
+                 withDockerRegistry(credentialsId: 'docker_ctl', url: 'https://index.docker.io/v1/') {
+                  sh 'docker push arvindm2004/simplewebapp'
+               }
+            }
+            }
+}
+}
+}
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1/target$ cd ..
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1$ ls
+Dockerfile  pom.xml  src  target
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1$ cd target
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1/target$ ls
+Jenkinsfile  maven-archiver  my-app  my-app.war
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1/target$ cd/
+-bash: cd/: No such file or directory
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1/target$ cd /
+arvind_2004@ARVINDM:/$ ls
+bin                boot  etc   init  lib.usr-is-merged  lost+found  mnt  proc  run   sbin.usr-is-merged  srv  tmp  var
+bin.usr-is-merged  dev   home  lib   lib64              media       opt  root  sbin  snap                sys  usr
+arvind_2004@ARVINDM:/$ cd home
+arvind_2004@ARVINDM:/home$ ls
+arvind_2004
+arvind_2004@ARVINDM:/home$ cd arvind_2004]
+-bash: cd: arvind_2004]: No such file or directory
+arvind_2004@ARVINDM:/home$ cd arvind_2004
+arvind_2004@ARVINDM:~$ ls
+docker-compose.yml  simplewebapp
+arvind_2004@ARVINDM:~$ mkdir day2
+arvind_2004@ARVINDM:~$ cd /
+arvind_2004@ARVINDM:/$ cd var/lib/jenkins/workspace/Maven1
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1$ cd target
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1/target$ ls
+Jenkinsfile  maven-archiver  my-app  my-app.war
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1/target$ mv Jenkinsfile day2
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1/target$ cd /
+arvind_2004@ARVINDM:/$ cd home/arvind_2004
+arvind_2004@ARVINDM:~$ cd day2
+arvind_2004@ARVINDM:~/day2$ ls
+arvind_2004@ARVINDM:~/day2$ cat Jenkinsfile
+cat: Jenkinsfile: No such file or directory
+arvind_2004@ARVINDM:~/day2$ cd /
+arvind_2004@ARVINDM:/$ cd /var/lib/jenkins/workspace/Maven1/target
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1/target$ cat Jenkinsfile
+cat: Jenkinsfile: No such file or directory
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1/target$ ls
+day2  maven-archiver  my-app  my-app.war
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1/target$ cat day2
+pipeline {
+    agent any
+
+    stages {
+        stage('scm') {
+            steps {
+      git 'https://github.com/Arvind22cse/Devops_Guivi.git'
+            }
+        }
+        stage('build') {
+            steps {
+               sh "mvn clean"
+               sh "mvn install"
+}
+}
+stage('build to images') {
+            steps {
+               script{
+                  sh 'docker build -t arvindm2004/simplewebapp .'
+               }
+    }
+}
+stage('push to hub') {
+            steps {
+               script{
+                 withDockerRegistry(credentialsId: 'docker_ctl', url: 'https://index.docker.io/v1/') {
+                  sh 'docker push arvindm2004/simplewebapp'
+               }
+            }
+            }
+}
+}
+}
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1/target$ mv day2 Jenkinsfile
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1/target$ ls
+Jenkinsfile  maven-archiver  my-app  my-app.war
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1/target$ cat Jenkinsfile
+pipeline {
+    agent any
+
+    stages {
+        stage('scm') {
+            steps {
+      git 'https://github.com/Arvind22cse/Devops_Guivi.git'
+            }
+        }
+        stage('build') {
+            steps {
+               sh "mvn clean"
+               sh "mvn install"
+}
+}
+stage('build to images') {
+            steps {
+               script{
+                  sh 'docker build -t arvindm2004/simplewebapp .'
+               }
+    }
+}
+stage('push to hub') {
+            steps {
+               script{
+                 withDockerRegistry(credentialsId: 'docker_ctl', url: 'https://index.docker.io/v1/') {
+                  sh 'docker push arvindm2004/simplewebapp'
+               }
+            }
+            }
+}
+}
+}
+arvind_2004@ARVINDM:/var/lib/jenkins/workspace/Maven1/target$ cd /
+arvind_2004@ARVINDM:/$ cd home/arvind_2004/day2
+arvind_2004@ARVINDM:~/day2$ sudo nano Jenkinsfile.txt
+[sudo] password for arvind_2004:
+arvind_2004@ARVINDM:~/day2$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in /home/arvind_2004/day2/.git/
+arvind_2004@ARVINDM:~/day2$ git add Jenkinsfile.txt
+arvind_2004@ARVINDM:~/day2$ git commit -m "JF"
+[master (root-commit) 84bb3f9] JF
+ 1 file changed, 33 insertions(+)
+ create mode 100644 Jenkinsfile.txt
+arvind_2004@ARVINDM:~/day2$ git branch -M "JF"
+arvind_2004@ARVINDM:~/day2$ git branch -M master
+arvind_2004@ARVINDM:~/day2$ git remote add origin https://github.com/Arvind22cse/Jenkins_Ubuntu.git
+arvind_2004@ARVINDM:~/day2$ git push -u origin master
+Username for 'https://github.com': Arvind22cse
+Password for 'https://Arvind22cse@github.com':
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 483 bytes | 483.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Arvind22cse/Jenkins_Ubuntu.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+arvind_2004@ARVINDM:~/day2$ [Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (build to images)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
++ docker build -t arvindm2004/simplewebapp .
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%2Fvar%2Frun%2Fdocker.sock/v1.45/build?buildargs=%7B%7D&cachefrom=%5B%5D&cgroupparent=&cpuperiod=0&cpuquota=0&cpusetcpus=&cpusetmems=&cpushares=0&dockerfile=Dockerfile&labels=%7B%7D&memory=0&memswap=0&networkmode=default&rm=1&shmsize=0&t=arvindm2004%2Fsimplewebapp&target=&ulimits=%5B%5D&version=1": dial unix /var/run/docker.sock: connect: permission denied
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (push to hub)
+Stage "push to hub" skipped due to earlier failure(s)
+[Pipeline] getContext
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End o^C
+arvind_2004@ARVINDM:~/day2$ sudo usermod -aG docker $USER
+[sudo] password for arvind_2004:
+31Sorry, try again.
+[sudo] password for arvind_2004:
+Sorry, try again.
+[sudo] password for arvind_2004:
+sudo: 2 incorrect password attempts
+arvind_2004@ARVINDM:~/day2$ cd ..
+arvind_2004@ARVINDM:~$ sudo chmod 666 /var/run/docker.sock
+[sudo] password for arvind_2004:
+arvind_2004@ARVINDM:~$ sudo nano Jenkins
+arvind_2004@ARVINDM:~$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in /home/arvind_2004/.git/
+arvind_2004@ARVINDM:~$ git add Jenkins
+arvind_2004@ARVINDM:~$ git commit -m "JK"
+[master (root-commit) c264aa9] JK
+ 1 file changed, 36 insertions(+)
+ create mode 100644 Jenkins
+arvind_2004@ARVINDM:~$ git remote add origin https://github.com/Arvind22cse/JK_UB.git
+arvind_2004@ARVINDM:~$ git branch -u master
+warning: not setting branch 'master' as its own upstream
+arvind_2004@ARVINDM:~$ git branch -M master
+arvind_2004@ARVINDM:~$ git push -u origin master
+Username for 'https://github.com': Arvind22cse
+Password for 'https://Arvind22cse@github.com':
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 493 bytes | 493.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Arvind22cse/JK_UB.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+arvind_2004@ARVINDM:~$ docker login
+Authenticating with existing credentials...
+WARNING! Your password will be stored unencrypted in /home/arvind_2004/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+arvind_2004@ARVINDM:~$

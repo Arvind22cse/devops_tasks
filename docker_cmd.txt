@@ -1,0 +1,27 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\Arvind M> $ docker run --name some-nginx -v /some/content:/usr/share/nginx/html:ro -d nginx
+>> 
+$ : The term '$' is not recognized as the name of a cmdlet, function, script file, or operable program. 
+Check the spelling of the name, or if a path was included, verify that the path is correct and try 
+again.
+At line:1 char:1
++ $ docker run --name some-nginx -v /some/content:/usr/share/nginx/html ...
++ ~
+    + CategoryInfo          : ObjectNotFound: ($:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Arvind M>  docker run --name some-nginx -v /some/content:/usr/share/nginx/html:ro -d nginx   
+>>
+340f6c2c663b087461736ff589c9bd9f15e7bedd7702af8738bc196d24a3e5e5
+PS C:\Users\Arvind M> docker run -itd -P sha256:53a18edff8091d5faff1e42b4d885bc5f0f897873b0b8f0ace236cd5930819b0
+5b4359d18fc029160a3363234a38de41909f71c9c1e67027e72fa310b2d0df54
+PS C:\Users\Arvind M> docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS              
+     NAMES
+5b4359d18fc0   53a18edff809   "/docker-entrypoint.…"   3 minutes ago   Up 3 minutes   0.0.0.0:32768->80/tcp   elated_lamport
+340f6c2c663b   nginx          "/docker-entrypoint.…"   8 minutes ago   Up 8 minutes   80/tcp             
+     some-nginx

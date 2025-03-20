@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod2
+spec:
+  containers:
+    - name: arvindm2004/webapp1
+      image: arvindm2004/webapp1:tagname
+  ports:
+        - containerPort: 8084

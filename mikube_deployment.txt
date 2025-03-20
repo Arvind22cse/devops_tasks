@@ -1,0 +1,1387 @@
+Microsoft Windows [Version 10.0.22631.4751]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Arvind M>wsl.exe -d Ubuntu
+Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 5.15.167.4-microsoft-standard-WSL2 x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Thu Mar 20 04:31:21 UTC 2025
+
+  System load:  0.83                Processes:             36
+  Usage of /:   0.8% of 1006.85GB   Users logged in:       0
+  Memory usage: 12%                 IPv4 address for eth0: 172.27.90.197
+  Swap usage:   0%
+
+
+This message is shown once a day. To disable it please create the
+/home/arvind_2004/.hushlogin file.
+arvind_2004@ARVINDM:/mnt/c/Users/Arvind M$ cd ..
+arvind_2004@ARVINDM:/mnt/c/Users$ cd /
+arvind_2004@ARVINDM:/$ minikube start
+😄  minikube v1.35.0 on Ubuntu 24.04 (amd64)
+✨  Using the docker driver based on existing profile
+👍  Starting "minikube" primary control-plane node in "minikube" cluster
+🚜  Pulling base image v0.0.46 ...
+🔄  Restarting existing docker container for "minikube" ...
+🐳  Preparing Kubernetes v1.32.0 on Docker 27.4.1 ...
+🔎  Verifying Kubernetes components...
+    ▪ Using image gcr.io/k8s-minikube/storage-provisioner:v5
+🌟  Enabled addons: default-storageclass, storage-provisioner
+🏄  Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
+arvind_2004@ARVINDM:/$ kubectl get pod
+No resources found in default namespace.
+arvind_2004@ARVINDM:/$ kubectl run mypod --image=nginx --port=80
+pod/mypod created
+arvind_2004@ARVINDM:/$ kubectl get pod
+NAME    READY   STATUS    RESTARTS   AGE
+mypod   1/1     Running   0          73s
+arvind_2004@ARVINDM:/$ kubectl get node
+NAME       STATUS   ROLES           AGE   VERSION
+minikube   Ready    control-plane   19h   v1.32.0
+arvind_2004@ARVINDM:/$ kubectl delete pod my-pod
+Error from server (NotFound): pods "my-pod" not found
+arvind_2004@ARVINDM:/$ kubectl delete pod mypod
+pod "mypod" deleted
+arvind_2004@ARVINDM:/$ kubectl run mypod --image=nginx --port=8085
+pod/mypod created
+arvind_2004@ARVINDM:/$ kubectl get pod
+NAME    READY   STATUS    RESTARTS   AGE
+mypod   1/1     Running   0          12s
+arvind_2004@ARVINDM:/$ kubectl run mypod --image=nginx:latest --port=8087
+Error from server (AlreadyExists): pods "mypod" already exists
+arvind_2004@ARVINDM:/$ kubectl run my-pod --image=nginx:latest --port=8087
+pod/my-pod created
+arvind_2004@ARVINDM:/$ kubectl get pod
+NAME     READY   STATUS    RESTARTS   AGE
+my-pod   1/1     Running   0          8s
+mypod    1/1     Running   0          3m3s
+arvind_2004@ARVINDM:/$ kubectl run my-pod2 --image=nginx:latest --port=8084
+pod/my-pod2 created
+arvind_2004@ARVINDM:/$ kubectl get pod
+NAME      READY   STATUS              RESTARTS   AGE
+my-pod    1/1     Running             0          62s
+my-pod2   0/1     ContainerCreating   0          3s
+mypod     1/1     Running             0          3m57s
+arvind_2004@ARVINDM:/$ kubectl logs my-pod2
+/docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+/docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+/docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+/docker-entrypoint.sh: Configuration complete; ready for start up
+2025/03/20 04:46:47 [notice] 1#1: using the "epoll" event method
+2025/03/20 04:46:47 [notice] 1#1: nginx/1.27.4
+2025/03/20 04:46:47 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14)
+2025/03/20 04:46:47 [notice] 1#1: OS: Linux 5.15.167.4-microsoft-standard-WSL2
+2025/03/20 04:46:47 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2025/03/20 04:46:47 [notice] 1#1: start worker processes
+2025/03/20 04:46:47 [notice] 1#1: start worker process 29
+2025/03/20 04:46:47 [notice] 1#1: start worker process 30
+2025/03/20 04:46:47 [notice] 1#1: start worker process 31
+2025/03/20 04:46:47 [notice] 1#1: start worker process 32
+2025/03/20 04:46:47 [notice] 1#1: start worker process 33
+2025/03/20 04:46:47 [notice] 1#1: start worker process 34
+2025/03/20 04:46:47 [notice] 1#1: start worker process 35
+2025/03/20 04:46:47 [notice] 1#1: start worker process 36
+2025/03/20 04:46:47 [notice] 1#1: start worker process 37
+2025/03/20 04:46:47 [notice] 1#1: start worker process 38
+2025/03/20 04:46:47 [notice] 1#1: start worker process 39
+2025/03/20 04:46:47 [notice] 1#1: start worker process 40
+arvind_2004@ARVINDM:/$ minikube ssh
+docker@minikube:~$ docker ps
+CONTAINER ID   IMAGE                        COMMAND                  CREATED              STATUS              PORTS     NAMES
+2c3ef2e4ea91   nginx                        "/docker-entrypoint.…"   About a minute ago   Up About a minute             k8s_my-pod2_my-pod2_default_c2eee31e-a019-40aa-b8fb-b5f3b9ddfd3f_0
+3c85de85a4ac   registry.k8s.io/pause:3.10   "/pause"                 About a minute ago   Up About a minute             k8s_POD_my-pod2_default_c2eee31e-a019-40aa-b8fb-b5f3b9ddfd3f_0
+18fefc6bc8ad   nginx                        "/docker-entrypoint.…"   2 minutes ago        Up 2 minutes                  k8s_my-pod_my-pod_default_c76700d2-2a03-4cd2-8887-9adc28ee0e72_0
+1961b345922d   registry.k8s.io/pause:3.10   "/pause"                 2 minutes ago        Up 2 minutes                  k8s_POD_my-pod_default_c76700d2-2a03-4cd2-8887-9adc28ee0e72_0
+43ca4ffd4f14   nginx                        "/docker-entrypoint.…"   5 minutes ago        Up 5 minutes                  k8s_mypod_mypod_default_8671366b-5ac7-4c55-9a4a-40a746680ba7_0
+a81a4eab7452   registry.k8s.io/pause:3.10   "/pause"                 5 minutes ago        Up 5 minutes                  k8s_POD_mypod_default_8671366b-5ac7-4c55-9a4a-40a746680ba7_0
+68039fa229f4   6e38f40d628d                 "/storage-provisioner"   16 minutes ago       Up 16 minutes                 k8s_storage-provisioner_storage-provisioner_kube-system_662c7ba5-f633-49b7-8f08-8fe775a520ee_3
+c2f36b460128   c69fa2e9cbf5                 "/coredns -conf /etc…"   16 minutes ago       Up 16 minutes                 k8s_coredns_coredns-668d6bf9bc-gj2j2_kube-system_7bfcff89-694f-406a-808e-466d0d549ea8_1
+20035d5be14e   040f9f8aac8c                 "/usr/local/bin/kube…"   16 minutes ago       Up 16 minutes                 k8s_kube-proxy_kube-proxy-2chv9_kube-system_b55c713f-8f1e-4218-b286-07528e7c34ca_1
+45f42d177058   registry.k8s.io/pause:3.10   "/pause"                 16 minutes ago       Up 16 minutes                 k8s_POD_coredns-668d6bf9bc-gj2j2_kube-system_7bfcff89-694f-406a-808e-466d0d549ea8_1
+1124f740e47b   registry.k8s.io/pause:3.10   "/pause"                 16 minutes ago       Up 16 minutes                 k8s_POD_storage-provisioner_kube-system_662c7ba5-f633-49b7-8f08-8fe775a520ee_1
+3bb28a2ca964   registry.k8s.io/pause:3.10   "/pause"                 16 minutes ago       Up 16 minutes                 k8s_POD_kube-proxy-2chv9_kube-system_b55c713f-8f1e-4218-b286-07528e7c34ca_1
+13ad1eb82586   a9e7e6b294ba                 "etcd --advertise-cl…"   16 minutes ago       Up 16 minutes                 k8s_etcd_etcd-minikube_kube-system_2b4b75c2a289008e0b381891e9683040_1
+9c99aea7da36   c2e17b8d0f4a                 "kube-apiserver --ad…"   16 minutes ago       Up 16 minutes                 k8s_kube-apiserver_kube-apiserver-minikube_kube-system_d72d0a4cf4be077c9919d46b7358a5e8_1
+09bb410b3d82   8cab3d2a8bd0                 "kube-controller-man…"   16 minutes ago       Up 16 minutes                 k8s_kube-controller-manager_kube-controller-manager-minikube_kube-system_843c74f7b3bc7d7040a05c31708a6a30_1
+cae7502e8a41   a389e107f4ff                 "kube-scheduler --au…"   16 minutes ago       Up 16 minutes                 k8s_kube-scheduler_kube-scheduler-minikube_kube-system_d14ce008bee3a1f3bd7cf547688f9dfe_1
+80138199261a   registry.k8s.io/pause:3.10   "/pause"                 16 minutes ago       Up 16 minutes                 k8s_POD_kube-apiserver-minikube_kube-system_d72d0a4cf4be077c9919d46b7358a5e8_1
+a0e780589b00   registry.k8s.io/pause:3.10   "/pause"                 16 minutes ago       Up 16 minutes                 k8s_POD_etcd-minikube_kube-system_2b4b75c2a289008e0b381891e9683040_1
+4acf7db67313   registry.k8s.io/pause:3.10   "/pause"                 16 minutes ago       Up 16 minutes                 k8s_POD_kube-controller-manager-minikube_kube-system_843c74f7b3bc7d7040a05c31708a6a30_1
+a00a5c570e77   registry.k8s.io/pause:3.10   "/pause"                 16 minutes ago       Up 16 minutes                 k8s_POD_kube-scheduler-minikube_kube-system_d14ce008bee3a1f3bd7cf547688f9dfe_1
+docker@minikube:~$ exit
+logout
+arvind_2004@ARVINDM:/$ ls
+bin                boot  etc   init  lib.usr-is-merged  lost+found  mnt  proc  run   sbin.usr-is-merged  srv  tmp  var
+bin.usr-is-merged  dev   home  lib   lib64              media       opt  root  sbin  snap                sys  usr
+arvind_2004@ARVINDM:/$ kubectl get pod -o wide
+NAME      READY   STATUS    RESTARTS   AGE     IP           NODE       NOMINATED NODE   READINESS GATES
+my-pod    1/1     Running   0          3m37s   10.244.0.6   minikube   <none>           <none>
+my-pod2   1/1     Running   0          2m38s   10.244.0.7   minikube   <none>           <none>
+mypod     1/1     Running   0          6m32s   10.244.0.5   minikube   <none>           <none>
+arvind_2004@ARVINDM:/$ kubectl get pods -n kube-system
+NAME                               READY   STATUS    RESTARTS      AGE
+coredns-668d6bf9bc-gj2j2           1/1     Running   1 (58m ago)   20h
+etcd-minikube                      1/1     Running   1 (58m ago)   20h
+kube-apiserver-minikube            1/1     Running   1 (58m ago)   20h
+kube-controller-manager-minikube   1/1     Running   1 (58m ago)   20h
+kube-proxy-2chv9                   1/1     Running   1 (58m ago)   20h
+kube-scheduler-minikube            1/1     Running   1 (58m ago)   20h
+storage-provisioner                1/1     Running   3 (58m ago)   20h
+arvind_2004@ARVINDM:/$ kubectl get pods my-pod2 -o yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2025-03-20T04:46:43Z"
+  labels:
+    run: my-pod2
+  name: my-pod2
+  namespace: default
+  resourceVersion: "22354"
+  uid: c2eee31e-a019-40aa-b8fb-b5f3b9ddfd3f
+spec:
+  containers:
+  - image: nginx:latest
+    imagePullPolicy: Always
+    name: my-pod2
+    ports:
+    - containerPort: 8084
+      protocol: TCP
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-ff8h2
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: minikube
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: kube-api-access-ff8h2
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2025-03-20T04:46:47Z"
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2025-03-20T04:46:43Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2025-03-20T04:46:47Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2025-03-20T04:46:47Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2025-03-20T04:46:43Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: docker://2c3ef2e4ea91dddd6ada681eab9430a4888c1c17351df593c32dd7ada2f8c06b
+    image: nginx:latest
+    imageID: docker-pullable://nginx@sha256:124b44bfc9ccd1f3cedf4b592d4d1e8bddb78b51ec2ed5056c52d3692baebc19
+    lastState: {}
+    name: my-pod2
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2025-03-20T04:46:47Z"
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-ff8h2
+      readOnly: true
+      recursiveReadOnly: Disabled
+  hostIP: 192.168.49.2
+  hostIPs:
+  - ip: 192.168.49.2
+  phase: Running
+  podIP: 10.244.0.7
+  podIPs:
+  - ip: 10.244.0.7
+  qosClass: BestEffort
+  startTime: "2025-03-20T04:46:43Z"
+arvind_2004@ARVINDM:/$ kubectl get pods my-pod2 -o json
+{
+    "apiVersion": "v1",
+    "kind": "Pod",
+    "metadata": {
+        "creationTimestamp": "2025-03-20T04:46:43Z",
+        "labels": {
+            "run": "my-pod2"
+        },
+        "name": "my-pod2",
+        "namespace": "default",
+        "resourceVersion": "22354",
+        "uid": "c2eee31e-a019-40aa-b8fb-b5f3b9ddfd3f"
+    },
+    "spec": {
+        "containers": [
+            {
+                "image": "nginx:latest",
+                "imagePullPolicy": "Always",
+                "name": "my-pod2",
+                "ports": [
+                    {
+                        "containerPort": 8084,
+                        "protocol": "TCP"
+                    }
+                ],
+                "resources": {},
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "volumeMounts": [
+                    {
+                        "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                        "name": "kube-api-access-ff8h2",
+                        "readOnly": true
+                    }
+                ]
+            }
+        ],
+        "dnsPolicy": "ClusterFirst",
+        "enableServiceLinks": true,
+        "nodeName": "minikube",
+        "preemptionPolicy": "PreemptLowerPriority",
+        "priority": 0,
+        "restartPolicy": "Always",
+        "schedulerName": "default-scheduler",
+        "securityContext": {},
+        "serviceAccount": "default",
+        "serviceAccountName": "default",
+        "terminationGracePeriodSeconds": 30,
+        "tolerations": [
+            {
+                "effect": "NoExecute",
+                "key": "node.kubernetes.io/not-ready",
+                "operator": "Exists",
+                "tolerationSeconds": 300
+            },
+            {
+                "effect": "NoExecute",
+                "key": "node.kubernetes.io/unreachable",
+                "operator": "Exists",
+                "tolerationSeconds": 300
+            }
+        ],
+        "volumes": [
+            {
+                "name": "kube-api-access-ff8h2",
+                "projected": {
+                    "defaultMode": 420,
+                    "sources": [
+                        {
+                            "serviceAccountToken": {
+                                "expirationSeconds": 3607,
+                                "path": "token"
+                            }
+                        },
+                        {
+                            "configMap": {
+                                "items": [
+                                    {
+                                        "key": "ca.crt",
+                                        "path": "ca.crt"
+                                    }
+                                ],
+                                "name": "kube-root-ca.crt"
+                            }
+                        },
+                        {
+                            "downwardAPI": {
+                                "items": [
+                                    {
+                                        "fieldRef": {
+                                            "apiVersion": "v1",
+                                            "fieldPath": "metadata.namespace"
+                                        },
+                                        "path": "namespace"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "status": {
+        "conditions": [
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2025-03-20T04:46:47Z",
+                "status": "True",
+                "type": "PodReadyToStartContainers"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2025-03-20T04:46:43Z",
+                "status": "True",
+                "type": "Initialized"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2025-03-20T04:46:47Z",
+                "status": "True",
+                "type": "Ready"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2025-03-20T04:46:47Z",
+                "status": "True",
+                "type": "ContainersReady"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2025-03-20T04:46:43Z",
+                "status": "True",
+                "type": "PodScheduled"
+            }
+        ],
+        "containerStatuses": [
+            {
+                "containerID": "docker://2c3ef2e4ea91dddd6ada681eab9430a4888c1c17351df593c32dd7ada2f8c06b",
+                "image": "nginx:latest",
+                "imageID": "docker-pullable://nginx@sha256:124b44bfc9ccd1f3cedf4b592d4d1e8bddb78b51ec2ed5056c52d3692baebc19",
+                "lastState": {},
+                "name": "my-pod2",
+                "ready": true,
+                "restartCount": 0,
+                "started": true,
+                "state": {
+                    "running": {
+                        "startedAt": "2025-03-20T04:46:47Z"
+                    }
+                },
+                "volumeMounts": [
+                    {
+                        "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                        "name": "kube-api-access-ff8h2",
+                        "readOnly": true,
+                        "recursiveReadOnly": "Disabled"
+                    }
+                ]
+            }
+        ],
+        "hostIP": "192.168.49.2",
+        "hostIPs": [
+            {
+                "ip": "192.168.49.2"
+            }
+        ],
+        "phase": "Running",
+        "podIP": "10.244.0.7",
+        "podIPs": [
+            {
+                "ip": "10.244.0.7"
+            }
+        ],
+        "qosClass": "BestEffort",
+        "startTime": "2025-03-20T04:46:43Z"
+    }
+}
+arvind_2004@ARVINDM:/$ sudo nano pod.yml
+[sudo] password for arvind_2004:
+arvind_2004@ARVINDM:/$ kubectl logs my-pod2
+/docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+/docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+/docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+/docker-entrypoint.sh: Configuration complete; ready for start up
+2025/03/20 04:46:47 [notice] 1#1: using the "epoll" event method
+2025/03/20 04:46:47 [notice] 1#1: nginx/1.27.4
+2025/03/20 04:46:47 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14)
+2025/03/20 04:46:47 [notice] 1#1: OS: Linux 5.15.167.4-microsoft-standard-WSL2
+2025/03/20 04:46:47 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2025/03/20 04:46:47 [notice] 1#1: start worker processes
+2025/03/20 04:46:47 [notice] 1#1: start worker process 29
+2025/03/20 04:46:47 [notice] 1#1: start worker process 30
+2025/03/20 04:46:47 [notice] 1#1: start worker process 31
+2025/03/20 04:46:47 [notice] 1#1: start worker process 32
+2025/03/20 04:46:47 [notice] 1#1: start worker process 33
+2025/03/20 04:46:47 [notice] 1#1: start worker process 34
+2025/03/20 04:46:47 [notice] 1#1: start worker process 35
+2025/03/20 04:46:47 [notice] 1#1: start worker process 36
+2025/03/20 04:46:47 [notice] 1#1: start worker process 37
+2025/03/20 04:46:47 [notice] 1#1: start worker process 38
+2025/03/20 04:46:47 [notice] 1#1: start worker process 39
+2025/03/20 04:46:47 [notice] 1#1: start worker process 40
+arvind_2004@ARVINDM:/$ kubectl get pod
+NAME      READY   STATUS    RESTARTS   AGE
+my-pod    1/1     Running   0          54m
+my-pod2   1/1     Running   0          53m
+mypod     1/1     Running   0          57m
+arvind_2004@ARVINDM:/$ sudo nano pod1.yml
+arvind_2004@ARVINDM:/$ kubectl get pod
+NAME      READY   STATUS    RESTARTS   AGE
+my-pod    1/1     Running   0          57m
+my-pod2   1/1     Running   0          56m
+mypod     1/1     Running   0          60m
+arvind_2004@ARVINDM:/$ kubectl exec -it my-pod2 -- /bin/bash
+root@my-pod2:/# exit
+exit
+arvind_2004@ARVINDM:/$ git init
+/.git: Permission denied
+arvind_2004@ARVINDM:/$ kubectl exec -it my-pod2 -- /bin/bash
+root@my-pod2:/# ls
+bin   dev                  docker-entrypoint.sh  home  lib64  mnt  proc  run   srv  tmp  var
+boot  docker-entrypoint.d  etc                   lib   media  opt  root  sbin  sys  usr
+root@my-pod2:/# exit
+exit
+arvind_2004@ARVINDM:/$ git init
+/.git: Permission denied
+arvind_2004@ARVINDM:/$ cd ~/my_project
+-bash: cd: /home/arvind_2004/my_project: No such file or directory
+arvind_2004@ARVINDM:/$ cd ~
+arvind_2004@ARVINDM:~$ mkdir my_project
+arvind_2004@ARVINDM:~$ cd my_project
+arvind_2004@ARVINDM:~/my_project$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in /home/arvind_2004/my_project/.git/
+arvind_2004@ARVINDM:~/my_project$ git add pom1.yml
+fatal: pathspec 'pom1.yml' did not match any files
+arvind_2004@ARVINDM:~/my_project$ ls -l pom1.yml
+ls: cannot access 'pom1.yml': No such file or directory
+arvind_2004@ARVINDM:~/my_project$ cd /
+arvind_2004@ARVINDM:/$ cat pom1.yml
+cat: pom1.yml: No such file or directory
+arvind_2004@ARVINDM:/$ cat pod1.yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod2
+spec:
+  containers:
+    - name: arvindm2004/webapp1
+      image: arvindm2004/webapp1:tagname
+  ports:
+        - containerPort: 8084
+arvind_2004@ARVINDM:/$ cd ~/my_project
+arvind_2004@ARVINDM:~/my_project$ sudo nano pod2.yml
+arvind_2004@ARVINDM:~/my_project$ git init
+Reinitialized existing Git repository in /home/arvind_2004/my_project/.git/
+arvind_2004@ARVINDM:~/my_project$ git add .
+arvind_2004@ARVINDM:~/my_project$ git commit -m "pod"
+[master (root-commit) 9e611cd] pod
+ 1 file changed, 10 insertions(+)
+ create mode 100644 pod2.yml
+arvind_2004@ARVINDM:~/my_project$ git remote add origin https://github.com/Arvind22cse/devops_tasks.git
+arvind_2004@ARVINDM:~/my_project$ git checkout day4
+error: pathspec 'day4' did not match any file(s) known to git
+arvind_2004@ARVINDM:~/my_project$ git switch day4
+fatal: invalid reference: day4
+arvind_2004@ARVINDM:~/my_project$ git branch day4
+arvind_2004@ARVINDM:~/my_project$ git checkout day4
+Switched to branch 'day4'
+arvind_2004@ARVINDM:~/my_project$ git push origin day4
+Username for 'https://github.com': Arvind22cse
+Password for 'https://Arvind22cse@github.com':
+To https://github.com/Arvind22cse/devops_tasks.git
+ ! [rejected]        day4 -> day4 (fetch first)
+error: failed to push some refs to 'https://github.com/Arvind22cse/devops_tasks.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+arvind_2004@ARVINDM:~/my_project$ git pull
+remote: Enumerating objects: 29, done.
+remote: Counting objects: 100% (29/29), done.
+remote: Compressing objects: 100% (27/27), done.
+remote: Total 29 (delta 0), reused 29 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (29/29), 3.83 MiB | 2.70 MiB/s, done.
+From https://github.com/Arvind22cse/devops_tasks
+ * [new branch]      day1       -> origin/day1
+ * [new branch]      day2       -> origin/day2
+ * [new branch]      day3       -> origin/day3
+ * [new branch]      day4       -> origin/day4
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> day4
+
+arvind_2004@ARVINDM:~/my_project$ git add .
+arvind_2004@ARVINDM:~/my_project$ git commit -m "pod"
+On branch day4
+nothing to commit, working tree clean
+arvind_2004@ARVINDM:~/my_project$ git push origin day4
+Username for 'https://github.com': Arvind22cse
+Password for 'https://Arvind22cse@github.com':
+To https://github.com/Arvind22cse/devops_tasks.git
+ ! [rejected]        day4 -> day4 (non-fast-forward)
+error: failed to push some refs to 'https://github.com/Arvind22cse/devops_tasks.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+arvind_2004@ARVINDM:~/my_project$ git commit -m "pod"
+On branch day4
+nothing to commit, working tree clean
+arvind_2004@ARVINDM:~/my_project$ git push origin day4
+Username for 'https://github.com': ^C
+arvind_2004@ARVINDM:~/my_project$ git pull --rebase origin day4
+From https://github.com/Arvind22cse/devops_tasks
+ * branch            day4       -> FETCH_HEAD
+Successfully rebased and updated refs/heads/day4.
+arvind_2004@ARVINDM:~/my_project$ git add .
+arvind_2004@ARVINDM:~/my_project$ git rebase --continue
+fatal: No rebase in progress?
+arvind_2004@ARVINDM:~/my_project$ git push origin day4 --force-with-lease
+Username for 'https://github.com': Arvind22cse
+Password for 'https://Arvind22cse@github.com':
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 397 bytes | 397.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Arvind22cse/devops_tasks.git
+   4b1990a..a515df1  day4 -> day4
+arvind_2004@ARVINDM:~/my_project$ sudo nano my-pod.yml
+arvind_2004@ARVINDM:~/my_project$ kubectl get pod
+NAME      READY   STATUS    RESTARTS   AGE
+my-pod    1/1     Running   0          76m
+my-pod2   1/1     Running   0          75m
+mypod     1/1     Running   0          79m
+arvind_2004@ARVINDM:~/my_project$ kubectl get pods
+NAME      READY   STATUS    RESTARTS   AGE
+my-pod    1/1     Running   0          76m
+my-pod2   1/1     Running   0          75m
+mypod     1/1     Running   0          79m
+arvind_2004@ARVINDM:~/my_project$ kubectl get pods
+NAME      READY   STATUS    RESTARTS   AGE
+my-pod    1/1     Running   0          77m
+my-pod2   1/1     Running   0          76m
+mypod     1/1     Running   0          80m
+arvind_2004@ARVINDM:~/my_project$ pod run scale
+Command 'pod' not found, did you mean:
+  command 'od' from deb coreutils (9.4-2ubuntu2)
+  command 'pdd' from deb pdd (1.7-1)
+  command 'pom' from deb bsdgames (2.17-30)
+  command 'pd' from deb puredata-core (0.54.1+ds-3)
+  command 'wod' from deb sope-bin (5.9.0-1)
+  command 'god' from deb ruby-god (0.13.7-3build5)
+  command 'psd' from deb profile-sync-daemon (6.50-1)
+  command 'poa' from deb poa (2.0+20060928-8)
+  command 'pox' from deb python3-pox (0.3.3-1)
+  command 'pwd' from deb coreutils (9.4-2ubuntu2)
+  command 'pods' from deb pmtools (2.2.0-3)
+  command 'pon' from deb ppp (2.4.9-1+1.1ubuntu1)
+  command 'mod' from deb monodoc-base (6.8.0.105+dfsg-3.5ubuntu1)
+Try: sudo apt install <deb name>
+arvind_2004@ARVINDM:~/my_project$ kubectl apply -f my-pod.yml
+pod/my-app1 created
+arvind_2004@ARVINDM:~/my_project$ kubectl get pods
+NAME      READY   STATUS         RESTARTS   AGE
+my-app1   0/1     ErrImagePull   0          13s
+my-pod    1/1     Running        0          79m
+my-pod2   1/1     Running        0          78m
+mypod     1/1     Running        0          82m
+arvind_2004@ARVINDM:~/my_project$ sudo nano rs-test.yml
+arvind_2004@ARVINDM:~/my_project$ kubectl apply -f rs-test.yml
+error: error validating "rs-test.yml": error validating data: apiVersion not set; if you choose to ignore these errors, turn validation off with --validate=false
+arvind_2004@ARVINDM:~/my_project$ sudo nano rs-test.yml
+arvind_2004@ARVINDM:~/my_project$ kubectl apply -f rs-test.yml
+error: error validating "rs-test.yml": error validating data: apiVersion not set; if you choose to ignore these errors, turn validation off with --validate=false
+arvind_2004@ARVINDM:~/my_project$ sudo nano rs-test.yml
+arvind_2004@ARVINDM:~/my_project$ kubectl apply -f rs-test.yml
+replicaset.apps/my-rs created
+arvind_2004@ARVINDM:~/my_project$ kubectl get pods
+NAME          READY   STATUS              RESTARTS   AGE
+my-app1       0/1     ImagePullBackOff    0          11m
+my-pod        1/1     Running             0          90m
+my-pod2       1/1     Running             0          89m
+my-rs-7xjf6   0/1     ContainerCreating   0          8s
+my-rs-fd6z6   0/1     ContainerCreating   0          8s
+my-rs-h8klx   0/1     ErrImagePull        0          8s
+my-rs-wcqzw   0/1     ContainerCreating   0          8s
+mypod         1/1     Running             0          93m
+arvind_2004@ARVINDM:~/my_project$ kubectl get pod
+NAME          READY   STATUS              RESTARTS   AGE
+my-app1       0/1     ImagePullBackOff    0          11m
+my-pod        1/1     Running             0          90m
+my-pod2       1/1     Running             0          89m
+my-rs-7xjf6   0/1     ErrImagePull        0          11s
+my-rs-fd6z6   0/1     ContainerCreating   0          11s
+my-rs-h8klx   0/1     ErrImagePull        0          11s
+my-rs-wcqzw   0/1     ContainerCreating   0          11s
+mypod         1/1     Running             0          93m
+arvind_2004@ARVINDM:~/my_project$ kubectl delete pod my-rs-7xjf6
+pod "my-rs-7xjf6" deleted
+arvind_2004@ARVINDM:~/my_project$ kubectl get pod
+NAME          READY   STATUS              RESTARTS   AGE
+my-app1       0/1     ImagePullBackOff    0          12m
+my-pod        1/1     Running             0          91m
+my-pod2       1/1     Running             0          90m
+my-rs-ctmbx   0/1     ContainerCreating   0          3s
+my-rs-fd6z6   0/1     ImagePullBackOff    0          66s
+my-rs-h8klx   0/1     ImagePullBackOff    0          66s
+my-rs-wcqzw   0/1     ErrImagePull        0          66s
+mypod         1/1     Running             0          94m
+arvind_2004@ARVINDM:~/my_project$ kubectl exec -it my-rs-ctmbx -- /bin/bash
+error: Internal error occurred: unable to upgrade connection: container not found ("my-app")
+arvind_2004@ARVINDM:~/my_project$ kubectl describe my-rs-ctmbx
+error: the server doesn't have a resource type "my-rs-ctmbx"
+arvind_2004@ARVINDM:~/my_project$ kubectl describe my-rs-fd6z6
+error: the server doesn't have a resource type "my-rs-fd6z6"
+arvind_2004@ARVINDM:~/my_project$ kubectl get pod
+NAME          READY   STATUS             RESTARTS   AGE
+my-app1       0/1     ImagePullBackOff   0          138m
+my-pod        1/1     Running            0          3h37m
+my-pod2       1/1     Running            0          3h36m
+my-rs-ctmbx   0/1     ImagePullBackOff   0          126m
+my-rs-fd6z6   0/1     ImagePullBackOff   0          127m
+my-rs-h8klx   0/1     ImagePullBackOff   0          127m
+my-rs-wcqzw   0/1     ImagePullBackOff   0          127m
+mypod         1/1     Running            0          3h40m
+arvind_2004@ARVINDM:~/my_project$ sudo nano deployment.yml
+[sudo] password for arvind_2004:
+arvind_2004@ARVINDM:~/my_project$
+arvind_2004@ARVINDM:~/my_project$ kubectl create deployment webnginx2 --image=nginx:latest --replicas=1
+deployment.apps/webnginx2 created
+arvind_2004@ARVINDM:~/my_project$ kubectl get pods
+NAME                         READY   STATUS             RESTARTS   AGE
+my-app1                      0/1     ImagePullBackOff   0          145m
+my-pod                       1/1     Running            0          3h44m
+my-pod2                      1/1     Running            0          3h43m
+my-rs-ctmbx                  0/1     ImagePullBackOff   0          133m
+my-rs-fd6z6                  0/1     ImagePullBackOff   0          134m
+my-rs-h8klx                  0/1     ImagePullBackOff   0          134m
+my-rs-wcqzw                  0/1     ImagePullBackOff   0          134m
+mypod                        1/1     Running            0          3h47m
+webnginx2-85b94f8d56-vgh6b   1/1     Running            0          13s
+arvind_2004@ARVINDM:~/my_project$ kubectl get rs
+NAME                   DESIRED   CURRENT   READY   AGE
+my-rs                  4         4         0       134m
+webnginx2-85b94f8d56   1         1         1       46s
+arvind_2004@ARVINDM:~/my_project$ kubectl kubectl delete all -all
+error: unknown command "kubectl" for "kubectl"
+arvind_2004@ARVINDM:~/my_project$ kubect delete all -all
+Command 'kubect' not found, did you mean:
+  command 'kubectx' from deb kubectx (0.9.5-1ubuntu0.3)
+Try: sudo apt install <deb name>
+arvind_2004@ARVINDM:~/my_project$ kubectl delete all -all
+error: unknown shorthand flag: 'a' in -all
+See 'kubectl delete --help' for usage.
+arvind_2004@ARVINDM:~/my_project$ kubectl delete all --all
+pod "my-app1" deleted
+pod "my-pod" deleted
+pod "my-pod2" deleted
+pod "my-rs-ctmbx" deleted
+pod "my-rs-fd6z6" deleted
+pod "my-rs-h8klx" deleted
+pod "my-rs-wcqzw" deleted
+pod "mypod" deleted
+pod "webnginx2-85b94f8d56-vgh6b" deleted
+service "kubernetes" deleted
+deployment.apps "webnginx2" deleted
+replicaset.apps "my-rs" deleted
+replicaset.apps "webnginx2-85b94f8d56" deleted
+arvind_2004@ARVINDM:~/my_project$ kubectl get pod
+NAME          READY   STATUS        RESTARTS   AGE
+my-rs-kdzk7   0/1     Terminating   0          26s
+my-rs-nnwdc   0/1     Terminating   0          25s
+arvind_2004@ARVINDM:~/my_project$ kubectl apply -f deployment.yml
+\Error from server (BadRequest): error when creating "deployment.yml": Deployment in version "v1" cannot be handled as a Deployment: json: cannot unmarshal string into Go struct field Container.spec.template.spec.containers.ports of type v1.ContainerPort
+arvind_2004@ARVINDM:~/my_project$ kubectl apply -f deployment.yml
+Error from server (BadRequest): error when creating "deployment.yml": Deployment in version "v1" cannot be handled as a Deployment: json: cannot unmarshal string into Go struct field Container.spec.template.spec.containers.ports of type v1.ContainerPort
+arvind_2004@ARVINDM:~/my_project$ sudo nano deployment.yml
+arvind_2004@ARVINDM:~/my_project$ kubectl apply -f deployment.yml
+deployment.apps/my-deployment created
+arvind_2004@ARVINDM:~/my_project$ kubectl get deployments
+NAME            READY   UP-TO-DATE   AVAILABLE   AGE
+my-deployment   0/3     3            0           8s
+arvind_2004@ARVINDM:~/my_project$ kubectl get pods
+NAME                            READY   STATUS             RESTARTS   AGE
+my-deployment-f47778678-czpqr   0/1     ErrImagePull       0          18s
+my-deployment-f47778678-d5bxg   0/1     ImagePullBackOff   0          18s
+my-deployment-f47778678-d8f7j   0/1     ImagePullBackOff   0          18s
+arvind_2004@ARVINDM:~/my_project$ kubectl describe deployment my-deployment
+Name:                   my-deployment
+Namespace:              default
+CreationTimestamp:      Thu, 20 Mar 2025 08:37:01 +0000
+Labels:                 <none>
+Annotations:            deployment.kubernetes.io/revision: 1
+Selector:               app=my-app
+Replicas:               3 desired | 3 updated | 3 total | 0 available | 3 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=my-app
+  Containers:
+   my-app:
+    Image:         arvindm2004/webapp1:tagname
+    Port:          8089/TCP
+    Host Port:     0/TCP
+    Environment:   <none>
+    Mounts:        <none>
+  Volumes:         <none>
+  Node-Selectors:  <none>
+  Tolerations:     <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      False   MinimumReplicasUnavailable
+  Progressing    True    ReplicaSetUpdated
+OldReplicaSets:  <none>
+NewReplicaSet:   my-deployment-f47778678 (3/3 replicas created)
+Events:
+  Type    Reason             Age   From                   Message
+  ----    ------             ----  ----                   -------
+  Normal  ScalingReplicaSet  26s   deployment-controller  Scaled up replica set my-deployment-f47778678 from 0 to 3
+arvind_2004@ARVINDM:~/my_project$ sudo nano deployment.yml
+arvind_2004@ARVINDM:~/my_project$ kubectl  create deployment webnginx2 --image=nginx:latest --replicas=1
+deployment.apps/webnginx2 created
+arvind_2004@ARVINDM:~/my_project$ kubectl replace -f deployment.yml
+deployment.apps/my-deployment replaced
+arvind_2004@ARVINDM:~/my_project$ kubectl get pod
+NAME                            READY   STATUS              RESTARTS   AGE
+my-deployment-f47778678-5qspr   0/1     ContainerCreating   0          12s
+my-deployment-f47778678-c8d5m   0/1     ErrImagePull        0          12s
+my-deployment-f47778678-czpqr   0/1     ImagePullBackOff    0          4m32s
+my-deployment-f47778678-d5bxg   0/1     ImagePullBackOff    0          4m32s
+my-deployment-f47778678-d8f7j   0/1     ImagePullBackOff    0          4m32s
+my-deployment-f47778678-f82gp   0/1     ContainerCreating   0          12s
+my-deployment-f47778678-fml6f   0/1     ErrImagePull        0          12s
+my-deployment-f47778678-zrh84   0/1     ContainerCreating   0          12s
+webnginx2-85b94f8d56-gsz4q      1/1     Running             0          72s
+arvind_2004@ARVINDM:~/my_project$ kubectl scale deploy my-deploy --replicas=2
+error: no objects passed to scale deployments.apps "my-deploy" not found
+arvind_2004@ARVINDM:~/my_project$ kubectl scale deploy mydeploy --replicas=2
+error: no objects passed to scale deployments.apps "mydeploy" not found
+arvind_2004@ARVINDM:~/my_project$ kubectl scale deploy my-deploy --replicas=2
+error: no objects passed to scale deployments.apps "my-deploy" not found
+arvind_2004@ARVINDM:~/my_project$ kubectl scale deploy my-deployment --replicas=2
+deployment.apps/my-deployment scaled
+arvind_2004@ARVINDM:~/my_project$ kubectl get pod
+NAME                            READY   STATUS             RESTARTS   AGE
+my-deployment-f47778678-czpqr   0/1     ImagePullBackOff   0          10m
+my-deployment-f47778678-d8f7j   0/1     ImagePullBackOff   0          10m
+webnginx2-85b94f8d56-gsz4q      1/1     Running            0          7m13s
+arvind_2004@ARVINDM:~/my_project$ kubectl delete webnginx2-85b94f8d56-gsz4q
+error: the server doesn't have a resource type "webnginx2-85b94f8d56-gsz4q"
+arvind_2004@ARVINDM:~/my_project$ kubectl delete pod webnginx2-85b94f8d56-gsz4q
+pod "webnginx2-85b94f8d56-gsz4q" deleted
+arvind_2004@ARVINDM:~/my_project$ kubectl get pod
+NAME                            READY   STATUS             RESTARTS   AGE
+my-deployment-f47778678-czpqr   0/1     ImagePullBackOff   0          11m
+my-deployment-f47778678-d8f7j   0/1     ImagePullBackOff   0          11m
+webnginx2-85b94f8d56-cvxv2      1/1     Running            0          6s
+arvind_2004@ARVINDM:~/my_project$ kubectl get pod
+NAME                            READY   STATUS             RESTARTS   AGE
+my-deployment-f47778678-czpqr   0/1     ImagePullBackOff   0          11m
+my-deployment-f47778678-d8f7j   0/1     ErrImagePull       0          11m
+webnginx2-85b94f8d56-cvxv2      1/1     Running            0          10s
+arvind_2004@ARVINDM:~/my_project$ kubectl get pod
+NAME                            READY   STATUS             RESTARTS   AGE
+my-deployment-f47778678-czpqr   0/1     ImagePullBackOff   0          12m
+my-deployment-f47778678-d8f7j   0/1     ImagePullBackOff   0          12m
+webnginx2-85b94f8d56-cvxv2      1/1     Running            0          29s
+arvind_2004@ARVINDM:~/my_project$ sudo nano deployment.yml
+arvind_2004@ARVINDM:~/my_project$ kubectl create apply -f deployment.yml
+error: Unexpected args: [apply]
+See 'kubectl create -h' for help and examples
+arvind_2004@ARVINDM:~/my_project$ kubectl create apply -f deployment.yml
+error: Unexpected args: [apply]
+See 'kubectl create -h' for help and examples
+arvind_2004@ARVINDM:~/my_project$ kubectl apply -f deployment.yml
+deployment.apps/my-deploy created
+Error from server (BadRequest): error when creating "deployment.yml": Service in version "v1" cannot be handled as a Service: json: cannot unmarshal string into Go struct field ServiceSpec.spec.selector of type map[string]string
+arvind_2004@ARVINDM:~/my_project$ cat deployment.yml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deploy
+  labels:
+    name: my-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      apptype: web-backend
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        apptype: web-backend
+    spec:
+      containers:
+      - name: my-app
+        image: arvindm2004/webapp1:tagname
+        ports:
+        - containerPort: 7070
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+  labels:
+    app: my-service
+    type: backend-app
+spec:
+  type: NodePort
+  ports:
+   - targetPort: 7070
+     port: 7070
+     nodePort: 30002
+  selector:
+    apptype: web-backend
+arvind_2004@ARVINDM:~/my_project$ sudo nano deployment.yml
+[sudo] password for arvind_2004:
+arvind_2004@ARVINDM:~/my_project$ kubectl apply -f deployment.yml
+service/my-service created
+arvind_2004@ARVINDM:~/my_project$ kubectl get pods
+NAME                            READY   STATUS             RESTARTS   AGE
+my-deploy-5df65497db-xfhlq      0/1     ErrImagePull       0          3m40s
+my-deployment-f47778678-czpqr   0/1     ImagePullBackOff   0          41m
+my-deployment-f47778678-d8f7j   0/1     ImagePullBackOff   0          41m
+webnginx2-85b94f8d56-cvxv2      1/1     Running            0          29m
+arvind_2004@ARVINDM:~/my_project$ kubectl get services
+NAME         TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE
+kubernetes   ClusterIP   10.96.0.1      <none>        443/TCP          44m
+my-service   NodePort    10.106.84.41   <none>        7070:30002/TCP   31s
+arvind_2004@ARVINDM:~/my_project$ sudo nano deployment.yml
+[sudo] password for arvind_2004:
+arvind_2004@ARVINDM:~/my_project$ kubectl apply -f deployment.yml
+deployment.apps/my-deploy configured
+service/my-service unchanged
+arvind_2004@ARVINDM:~/my_project$ kubectl replace deployment.yml
+error: must specify one of -f and -k
+arvind_2004@ARVINDM:~/my_project$ kubectl replace -f deployment.yml
+deployment.apps/my-deploy replaced
+service/my-service replaced
+arvind_2004@ARVINDM:~/my_project$ minikube service my-service
+|-----------|------------|-------------|---------------------------|
+| NAMESPACE |    NAME    | TARGET PORT |            URL            |
+|-----------|------------|-------------|---------------------------|
+| default   | my-service |        7070 | http://192.168.49.2:30002 |
+|-----------|------------|-------------|---------------------------|
+
+❌  Exiting due to SVC_UNREACHABLE: service not available: no running pod for service my-service found
+
+╭───────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                           │
+│    😿  If the above advice does not help, please let us know:                             │
+│    👉  https://github.com/kubernetes/minikube/issues/new/choose                           │
+│                                                                                           │
+│    Please run `minikube logs --file=logs.txt` and attach logs.txt to the GitHub issue.    │
+│    Please also attach the following file to the GitHub issue:                             │
+│    - /tmp/minikube_service_8aaa71feca0d33a15dc0b5f1d3de1c519de02edd_0.log                 │
+│                                                                                           │
+╰───────────────────────────────────────────────────────────────────────────────────────────╯
+
+arvind_2004@ARVINDM:~/my_project$ curl http://192.168.49.2:30002
+curl: (7) Failed to connect to 192.168.49.2 port 30002 after 1 ms: Couldn't connect to server
+arvind_2004@ARVINDM:~/my_project$ ping http://192.168.49.2:30002
+ping: http://192.168.49.2:30002: Name or service not known
+arvind_2004@ARVINDM:~/my_project$ ping http://192.168.49.2:30002/my-app/
+ping: http://192.168.49.2:30002/my-app/: Name or service not known
+arvind_2004@ARVINDM:~/my_project$ sudo chmod 666 /var/run/docker.sock
+[sudo] password for arvind_2004:
+arvind_2004@ARVINDM:~/my_project$ kubectl delete all --all
+pod "my-deploy-5df65497db-mv5jq" deleted
+pod "my-deploy-5df65497db-n4ln2" deleted
+pod "my-deploy-5df65497db-tt8n6" deleted
+pod "my-deploy-5df65497db-xfhlq" deleted
+pod "my-deployment-f47778678-czpqr" deleted
+pod "my-deployment-f47778678-d8f7j" deleted
+pod "webnginx2-85b94f8d56-cvxv2" deleted
+service "kubernetes" deleted
+service "my-service" deleted
+deployment.apps "my-deploy" deleted
+deployment.apps "my-deployment" deleted
+deployment.apps "webnginx2" deleted
+replicaset.apps "webnginx2-85b94f8d56" deleted
+arvind_2004@ARVINDM:~/my_project$ sudo nano deployment.yml
+arvind_2004@ARVINDM:~/my_project$ sudo nano deployment.yml
+arvind_2004@ARVINDM:~/my_project$ kubectl apply -f deployment.yml
+deployment.apps/my-deploy created
+service/my-service created
+arvind_2004@ARVINDM:~/my_project$ minikube service myservice.yml
+
+❌  Exiting due to SVC_NOT_FOUND: Service 'myservice.yml' was not found in 'default' namespace.
+You may select another namespace by using 'minikube service myservice.yml -n <namespace>'. Or list out all the services using 'minikube service list'
+
+arvind_2004@ARVINDM:~/my_project$ minikube service my-service
+|-----------|------------|-------------|---------------------------|
+| NAMESPACE |    NAME    | TARGET PORT |            URL            |
+|-----------|------------|-------------|---------------------------|
+| default   | my-service |        9000 | http://192.168.49.2:30002 |
+|-----------|------------|-------------|---------------------------|
+
+❌  Exiting due to SVC_UNREACHABLE: service not available: no running pod for service my-service found
+
+╭───────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                           │
+│    😿  If the above advice does not help, please let us know:                             │
+│    👉  https://github.com/kubernetes/minikube/issues/new/choose                           │
+│                                                                                           │
+│    Please run `minikube logs --file=logs.txt` and attach logs.txt to the GitHub issue.    │
+│    Please also attach the following file to the GitHub issue:                             │
+│    - /tmp/minikube_service_8aaa71feca0d33a15dc0b5f1d3de1c519de02edd_0.log                 │
+│                                                                                           │
+╰───────────────────────────────────────────────────────────────────────────────────────────╯
+
+arvind_2004@ARVINDM:~/my_project$ curl http://192.168.49.2:30002
+curl: (7) Failed to connect to 192.168.49.2 port 30002 after 0 ms: Couldn't connect to server
+arvind_2004@ARVINDM:~/my_project$ cat deployment.yml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deploy
+  labels:
+    name: my-deploy
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      apptype: web-backend
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        apptype: web-backend
+    spec:
+      containers:
+      - name: my-app
+        image: arvindm2004/webapp1:tagname
+        ports:
+              - containerPort: 9000
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+  labels:
+    app: my-service
+    type: backend-app
+spec:
+  type: NodePort
+  ports:
+   - targetPort: 9000
+     port: 9000
+     nodePort: 30002
+  selector:
+    apptype: web-backend
+arvind_2004@ARVINDM:~/my_project$ kubectl get pods
+NAME                         READY   STATUS             RESTARTS   AGE
+my-deploy-84f4966d79-64z7p   0/1     ImagePullBackOff   0          4m41s
+my-deploy-84f4966d79-7f92t   0/1     ImagePullBackOff   0          4m41s
+my-deploy-84f4966d79-bt29f   0/1     ImagePullBackOff   0          4m41s
+my-deploy-84f4966d79-n4ts5   0/1     ImagePullBackOff   0          4m41s
+arvind_2004@ARVINDM:~/my_project$ kubectl describe deployment my-deploy
+Name:                   my-deploy
+Namespace:              default
+CreationTimestamp:      Thu, 20 Mar 2025 10:07:31 +0000
+Labels:                 name=my-deploy
+Annotations:            deployment.kubernetes.io/revision: 1
+Selector:               apptype=web-backend
+Replicas:               4 desired | 4 updated | 4 total | 0 available | 4 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  apptype=web-backend
+  Containers:
+   my-app:
+    Image:         arvindm2004/webapp1:tagname
+    Port:          9000/TCP
+    Host Port:     0/TCP
+    Environment:   <none>
+    Mounts:        <none>
+  Volumes:         <none>
+  Node-Selectors:  <none>
+  Tolerations:     <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      False   MinimumReplicasUnavailable
+  Progressing    True    ReplicaSetUpdated
+OldReplicaSets:  <none>
+NewReplicaSet:   my-deploy-84f4966d79 (4/4 replicas created)
+Events:
+  Type    Reason             Age    From                   Message
+  ----    ------             ----   ----                   -------
+  Normal  ScalingReplicaSet  4m54s  deployment-controller  Scaled up replica set my-deploy-84f4966d79 from 0 to 4
+arvind_2004@ARVINDM:~/my_project$ kubectl port-forward service/my-service 9000:9000
+error: unable to forward port because pod is not running. Current status=Pending
+arvind_2004@ARVINDM:~/my_project$ kubectl delete all --all
+pod "my-deploy-84f4966d79-64z7p" deleted
+pod "my-deploy-84f4966d79-7f92t" deleted
+pod "my-deploy-84f4966d79-bt29f" deleted
+pod "my-deploy-84f4966d79-n4ts5" deleted
+service "kubernetes" deleted
+service "my-service" deleted
+deployment.apps "my-deploy" deleted
+arvind_2004@ARVINDM:~/my_project$ kubectl delete pods --all
+pod "my-deploy-84f4966d79-52xlz" deleted
+pod "my-deploy-84f4966d79-rptt5" deleted
+arvind_2004@ARVINDM:~/my_project$ kubectl apply -f deployment.yml
+deployment.apps/my-deploy created
+service/my-service created
+arvind_2004@ARVINDM:~/my_project$ kubectl get pods
+NAME                         READY   STATUS              RESTARTS   AGE
+my-deploy-84f4966d79-qhtb2   0/1     ContainerCreating   0          9s
+my-deploy-84f4966d79-tg7nl   0/1     ContainerCreating   0          9s
+my-deploy-84f4966d79-zflkr   0/1     ErrImagePull        0          9s
+my-deploy-84f4966d79-zgf99   0/1     ContainerCreating   0          9s
+arvind_2004@ARVINDM:~/my_project$ kubectl port-forward service/my-service 9000:9000
+error: unable to forward port because pod is not running. Current status=Pending
+arvind_2004@ARVINDM:~/my_project$ docker pull arvindm2004/webapp1:tagname
+Error response from daemon: manifest for arvindm2004/webapp1:tagname not found: manifest unknown: manifest unknown
+arvind_2004@ARVINDM:~/my_project$ sudo nano deployment.yml
+arvind_2004@ARVINDM:~/my_project$ kubectl apply -f deployment.yml
+deployment.apps/my-deploy configured
+error: error parsing deployment.yml: error converting YAML to JSON: yaml: line 15: mapping values are not allowed in this context
+arvind_2004@ARVINDM:~/my_project$ minikube service my-service
+|-----------|------------|-------------|---------------------------|
+| NAMESPACE |    NAME    | TARGET PORT |            URL            |
+|-----------|------------|-------------|---------------------------|
+| default   | my-service |        9000 | http://192.168.49.2:30002 |
+|-----------|------------|-------------|---------------------------|
+
+❌  Exiting due to SVC_UNREACHABLE: service not available: no running pod for service my-service found
+
+╭───────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                           │
+│    😿  If the above advice does not help, please let us know:                             │
+│    👉  https://github.com/kubernetes/minikube/issues/new/choose                           │
+│                                                                                           │
+│    Please run `minikube logs --file=logs.txt` and attach logs.txt to the GitHub issue.    │
+│    Please also attach the following file to the GitHub issue:                             │
+│    - /tmp/minikube_service_8aaa71feca0d33a15dc0b5f1d3de1c519de02edd_0.log                 │
+│                                                                                           │
+╰───────────────────────────────────────────────────────────────────────────────────────────╯
+
+arvind_2004@ARVINDM:~/my_project$ curl http://192.168.49.2:30002
+curl: (7) Failed to connect to 192.168.49.2 port 30002 after 0 ms: Couldn't connect to server
+arvind_2004@ARVINDM:~/my_project$ kubectl replace deployment.yml
+error: must specify one of -f and -k
+arvind_2004@ARVINDM:~/my_project$ kubectl replace -f deployment.yml
+deployment.apps/my-deploy replaced
+error: error parsing deployment.yml: error converting YAML to JSON: yaml: line 15: mapping values are not allowed in this context
+arvind_2004@ARVINDM:~/my_project$ cat deployment.yml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deploy
+  labels:
+    name: my-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      apptype: web-backend
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        apptype: web-backend
+    spec:
+      containers:
+      - name: my-app
+        image: arvindm2004/webapp1:tagname
+        ports:
+        - containerPort: 9000
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+  labels:
+    app: my-service
+spec:
+  type: NodePort
+  ports:
+    - port: 9000
+      targetPort: 8080
+      nodePort: 30002
+  selector:
+    apptype: web-backendapiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deploy
+  labels:
+    name: my-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      apptype: web-backend
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        apptype: web-backend
+    spec:
+      containers:
+      - name: my-app
+        image: arvindm2004/webapp1:tagname
+        ports:
+        - containerPort: 9000
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+  labels:
+    app: my-service
+spec:
+  type: NodePort
+  ports:
+    - port: 9000
+      targetPort: 8080
+      nodePort: 30002
+  selector:
+    apptype: web-backend
+arvind_2004@ARVINDM:~/my_project$ sudo nano deployment.yml
+arvind_2004@ARVINDM:~/my_project$ kubectl apply -f deployment.yml
+Warning: resource deployments/my-deploy is missing the kubectl.kubernetes.io/last-applied-configuration annotation which is required by kubectl apply. kubectl apply should only be used on resources created declaratively by either kubectl create --save-config or kubectl apply. The missing annotation will be patched automatically.
+deployment.apps/my-deploy configured
+service/my-service configured
+arvind_2004@ARVINDM:~/my_project$ minikube service my-service
+|-----------|------------|-------------|---------------------------|
+| NAMESPACE |    NAME    | TARGET PORT |            URL            |
+|-----------|------------|-------------|---------------------------|
+| default   | my-service |        9000 | http://192.168.49.2:30002 |
+|-----------|------------|-------------|---------------------------|
+
+❌  Exiting due to SVC_UNREACHABLE: service not available: no running pod for service my-service found
+
+╭───────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                           │
+│    😿  If the above advice does not help, please let us know:                             │
+│    👉  https://github.com/kubernetes/minikube/issues/new/choose                           │
+│                                                                                           │
+│    Please run `minikube logs --file=logs.txt` and attach logs.txt to the GitHub issue.    │
+│    Please also attach the following file to the GitHub issue:                             │
+│    - /tmp/minikube_service_8aaa71feca0d33a15dc0b5f1d3de1c519de02edd_0.log                 │
+│                                                                                           │
+╰───────────────────────────────────────────────────────────────────────────────────────────╯
+
+arvind_2004@ARVINDM:~/my_project$ minikube log
+Error: unknown command "log" for "minikube"
+
+Did you mean this?
+        logs
+
+Run 'minikube --help' for usage.
+arvind_2004@ARVINDM:~/my_project$ sudo nano deployment.yml
+arvind_2004@ARVINDM:~/my_project$ kubectl apply -f deployment.yml
+deployment.apps/my-deploy configured
+service/my-service unchanged
+arvind_2004@ARVINDM:~/my_project$ minikube service my-service
+|-----------|------------|-------------|---------------------------|
+| NAMESPACE |    NAME    | TARGET PORT |            URL            |
+|-----------|------------|-------------|---------------------------|
+| default   | my-service |        9000 | http://192.168.49.2:30002 |
+|-----------|------------|-------------|---------------------------|
+
+❌  Exiting due to SVC_UNREACHABLE: service not available: no running pod for service my-service found
+
+╭───────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                           │
+│    😿  If the above advice does not help, please let us know:                             │
+│    👉  https://github.com/kubernetes/minikube/issues/new/choose                           │
+│                                                                                           │
+│    Please run `minikube logs --file=logs.txt` and attach logs.txt to the GitHub issue.    │
+│    Please also attach the following file to the GitHub issue:                             │
+│    - /tmp/minikube_service_8aaa71feca0d33a15dc0b5f1d3de1c519de02edd_0.log                 │
+│                                                                                           │
+╰───────────────────────────────────────────────────────────────────────────────────────────╯
+
+arvind_2004@ARVINDM:~/my_project$ sudo nano deployment.yml
+arvind_2004@ARVINDM:~/my_project$ kubectl delete all --all
+pod "my-deploy-84f4966d79-qhtb2" deleted
+service "kubernetes" deleted
+service "my-service" deleted
+deployment.apps "my-deploy" deleted
+arvind_2004@ARVINDM:~/my_project$ kubectl apply -f deployment.yml
+deployment.apps/my-deploy created
+service/my-service created
+arvind_2004@ARVINDM:~/my_project$ minikube service my-service
+|-----------|------------|-------------|---------------------------|
+| NAMESPACE |    NAME    | TARGET PORT |            URL            |
+|-----------|------------|-------------|---------------------------|
+| default   | my-service |        9001 | http://192.168.49.2:30002 |
+|-----------|------------|-------------|---------------------------|
+
+❌  Exiting due to SVC_UNREACHABLE: service not available: no running pod for service my-service found
+
+╭───────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                           │
+│    😿  If the above advice does not help, please let us know:                             │
+│    👉  https://github.com/kubernetes/minikube/issues/new/choose                           │
+│                                                                                           │
+│    Please run `minikube logs --file=logs.txt` and attach logs.txt to the GitHub issue.    │
+│    Please also attach the following file to the GitHub issue:                             │
+│    - /tmp/minikube_service_8aaa71feca0d33a15dc0b5f1d3de1c519de02edd_0.log                 │
+│                                                                                           │
+╰───────────────────────────────────────────────────────────────────────────────────────────╯
+
+arvind_2004@ARVINDM:~/my_project$ sudo nano deployment.yml
+arvind_2004@ARVINDM:~/my_project$ kubectl delete all --all
+pod "my-deploy-6b478cb7cb-4fhwv" deleted
+service "kubernetes" deleted
+service "my-service" deleted
+deployment.apps "my-deploy" deleted
+arvind_2004@ARVINDM:~/my_project$ kubectl apply -f deployment.yml
+deployment.apps/my-deploy created
+service/my-service created
+arvind_2004@ARVINDM:~/my_project$ minikube service my-service
+|-----------|------------|-------------|---------------------------|
+| NAMESPACE |    NAME    | TARGET PORT |            URL            |
+|-----------|------------|-------------|---------------------------|
+| default   | my-service |        9001 | http://192.168.49.2:30005 |
+|-----------|------------|-------------|---------------------------|
+🏃  Starting tunnel for service my-service.
+|-----------|------------|-------------|------------------------|
+| NAMESPACE |    NAME    | TARGET PORT |          URL           |
+|-----------|------------|-------------|------------------------|
+| default   | my-service |             | http://127.0.0.1:36227 |
+|-----------|------------|-------------|------------------------|
+🎉  Opening service default/my-service in default browser...
+👉  http://127.0.0.1:36227
+❗  Because you are using a Docker driver on linux, the terminal needs to be open to run it.
+^C✋  Stopping tunnel for service my-service.
+arvind_2004@ARVINDM:~/my_project$ curl http://192.168.49.2:30005
+<!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Description</b> The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p><hr class="line" /><h3>Apache Tomcat/9.0.102</h3></body></html>arvind_2004@ARVINDM:~/my_project$ curl http://192.168.49.2:30005/my-app/
+<!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Description</b> The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p><hr class="line" /><h3>Apache Tomcat/9.0.102</h3></body></html>arvind_2004@ARVINDM:kubect get pod
+Command 'kubect' not found, did you mean:
+  command 'kubectx' from deb kubectx (0.9.5-1ubuntu0.3)
+Try: sudo apt install <deb name>
+arvind_2004@ARVINDM:~/my_project$ kubectl get pod
+NAME                         READY   STATUS    RESTARTS   AGE
+my-deploy-6b478cb7cb-t5lkg   1/1     Running   0          3m38s
+arvind_2004@ARVINDM:~/my_project$ kubectl exec -it my-deploy-my-deploy-6b478cb7cb-t5lkg -- /bin/bash
+Error from server (NotFound): pods "my-deploy-my-deploy-6b478cb7cb-t5lkg" not found
+arvind_2004@ARVINDM:~/my_project$ minikube service my-service
+|-----------|------------|-------------|---------------------------|
+| NAMESPACE |    NAME    | TARGET PORT |            URL            |
+|-----------|------------|-------------|---------------------------|
+| default   | my-service |        9001 | http://192.168.49.2:30005 |
+|-----------|------------|-------------|---------------------------|
+🏃  Starting tunnel for service my-service.
+|-----------|------------|-------------|------------------------|
+| NAMESPACE |    NAME    | TARGET PORT |          URL           |
+|-----------|------------|-------------|------------------------|
+| default   | my-service |             | http://127.0.0.1:35123 |
+|-----------|------------|-------------|------------------------|
+🎉  Opening service default/my-service in default browser...
+👉  http://127.0.0.1:35123
+❗  Because you are using a Docker driver on linux, the terminal needs to be open to run it.
+^C✋  Stopping tunnel for service my-service.
+arvind_2004@ARVINDM:~/my_project$ curl  http://127.0.0.1:35123
+curl: (7) Failed to connect to 127.0.0.1 port 35123 after 0 ms: Couldn't connect to server
+arvind_2004@ARVINDM:~/my_project$ curl http://192.168.49.2:30005
+<!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Description</b> The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p><hr class="line" /><h3>Apache Tomcat/9.0.102</h3></body></html>arvind_2004@ARVINDM:curl http://192.168.49.2:30005/my-app/
+<!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Description</b> The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p><hr class="line" /><h3>Apache Tomcat/9.0.102</h3></body></html>arvind_2004@ARVINDM:curl http://192.168.49.2:30005/my-service/
+<!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Description</b> The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p><hr class="line" /><h3>Apache Tomcat/9.0.102</h3></body></html>arvind_2004@ARVINDM:~/my_project$ curl http://192.168.49.2:30005/my-app
+<!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Description</b> The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p><hr class="line" /><h3>Apache Tomcat/9.0.102</h3></body></html>arvind_2004@ARVINDM:~/my_project$ kubectl get pods
+NAME                         READY   STATUS    RESTARTS   AGE
+my-deploy-6b478cb7cb-t5lkg   1/1     Running   0          6m50s
+arvind_2004@ARVINDM:~/my_project$ curl http://192.168.49.2:30005/my-deploy
+<!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Description</b> The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p><hr class="line" /><h3>Apache Tomcat/9.0.102</h3></body></html>arvind_2004@ARVINDM:curl http://192.168.49.2:30005/my-deploy/
+<!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Description</b> The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p><hr class="line" /><h3>Apache Tomcat/9.0.102</h3></body></html>arvind_2004@ARVINDM:~/my_project$ curl http://192.168.49.2:30005/my-deploy/
+<!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Description</b> The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p><hr class="line" /><h3>Apache Tomcat/9.0.102</h3></body></html>arvind_2004@ARVINDM:curl http://192.168.49.2:30005/maven-web-app/
+<!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Description</b> The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p><hr class="line" /><h3>Apache Tomcat/9.0.102</h3></body></html>arvind_2004@ARVINDM:~/my_project$ kubectl exec -it my-deploy-6b478cb7cb-t5lkg -- /bin/bash
+root@my-deploy-6b478cb7cb-t5lkg:/usr/local/tomcat# ls
+bin           conf             filtered-KEYS  LICENSE  native-jni-lib  README.md      RUNNING.txt  upstream-KEYS  webapps.dist
+BUILDING.txt  CONTRIBUTING.md  lib            logs     NOTICE          RELEASE-NOTES  temp         webapps        work
+root@my-deploy-6b478cb7cb-t5lkg:/usr/local/tomcat# cd webapps
+root@my-deploy-6b478cb7cb-t5lkg:/usr/local/tomcat/webapps# ls
+my-web  my-web.war
+root@my-deploy-6b478cb7cb-t5lkg:/usr/local/tomcat/webapps# cd
+root@my-deploy-6b478cb7cb-t5lkg:~# exit
+exit
+arvind_2004@ARVINDM:~/my_project$ ls
+deployment.yml  kubctl.txt  my-pod.yml  pod2.yml  rs-test.yml
+arvind_2004@ARVINDM:~/my_project$ curl http://192.168.49.2:30005/my-web/
+<html>
+<body>
+<h2>Hello World!</h2>
+</body>
+</html>
+arvind_2004@ARVINDM:~/my_project$ sudo nano deployment.yml
+arvind_2004@ARVINDM:~/my_project$ curl http://192.168.49.2:30005/my-web/
+<html>
+<body>
+<h2>Hello World!</h2>
+</body>
+</html>

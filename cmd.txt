@@ -1,0 +1,183 @@
+arvind_2004@ARVINDM:~$ cd
+arvind_2004@ARVINDM:~$ sudo visido
+[sudo] password for arvind_2004:
+sudo: visido: command not found
+arvind_2004@ARVINDM:~$ sudo visudo
+arvind_2004@ARVINDM:~$ sudo systemctl restart sshd.service
+Failed to restart sshd.service: Unit sshd.service not found.
+arvind_2004@ARVINDM:~$ sudo apt update
+Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+Get:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Ign:3 https://pkg.jenkins.io/debian-stable binary/ InRelease
+Get:4 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Hit:5 https://pkg.jenkins.io/debian-stable binary/ Release
+Get:7 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [671 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Get:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [922 kB]
+Get:10 http://security.ubuntu.com/ubuntu noble-security/main Translation-en [130 kB]
+Get:11 http://security.ubuntu.com/ubuntu noble-security/main amd64 Components [8960 B]
+Get:12 http://security.ubuntu.com/ubuntu noble-security/main amd64 c-n-f Metadata [6936 B]
+Get:13 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [820 kB]
+Get:14 http://security.ubuntu.com/ubuntu noble-security/universe Translation-en [177 kB]
+Get:15 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Components [51.9 kB]
+Get:16 http://security.ubuntu.com/ubuntu noble-security/universe amd64 c-n-f Metadata [17.0 kB]
+Get:17 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Components [208 B]
+Get:18 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Components [208 B]
+Get:19 http://archive.ubuntu.com/ubuntu noble-updates/main Translation-en [209 kB]
+Get:20 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [151 kB]
+Get:21 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 c-n-f Metadata [13.5 kB]
+Get:22 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1041 kB]
+Get:23 http://archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [262 kB]
+Get:24 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [364 kB]
+Get:25 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 c-n-f Metadata [25.9 kB]
+Get:26 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Components [212 B]
+Get:27 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+Get:28 http://archive.ubuntu.com/ubuntu noble-backports/main Translation-en [2588 B]
+Get:29 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [208 B]
+Get:30 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [14.6 kB]
+Get:31 http://archive.ubuntu.com/ubuntu noble-backports/universe Translation-en [14.6 kB]
+Get:32 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [20.0 kB]
+Get:33 http://archive.ubuntu.com/ubuntu noble-backports/restricted amd64 Components [212 B]
+Get:34 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Components [212 B]
+Fetched 5303 kB in 11s (479 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+30 packages can be upgraded. Run 'apt list --upgradable' to see them.
+arvind_2004@ARVINDM:~$ sudo apt install openssh-server
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+openssh-server is already the newest version (1:9.6p1-3ubuntu13.8).
+0 upgraded, 0 newly installed, 0 to remove and 30 not upgraded.
+arvind_2004@ARVINDM:~$ sudo systemctl start ssh
+arvind_2004@ARVINDM:~$
+arvind_2004@ARVINDM:~$ sudo systemctl start ssh
+arvind_2004@ARVINDM:~$ sudo systemctl enable ssh
+Synchronizing state of ssh.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable ssh
+Created symlink /etc/systemd/system/sshd.service → /usr/lib/systemd/system/ssh.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/ssh.service → /usr/lib/systemd/system/ssh.service.
+arvind_2004@ARVINDM:~$ sudo systemctl restart sshd.service
+Unknown command verb 'restart sshd.service'.
+arvind_2004@ARVINDM:~$ sudo systemctl restart sshd
+arvind_2004@ARVINDM:~$ cat /home/david/.minikube/ca.crt | base64 -w 0; echo
+base64: invalid wrap size: ‘ 0’
+cat: /home/david/.minikube/ca.crt: No such file or directory
+Command ' echo' not found, did you mean:
+  command 'echo' from deb coreutils (9.4-2ubuntu2)
+Try: sudo apt install <deb name>
+arvind_2004@ARVINDM:~$ cat /home/arvind_2004/.minikube/ca.crt | base64 -w 0; echo
+base64: invalid wrap size: ‘ 0’
+Command ' echo' not found, did you mean:
+  command 'echo' from deb coreutils (9.4-2ubuntu2)
+Try: sudo apt install <deb name>
+arvind_2004@ARVINDM:~$ ls /etc/systemd/system/sshd.service or ls /usr/lib/systemd/system/sshd.service
+ls: cannot access 'or': No such file or directory
+ls: cannot access 'ls': No such file or directory
+ls: cannot access '/usr/lib/systemd/system/sshd.service': No such file or directory
+/etc/systemd/system/sshd.service
+arvind_2004@ARVINDM:~$ dpkg -l | grep openssh'
+> ^C
+arvind_2004@ARVINDM:~$ dpkg -l | grep openssh
+ii  openssh-client                        1:9.6p1-3ubuntu13.8                     amd64        secure shell (SSH) client, for secure access to remote machines
+ii  openssh-server                        1:9.6p1-3ubuntu13.8                     amd64        secure shell (SSH) server, for secure access from remote machines
+ii  openssh-sftp-server                   1:9.6p1-3ubuntu13.8                     amd64        secure shell (SSH) sftp server module, for SFTP access from remote machines
+arvind_2004@ARVINDM:~$ sudo systemctl enable ssh
+Synchronizing state of ssh.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable ssh
+arvind_2004@ARVINDM:~$ sudo systemctl restart ssh.service
+arvind_2004@ARVINDM:~$ sudo systemctl restart sshd.service
+arvind_2004@ARVINDM:~$ sudo apt update
+Ign:1 https://pkg.jenkins.io/debian-stable binary/ InRelease
+Hit:2 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:4 https://pkg.jenkins.io/debian-stable binary/ Release
+Hit:6 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:7 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+30 packages can be upgraded. Run 'apt list --upgradable' to see them.
+arvind_2004@ARVINDM:~$ sudo apt install openssh-server
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+openssh-server is already the newest version (1:9.6p1-3ubuntu13.8).
+0 upgraded, 0 newly installed, 0 to remove and 30 not upgraded.
+arvind_2004@ARVINDM:~$ cat /home/arvind_2004/.minikube/ca.crt | base64 -w 0; echo
+base64: invalid wrap size: ‘ 0’
+Command ' echo' not found, did you mean:
+  command 'echo' from deb coreutils (9.4-2ubuntu2)
+Try: sudo apt install <deb name>
+arvind_2004@ARVINDM:~$ cat /home/arvind_2004/.minikube/ca.crt | base64 -w 0; echo
+LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCakNDQWU2Z0F3SUJBZ0lCQVRBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwdGFXNXAKYTNWaVpVTkJNQjRYRFRJMU1ETXhPREEyTXpFd09Gb1hEVE0xTURNeE56QTJNekV3T0Zvd0ZURVRNQkVHQTFVRQpBeE1LYldsdWFXdDFZbVZEUVRDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTTN4CnprdTJhUEhkc2g0dHlqUkIxSllQd1ZGTWNBcHFFaGtlUEE3L25PWGZYYzY3R005RTl4Zkc5SzNNVnhjUzNXWFgKSFJMMFcyZXdvK1lsQlJQRmVNK1dsWVphb2FvODQ1SUU5V3dEZEhVWWltNEEzaUJjTi9ZQ2dzalBHYTlaUGtvNwp1QzNBTHZnSVQ4YTYxdVlrcjVJVGtTd1lUWUYxY2Jna255arvind_2004@ARVINDM:~/.kube$
+RWo1Q0xJc0hjK3NFY1RCMnh5QkxabmFOc21OUWhSQQpkS1JscWpDWU9DRGFjOGU0Z1ljQ0F3RUFBYU5oTUY4d0RnWURWUjBQQVFIL0JBUURBZ0trTUIwR0ExVWRKUVFXCk1CUUdDQ3NHQVFVRkJ3TUNCZ2dyQmdFRkJRY0RBVEFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVcKQkJTTllaTXRjV0FwcjdyQm8vY05UOWt0bzNvMU9UQU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFMenkrUmV3RQpLUXduZ2dDUUhoRGtXOS9xY2IwUTdYektpMHFCV2NrOFE2U0tVb0Q0UXFKNzVmZG5tRVBSWGdncXZqcnVxU0R3CmxqTHVVOW1IQ3RrNllIQ0pvRk92UEZXQXpKemJXaldTR1BmdExyenpIOHZOS2NFaXBmd3lRbVVqd0tMdjgvYnAKN2JxSEo3Q1RaYXBIZFRvVFJja0Jnbk1OaHY2eENpUW00YVNTZ2ZBQ2xiUHM4cUhCRExGWEZPbjZLYjlvYVBLOApJOWVSa3pGdmVXaFdwUWQ5MkdKMHRlZ0FpdzRJWlViaHltWEczRHZNQW1LNVZIUnoxazY3VWgydUYvNC83SFBaCnV4STBVeVV0MGxZOFF5ZUJGS1dlZDYvc01HUmJETU1CSWVXYzhZaldhdlI1eko0eloxZXBTcXpjcU93YzN6RW0KcHdxbUNEb3ZFVEtvOGc9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+arvind_2004@ARVINDM:~$ cat pod.yml
+cat: pod.yml: No such file or directory
+arvind_2004@ARVINDM:~$ /home/arvind_2004/.minikube/profiles/minikube/client.crt
+-bash: /home/arvind_2004/.minikube/profiles/minikube/client.crt: Permission denied
+arvind_2004@ARVINDM:~$ cd  /home/arvind_2004/
+arvind_2004@ARVINDM:~$ cd /home/arvind_2004/.minikube/profiles/minikube/client.crt
+-bash: cd: /home/arvind_2004/.minikube/profiles/minikube/client.crt: Not a directoryarvind_2004@ARVINDM:~$ cd /home/arvind_2004/.minikube/profiles/minikube
+arvind_2004@ARVINDM:~/.minikube/profiles/minikube$ cd
+arvind_2004@ARVINDM:~$ cd ~/.kube
+arvind_2004@ARVINDM:~/.kube$ cat /home/arvind_2004/.minikube/profiles/minikube/client.crt | base64 -w 0; echo
+LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURJVENDQWdtZ0F3SUJBZ0lCQWpBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwdGFXNXAKYTNWaVpVTkJNQjRYRFRJMU1ETXhPREE1TURJeU1Gb1hEVEk0TURNeE9EQTVNREl5TUZvd01URVhNQlVHQTFVRQpDaE1PYzNsemRHVnRPbTFoYzNSbGNuTXhGakFVQmdOVkJBTVREVzFwYm1scmRXSmxMWFZ6WlhJd2dnRWlNQTBHCkNTcUdTSWIzRFFFQkFRVUFBNElCRHdBd2dnRUtBb0lCQVFDMCtXM3JJdEludTBYZHhJaUh2OEFMK0huUTgzbWYKN21IdDQwS3JsTllsdnZqUytUMG1ybmtmMzhWYUN0bFFjN0JrelU0U0U0eEpYTzR2YjJLdWZYWk1ZMll5d0hjawozQXVnNHhlVUdRbTBNeDgzUHNzUjZNazJHWjJFRXRHN3YyNytDZ05jcFV0SkV3MXNJWE0wUTg3Qmc3N1R2WENKCmJmczZ0RjhKQ21YanZ1OWxaZEFHbWdvTWl4VjF1YjBLeFBRUHlBcVYvOHBZclVnZFVrUW1Td21LRUc2YjdaY1QKVDFuOWdZRmdMQWpMT1N3amVEbm5BUEY4L0VPdUl4cElENmlNWnFmT0pBT3ZsQTZHYWlaTjNnUTQxNUI3WUljTwpWMGE0dzlhQS8yZm11c3RyWkhjdFJ0dStRSlArQlE1aXhCM0tnbGhvVU1lM2ovVEVjOFZKcGs5OUFnTUJBQUdqCllEQmVNQTRHQTFVZER3RUIvd1FFQXdJRm9EQWRCZ05WSFNVRUZqQVVCZ2dyQmdFRkJRY0RBUVlJS3dZQkJRVUgKQXdJd0RBWURWUjBUQVFIL0JBSXdBREFmQmdOVkhTTUVHREFXZ0JTTllaTXRjV0FwcjdyQm8vY05UOWt0bzNvMQpPVEFOQmdrcWhraUc5dzBCQVFzRkFBT0NBUUVBeExwcVB1a0x1cE9ncHRBOEY3Y2ZHVDUxcFM1MDdLT0xKU3RFCkRHZ2NCdFkvY2NjYUFqQjR0aW80L3pLKzdaSDN2WU5CMnlrVWF6QlhsS1AydnJ1aEFJaG1OekkrdXFnY1VFWVgKRXJsM2s4anhmVlZja1dMbUdVNVV4UGlDTGZseXEzUlhoRzYzSEQ1Nk16YXV1SWZWbDZGNGsyNEdweEx1WkJuWQpFMUpvcm1NMzVMcUF2UGJYWk9BMWFyWUwydEZrdkh1dnozLytGU0NwTTJIM0ZobnRZRUNDcDgvem5nZVV6OS9wCjVsRnZBbVdPZkhubW1EYmpRNmNxOW15eTJLYVA4cUhqK3FPa1JBeVZ1NDhoVTllNXpVaExpTWtvdTVudXRVeWcKdCtITWQxUXdZSHI5S2ZYYUJQRiszWWxpTVhBTjZURU1WcExOR3hIWG5tQVhONXQ1d3c9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+arvind_2004@ARVINDM:~/.kube$ cat /home/arvind_2004/.minikube/profiles/minikube/client.key | base64 -w 0; echo
+LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFcEFJQkFBS0NBUUVBdFBsdDZ5TFNKN3RGM2NTSWg3L0FDL2g1MFBONW4rNWg3ZU5DcTVUV0piNzQwdms5CkpxNTVIOS9GV2dyWlVIT3daTTFPRWhPTVNWenVMMjlpcm4xMlRHTm1Nc0IzSk53TG9PTVhsQmtKdERNZk56N0wKRWVqSk5obWRoQkxSdTc5dS9nb0RYS1ZMU1JNTmJDRnpORVBPd1lPKzA3MXdpVzM3T3JSZkNRcGw0Nzd2WldYUQpCcG9LRElzVmRibTlDc1QwRDhnS2xmL0tXSzFJSFZKRUprc0ppaEJ1bSsyWEUwOVovWUdCWUN3SXl6a3NJM2c1CjV3RHhmUHhEcmlNYVNBK29qR2FuemlRRHI1UU9obW9tVGQ0RU9OZVFlMkNIRGxkR3VNUFdnUDluNXJyTGEyUjMKTFViYnZrQ1QvZ1VPWXNRZHlvSllhRkRIdDQvMHhIUEZTYVpQZlFJREFRQUJBb0lCQUNzVDlJWTBFN0pCY2JBSQpTRGVIL1Q3Y05xTDJVYzB3QVQrUENSK3VuZ3IrR2x5ZDEyQ054MmMrN01zeUtlaHNvV0JkUG1ndkh3V1hpVnJoCk9Ld3dVU2g5d0tYMENtaEx1TGpqVllsN0xFUW9weFdQYk9jbWNqN2VlaEFtS3FaMk93VmRmTTlneVRycnZoWXYKSUMwZ3R1WjVaY01oSk5pUnhXdUQ0OXRURGszWGpvNjVqS2VNZUYxdjVpWkVXWVQrNWF5aWc5b2lPcWM4czJCaAprTThUMnNXSUVPU1k2ZU95cWhnVUpwVSt3SXVlYzZURFVVVUJqazc5aWJKQVNVU0dCODJpTVgwK29FeE1EbG9aClUzbmQ2elRyYlR5ZzkxdnNONExVd0Y2RXJUYm1scDI3ZDdpc1I4OXNpeHpzcjdQKzM5dUl5Q2tEMDVjVytxbFIKUml1SG1nRUNnWUVBNW5VZjErOWtlOFVQdDZkN2pMYzJxNU5YQkVXejdYbHdFMHZyakJTdkliRWVtZE5hb09EVQoveWlYdWFiSlNITHJTYWlWYTJNdFlVdnU4V1FaVTNsQS8zNkhDU1l4OW9SbTFyMGNMTCthOUtHUkJsZzZVaG51Ck1ySFZCdkkremh6WVBWMWt1dVdsRW81Q2h4Tjc5aHRUZ0xrTGpMUmdOTjd3UnVJQnVBbUNaUmtDZ1lFQXlRaEwKMGtOdXk5RzNzb005WjVMMVM3WFBBNzQxL2N5OUtkYVNTUDVkaEM1K2RjcEFSMktWYjJYZ25NV2pnbmpnN3NTTgpYOWJBRkVDY2lmVE51Uk5aRjRpVzUyVkFtVExaejNLSVRjbFE1TDhUa1JnbXFxSnVpU1Z6blozbDlISWdURmUrCnl1cGJKZkZ1UVVZSzIxcGVLN3QydkM2ZmZ6eS84aVYzVDd0UnhnVUNnWUJHdFhFTHcvdkVyZlhnbDVhazJpSUEKQ3JrTUtvYkdPaGhWRTFvMkpMS0hWOXpYdmExMDV3YnpNdlU2bFIzMUNLMkFjQ1ZJU2FuR3pKR0hwdnJPVGNuUAptbmE4Sytmd2h6YzJjOWVOTTB6TCtqYVJCOGo5SDgraDVrWkNWMWxGekR2Y3VDY0w0U0lBeTMxR0RJaGdQb29rCldLSmVqWWxuTDIveGo2NlBWUHVaSVFLQmdRQ2k5WU9vNVJxNlE3MDZDcUxMQTlpdHo2b0k2YmFRanRmRVEzaC8KalJvM1hRMEw1TEFvYmFTZkVhRjYwOGNRcTNZQ2R2ZjIrWGpvc2R0ekJTdUNYRW03QnZEMGtDSkdUVzg4ZHlaQQpqL0Z3QytnTGxOMDdNc0tSai9kaGpDNXM4ZHAycUNZMERMZG9VWVpEaVVpaHVXWmU0dTZENnZORnkvUDRrU0JmClZJUWNGUUtCZ1FESDAwM3hmM1JVRXJtdVJCeFIzY3VZamNyU1g2a25hQW94ZEprNXBxdGp6UTUxNHdpc3h5NFIKTXhCOE1KOCsvcTYxVU9XckN2Y29zWlp6VVp2bktYeUUyVkM2aTYrTm5iaVVHSkIwRkVJQkNhQ3hJU3VSbFQyMgpFMSs4NnZpZVZqRXQzVGtPaldKY0N3RzdYOEd1RGNqdzl6K25QNlp5SEo2OVQyTHdHZDN1S0E9PQotLS0tLUVORCBSU0EgUFJJVkFURSBLRVktLS0tLQo=
+
+
+
+
+
+----------------------------------------------------------
+
+arvind_2004@ARVINDM:~$ cd ~/.kube
+arvind_2004@ARVINDM:~/.kube$ sudo vi config
+[sudo] password for arvind_2004:
+arvind_2004@ARVINDM:~/.kube$ kubectl get node
+error: error loading config file "/home/arvind_2004/.kube/config": yaml: line 5: mapping values are not allowed in this context
+arvind_2004@ARVINDM:~/.kube$ sudo vi config
+[sudo] password for arvind_2004:
+arvind_2004@ARVINDM:~/.kube$ kubectl get node
+error: error loading config file "/home/arvind_2004/.kube/config": yaml: line 5: mapping values are not allowed in this context
+arvind_2004@ARVINDM:~/.kube$ sudo vi config
+arvind_2004@ARVINDM:~/.kube$ kubectl get node
+NAME       STATUS   ROLES           AGE   VERSION
+minikube   Ready    control-plane   47h   v1.32.0
+arvind_2004@ARVINDM:~/.kube$ cat ~/.kube/config
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCakNDQWU2Z0F3SUJBZ0lCQVRBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwdGFXNXAKYTNWaVpVTkJNQjRYRFRJMU1ETXhPREEyTXpFd09Gb1hEVE0xTURNeE56QTJNekV3T0Zvd0ZURVRNQkVHQTFVRQpBeE1LYldsdWFXdDFZbVZEUVRDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTTN4CnprdTJhUEhkc2g0dHlqUkIxSllQd1ZGTWNBcHFFaGtlUEE3L25PWGZYYzY3R005RTl4Zkc5SzNNVnhjUzNXWFgKSFJMMFcyZXdvK1lsQlJQRmVNK1dsWVphb2FvODQ1SUU5V3dEZEhVWWltNEEzaUJjTi9ZQ2dzalBHYTlaUGtvNwp1QzNBTHZnSVQ4YTYxdVlrcjVJVGtTd1lUWUYxY2Jna255WUxMTDhNQlEvV3IyUW9hS212QWJJNUtnSDZESFFuCko0d05wVHlGMlZ1WFJkK1VFbHQ5VnFCU0t4d1lsbzJCQ0ZJdGswZ3EvaGFnU1VVUitwOVkyNWVxQWU2SEdhd04KU0RyTDU2QkFGRDBINElNQ3hkNHMvK2o2Y3NKaWNlU0liRWo1Q0xJc0hjK3NFY1RCMnh5QkxabmFOc21OUWhSQQpkS1JscWpDWU9DRGFjOGU0Z1ljQ0F3RUFBYU5oTUY4d0RnWURWUjBQQVFIL0JBUURBZ0trTUIwR0ExVWRKUVFXCk1CUUdDQ3NHQVFVRkJ3TUNCZ2dyQmdFRkJRY0RBVEFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVcKQkJTTllaTXRjV0FwcjdyQm8vY05UOWt0bzNvMU9UQU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFMenkrUmV3RQpLUXduZ2dDUUhoRGtXOS9xY2IwUTdYektpMHFCV2NrOFE2U0tVb0Q0UXFKNzVmZG5tRVBSWGdncXZqcnVxU0R3CmxqTHVVOW1IQ3RrNllIQ0pvRk92UEZXQXpKemJXaldTR1BmdExyenpIOHZOS2NFaXBmd3lRbVVqd0tMdjgvYnAKN2JxSEo3Q1RaYXBIZFRvVFJja0Jnbk1OaHY2eENpUW00YVNTZ2ZBQ2xiUHM4cUhCRExGWEZPbjZLYjlvYVBLOApJOWVSa3pGdmVXaFdwUWQ5MkdKMHRlZ0FpdzRJWlViaHltWEczRHZNQW1LNVZIUnoxazY3VWgydUYvNC83SFBaCnV4STBVeVV0MGxZOFF5ZUJGS1dlZDYvc01HUmJETU1CSWVXYzhZaldhdlI1eko0eloxZXBTcXpjcU93YzN6RW0KcHdxbUNEb3ZFVEtvOGc9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    extensions:
+    - extension:
+        last-update: Fri, 21 Mar 2025 05:49:38 UTC
+        provider: minikube.sigs.k8s.io
+        version: v1.35.0
+      name: cluster_info
+    server: https://127.0.0.1:32769
+  name: minikube
+contexts:
+- context:
+    cluster: minikube
+    extensions:
+    - extension:
+        last-update: Fri, 21 Mar 2025 05:49:38 UTC
+        provider: minikube.sigs.k8s.io
+        version: v1.35.0
+      name: context_info
+    namespace: default
+    user: minikube
+  name: minikube
+current-context: minikube
+kind: Config
+preferences: {}
+users:
+- name: minikube
+  user:
+    client-certificate-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURJVENDQWdtZ0F3SUJBZ0lCQWpBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwdGFXNXAKYTNWaVpVTkJNQjRYRFRJMU1ETXhPREE1TURJeU1Gb1hEVEk0TURNeE9EQTVNREl5TUZvd01URVhNQlVHQTFVRQpDaE1PYzNsemRHVnRPbTFoYzNSbGNuTXhGakFVQmdOVkJBTVREVzFwYm1scmRXSmxMWFZ6WlhJd2dnRWlNQTBHCkNTcUdTSWIzRFFFQkFRVUFBNElCRHdBd2dnRUtBb0lCQVFDMCtXM3JJdEludTBYZHhJaUh2OEFMK0huUTgzbWYKN21IdDQarvind_2004@ARVINDM:~/.kube$
+nNHhlVUdRbTBNeDgzUHNzUjZNazJHWjJFRXRHN3YyNytDZ05jcFV0SkV3MXNJWE0wUTg3Qmc3N1R2WENKCmJmczZ0RjhKQ21YanZ1OWxaZEFHbWdvTWl4VjF1YjBLeFBRUHlBcVYvOHBZclVnZFVrUW1Td21LRUc2YjdaY1QKVDFuOWdZRmdMQWpMT1N3amVEbm5BUEY4L0VPdUl4cElENmlNWnFmT0pBT3ZsQTZHYWlaTjNnUTQxNUI3WUljTwpWMGE0dzlhQS8yZm11c3RyWkhjdFJ0dStRSlArQlE1aXhCM0tnbGhvVU1lM2ovVEVjOFZKcGs5OUFnTUJBQUdqCllEQmVNQTRHQTFVZER3RUIvd1FFQXdJRm9EQWRCZ05WSFNVRUZqQVVCZ2dyQmdFRkJRY0RBUVlJS3dZQkJRVUgKQXdJd0RBWURWUjBUQVFIL0JBSXdBREFmQmdOVkhTTUVHREFXZ0JTTllaTXRjV0FwcjdyQm8vY05UOWt0bzNvMQpPVEFOQmdrcWhraUc5dzBCQVFzRkFBT0NBUUVBeExwcVB1a0x1cE9ncHRBOEY3Y2ZHVDUxcFM1MDdLT0xKU3RFCkRHZ2NCdFkvY2NjYUFqQjR0aW80L3pLKzdaSDN2WU5CMnlrVWF6QlhsS1AydnJ1aEFJaG1OekkrdXFnY1VFWVgKRXJsM2s4anhmVlZja1dMbUdVNVV4UGlDTGZseXEzUlhoRzYzSEQ1Nk16YXV1SWZWbDZGNGsyNEdweEx1WkJuWQpFMUpvcm1NMzVMcUF2UGJYWk9BMWFyWUwydEZrdkh1dnozLytGU0NwTTJIM0ZobnRZRUNDcDgvem5nZVV6OS9wCjVsRnZBbVdPZkhubW1EYmpRNmNxOW15eTJLYVA4cUhqK3FPa1JBeVZ1NDhoVTllNXpVaExpTWtvdTVudXRVeWcKdCtITWQxUXdZSHI5S2ZYYUJQRiszWWxpTVhBTjZURU1WcExOR3hIWG5tQVhONXQ1d3c9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    client-key-data: LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFcEFJQkFBS0NBUUVBdFBsdDZ5TFNKN3RGM2NTSWg3L0FDL2g1MFBONW4rNWg3ZU5DcTVUV0piNzQwdms5CkpxNTVIOS9GV2dyWlVIT3daTTFPRWhPTVNWenVMMjlpcm4xMlRHTm1Nc0IzSk53TG9PTVhsQmtKdERNZk56N0wKRWVqSk5obWRoQkxSdTc5dS9nb0RYS1ZMU1JNTmJDRnpORVBPd1lPKzA3MXdpVzM3T3JSZkNRcGw0Nzd2WldYUQpCcG9LRElzVmRibTlDc1QwRDhnS2xmL0tXSzFJSFZKRUprc0ppaEJ1bSsyWEUwOVovWUdCWUN3SXl6a3NJM2c1CjV3RHhmUHhEcmlNYVNBK29qR2FuemlRRHI1UU9obW9tVGQ0RU9OZVFlMkNIRGxkR3VNUFdnUDluNXJyTGEyUjMKTFViYnZrQ1QvZ1VPWXNRZHlvSllhRkRIdDQvMHhIUEZTYVpQZlFJREFRQUJBb0lCQUNzVDlJWTBFN0pCY2JBSQpTRGVIL1Q3Y05xTDJVYzB3QVQrUENSK3VuZ3IrR2x5ZDEyQ054MmMrN01zeUtlaHNvV0JkUG1ndkh3V1hpVnJoCk9Ld3dVU2g5d0tYMENtaEx1TGpqVllsN0xFUW9weFdQYk9jbWNqN2VlaEFtS3FaMk93VmRmTTlneVRycnZoWXYKSUMwZ3R1WjVaY01oSk5pUnhXdUQ0OXRURGszWGpvNjVqS2VNZUYxdjVpWkVXWVQrNWF5aWc5b2lPcWM4czJCaAprTThUMnNXSUVPU1k2ZU95cWhnVUpwVSt3SXVlYzZURFVVVUJqazc5aWJKQVNVU0dCODJpTVgwK29FeE1EbG9aClUzbmQ2elRyYlR5ZzkxdnNONExVd0Y2RXJUYm1scDI3ZDdpc1I4OXNpeHpzcjdQKzM5dUl5Q2tEMDVjVytxbFIKUml1SG1nRUNnWUVBNW5VZjErOWtlOFVQdDZkN2pMYzJxNU5YQkVXejdYbHdFMHZyakJTdkliRWVtZE5hb09EVQoveWlYdWFiSlNITHJTYWlWYTJNdFlVdnU4V1FaVTNsQS8zNkhDU1l4OW9SbTFyMGNMTCthOUtHUkJsZzZVaG51Ck1ySFZCdkkremh6WVBWMWt1dVdsRW81Q2h4Tjc5aHRUZ0xrTGpMUmdOTjd3UnVJQnVBbUNaUmtDZ1lFQXlRaEwKMGtOdXk5RzNzb005WjVMMVM3WFBBNzQxL2N5OUtkYVNTUDVkaEM1K2RjcEFSMktWYjJYZ25NV2pnbmpnN3NTTgpYOWJBRkVDY2lmVE51Uk5aRjRpVzUyVkFtVExaejNLSVRjbFE1TDhUa1JnbXFxSnVpU1Z6blozbDlISWdURmUrCnl1cGJKZkZ1UVVZSzIxcGVLN3QydkM2ZmZ6eS84aVYzVDd0UnhnVUNnWUJHdFhFTHcvdkVyZlhnbDVhazJpSUEKQ3JrTUtvYkdPaGhWRTFvMkpMS0hWOXpYdmExMDV3YnpNdlU2bFIzMUNLMkFjQ1ZJU2FuR3pKR0hwdnJPVGNuUAptbmE4Sytmd2h6YzJjOWVOTTB6TCtqYVJCOGo5SDgraDVrWkNWMWxGekR2Y3VDY0w0U0lBeTMxR0RJaGdQb29rCldLSmVqWWxuTDIveGo2NlBWUHVaSVFLQmdRQ2k5WU9vNVJxNlE3MDZDcUxMQTlpdHo2b0k2YmFRanRmRVEzaC8KalJvM1hRMEw1TEFvYmFTZkVhRjYwOGNRcTNZQ2R2ZjIrWGpvc2R0ekJTdUNYRW03QnZEMGtDSkdUVzg4ZHlaQQpqL0Z3QytnTGxOMDdNc0tSai9kaGpDNXM4ZHAycUNZMERMZG9VWVpEaVVpaHVXWmU0dTZENnZORnkvUDRrU0JmClZJUWNGUUtCZ1FESDAwM3hmM1JVRXJtdVJCeFIzY3VZamNyU1g2a25hQW94ZEprNXBxdGp6UTUxNHdpc3h5NFIKTXhCOE1KOCsvcTYxVU9XckN2Y29zWlp6VVp2bktYeUUyVkM2aTYrTm5iaVVHSkIwRkVJQkNhQ3hJU3VSbFQyMgpFMSs4NnZpZVZqRXQzVGtPaldKY0N3RzdYOEd1RGNqdzl6K25QNlp5SEo2OVQyTHdHZDN1S0E9PQotLS0tLUVORCBSU0EgUFJJVkFURSBLRVktLS0tLQo=
+arvind_2004@ARVINDM:~/.kube$
